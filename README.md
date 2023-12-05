@@ -1,2 +1,2 @@
 # softwarebydaw
-Web site source for SoftwareByDaW
+Source code for web site SoftwareByDaW.  
