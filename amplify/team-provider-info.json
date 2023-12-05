@@ -10,6 +10,14 @@
       "StackName": "amplify-softwarebydaw-dev-163623",
       "StackId": "arn:aws:cloudformation:us-east-2:378944200967:stack/amplify-softwarebydaw-dev-163623/b9b350f0-93be-11ee-9a8b-0a6d9eef1bd1",
       "AmplifyAppId": "d2mk5o3l0841e9"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2mk5o3l0841e9",
+          "type": "manual"
+        }
+      }
     }
   }
 }
