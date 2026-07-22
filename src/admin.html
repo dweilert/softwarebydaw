@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin — Feedback &amp; Bug Reports</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="noindex, nofollow" name="robots">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid bg-light footer pt-4 pb-4" style="border-bottom: 1px solid rgba(20,24,62,.08);">
+        <div class="container">
+            <h4 class="text-dark mb-0">SOFTWARE<span class="text-primary">by</span>DaW <span
+                    class="text-muted fs-6">— Admin</span></h4>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <!-- Login Panel -->
+        <div id="login-panel" class="row justify-content-center">
+            <div class="col-lg-5">
+                <h3 class="mb-3">Sign in</h3>
+                <p class="text-muted">Enter IAM credentials for the <code>softwarebydaw-admin</code> user.
+                    These are held in memory only for this browser tab &mdash; never saved to disk, never
+                    sent anywhere except AWS.</p>
+                <form id="login-form">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold" for="access-key">Access Key ID</label>
+                        <input type="text" class="form-control" id="access-key" autocomplete="off" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold" for="secret-key">Secret Access Key</label>
+                        <input type="password" class="form-control" id="secret-key" autocomplete="off" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary rounded-pill px-4">Sign in</button>
+                    <span id="login-status" class="ms-3 text-danger"></span>
+                </form>
+            </div>
+        </div>
+
+        <!-- Data Panel -->
+        <div id="data-panel" class="d-none">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+                <h3 class="mb-0">Feedback &amp; bug reports</h3>
+                <div>
+                    <button class="btn btn-outline-primary rounded-pill px-4 me-2" id="refresh-btn">
+                        Refresh<i class="px-2 fas fa-sync-alt"></i></button>
+                    <button class="btn btn-outline-primary rounded-pill px-4" id="signout-btn">Sign out</button>
+                </div>
+            </div>
+            <div id="load-status" class="text-muted mb-3"></div>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { AwsClient } from "https://cdn.jsdelivr.net/npm/aws4fetch/dist/aws4fetch.esm.js";
+
+        const API_URL = "https://ra5do16vel.execute-api.us-east-2.amazonaws.com/feedback";
+        const REGION = "us-east-2";
+
+        const loginPanel = document.getElementById("login-panel");
+        const dataPanel = document.getElementById("data-panel");
+        const loginForm = document.getElementById("login-form");
+        const loginStatus = document.getElementById("login-status");
+        const loadStatus = document.getElementById("load-status");
+        const results = document.getElementById("results");
+
+        let client = null;
+
+        function escapeHtml(str) {
+            const div = document.createElement("div");
+            div.textContent = str == null ? "" : String(str);
+            return div.innerHTML;
+        }
+
+        function badge(type) {
+            return type === "enhancement"
+                ? '<span class="badge rounded-pill" style="background-color:#8E24AA;">Enhancement</span>'
+                : '<span class="badge rounded-pill" style="background-color:#D81B60;">Bug</span>';
+        }
+
+        function render(items) {
+            if (!items.length) {
+                results.innerHTML = '<p class="text-muted">No submissions yet.</p>';
+                return;
+            }
+            results.innerHTML = items.map(function (item) {
+                const contact = escapeHtml(item.contactName || "(no name)") + " &mdash; " +
+                    '<a href="mailto:' + escapeHtml(item.contactEmail) + '">' + escapeHtml(item.contactEmail) + "</a>";
+                const bugReportBlock = item.appBugReport
+                    ? '<details class="mt-2"><summary class="text-muted" style="cursor:pointer;">Pasted app bug report</summary>' +
+                      '<pre class="bg-light rounded p-3 mt-2" style="white-space:pre-wrap; font-size:.85rem;">' +
+                      escapeHtml(item.appBugReport) + "</pre></details>"
+                    : "";
+                return '<div class="border rounded p-4 mb-3">' +
+                    '<div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">' +
+                    "<div>" + badge(item.type) + ' <span class="text-muted ms-2">' +
+                    escapeHtml(new Date(item.createdAt).toLocaleString()) + "</span></div>" +
+                    '<div class="text-muted small">' + escapeHtml(item.sourcePage || "") + "</div>" +
+                    "</div>" +
+                    '<p class="mb-2" style="white-space:pre-wrap;">' + escapeHtml(item.description) + "</p>" +
+                    '<div class="text-muted small">' + contact + "</div>" +
+                    bugReportBlock +
+                    "</div>";
+            }).join("");
+        }
+
+        async function loadData() {
+            loadStatus.textContent = "Loading...";
+            results.innerHTML = "";
+            try {
+                const res = await client.fetch(API_URL, { method: "GET" });
+                if (!res.ok) {
+                    if (res.status === 403) {
+                        loadStatus.textContent = "Access denied — check that these credentials belong to softwarebydaw-admin.";
+                    } else {
+                        loadStatus.textContent = "Request failed (HTTP " + res.status + ").";
+                    }
+                    return;
+                }
+                const data = await res.json();
+                loadStatus.textContent = data.items.length + " submission(s).";
+                render(data.items);
+            } catch (err) {
+                loadStatus.textContent = "Network error — " + err.message;
+            }
+        }
+
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const accessKeyId = document.getElementById("access-key").value.trim();
+            const secretAccessKey = document.getElementById("secret-key").value.trim();
+            if (!accessKeyId || !secretAccessKey) return;
+
+            client = new AwsClient({
+                accessKeyId: accessKeyId,
+                secretAccessKey: secretAccessKey,
+                region: REGION,
+                service: "execute-api",
+            });
+
+            loginStatus.textContent = "";
+            loginPanel.classList.add("d-none");
+            dataPanel.classList.remove("d-none");
+            loadData();
+        });
+
+        document.getElementById("refresh-btn").addEventListener("click", loadData);
+
+        document.getElementById("signout-btn").addEventListener("click", function () {
+            client = null;
+            document.getElementById("access-key").value = "";
+            document.getElementById("secret-key").value = "";
+            dataPanel.classList.add("d-none");
+            loginPanel.classList.remove("d-none");
+            results.innerHTML = "";
+            loadStatus.textContent = "";
+        });
+    </script>
+</body>
+
+</html>

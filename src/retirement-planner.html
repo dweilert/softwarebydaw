@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Retirement Planner — Free, open, private retirement planning | SoftwareByDaW</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="retirement planner, retirement planning software, free retirement calculator, open source retirement planning, Social Security optimizer, Roth conversion, Monte Carlo retirement" name="keywords">
+    <meta content="A premiere-grade retirement planner that rivals paid industry leaders — free and open source. Social Security optimization, Roth conversions, full tax modeling, and estate planning — every number inspectable, nothing leaves your device, no subscription ever." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Nine distinct pastel hover treatments for the "What it does" feature grid,
+           scoped to #feature-grid so the site-wide black .software-item:hover is untouched. */
+        #feature-grid > div:nth-child(1) .software-item:hover { background: rgba(240,98,146,.14); }
+        #feature-grid > div:nth-child(1) .software-item:hover .software-icon { background: #F06292; }
+        #feature-grid > div:nth-child(1) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(1) .software-item:hover h5,
+        #feature-grid > div:nth-child(1) .software-item:hover p { color: #3D3D3D; }
+
+        #feature-grid > div:nth-child(2) .software-item:hover { background: rgba(251,140,0,.14); }
+        #feature-grid > div:nth-child(2) .software-item:hover .software-icon { background: #FB8C00; }
+        #feature-grid > div:nth-child(2) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(2) .software-item:hover h5,
+        #feature-grid > div:nth-child(2) .software-item:hover p { color: #3D3D3D; }
+
+        #feature-grid > div:nth-child(3) .software-item:hover { background: rgba(255,179,0,.16); }
+        #feature-grid > div:nth-child(3) .software-item:hover .software-icon { background: #FFB300; }
+        #feature-grid > div:nth-child(3) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(3) .software-item:hover h5,
+        #feature-grid > div:nth-child(3) .software-item:hover p { color: #3D3D3D; }
+
+        #feature-grid > div:nth-child(4) .software-item:hover { background: rgba(192,202,51,.18); }
+        #feature-grid > div:nth-child(4) .software-item:hover .software-icon { background: #C0CA33; }
+        #feature-grid > div:nth-child(4) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(4) .software-item:hover h5,
+        #feature-grid > div:nth-child(4) .software-item:hover p { color: #3D3D3D; }
+
+        #feature-grid > div:nth-child(5) .software-item:hover { background: rgba(67,160,71,.14); }
+        #feature-grid > div:nth-child(5) .software-item:hover .software-icon { background: #43A047; }
+        #feature-grid > div:nth-child(5) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(5) .software-item:hover h5,
+        #feature-grid > div:nth-child(5) .software-item:hover p { color: #3D3D3D; }
+
+        #feature-grid > div:nth-child(6) .software-item:hover { background: rgba(191,110,78,.14); }
+        #feature-grid > div:nth-child(6) .software-item:hover .software-icon { background: #BF6E4E; }
+        #feature-grid > div:nth-child(6) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(6) .software-item:hover h5,
+        #feature-grid > div:nth-child(6) .software-item:hover p { color: #3D3D3D; }
+
+        #feature-grid > div:nth-child(7) .software-item:hover { background: rgba(142,36,170,.12); }
+        #feature-grid > div:nth-child(7) .software-item:hover .software-icon { background: #8E24AA; }
+        #feature-grid > div:nth-child(7) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(7) .software-item:hover h5,
+        #feature-grid > div:nth-child(7) .software-item:hover p { color: #3D3D3D; }
+
+        #feature-grid > div:nth-child(8) .software-item:hover { background: rgba(216,27,96,.12); }
+        #feature-grid > div:nth-child(8) .software-item:hover .software-icon { background: #D81B60; }
+        #feature-grid > div:nth-child(8) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(8) .software-item:hover h5,
+        #feature-grid > div:nth-child(8) .software-item:hover p { color: #3D3D3D; }
+
+        #feature-grid > div:nth-child(9) .software-item:hover { background: rgba(141,110,99,.14); }
+        #feature-grid > div:nth-child(9) .software-item:hover .software-icon { background: #8D6E63; }
+        #feature-grid > div:nth-child(9) .software-item:hover .software-icon i { color: #fff !important; }
+        #feature-grid > div:nth-child(9) .software-item:hover h5,
+        #feature-grid > div:nth-child(9) .software-item:hover p { color: #3D3D3D; }
+
+        /* Consistent darker-blue hover for the OS download cards (same color for all three) */
+        #download-grid .software-item:hover { background: #5C8FE0; }
+        #download-grid .software-item:hover i { color: #fff; }
+
+        .copy-btn { cursor: pointer; }
+        .copy-btn.copied { background-color: #43A047 !important; border-color: #43A047 !important; color: #fff !important; }
+
+        /* Comparison matrix color coding */
+        .cell-good { background-color: #E8F5E9 !important; color: #2E7D32; }
+        .cell-mid { background-color: #EEEEEE !important; color: #5F5F5F; }
+        .cell-bad { background-color: #FDECEA !important; color: #B71C1C; }
+        .cell-best { background-color: #C8ECD1 !important; color: #1B5E20 !important; font-weight: 600; }
+        .col-best-header { border-bottom: 3px solid #2E7D32; }
+        .legend-swatch {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a href="index.html" class="navbar-brand">
+                    <h4 class="text-dark">SOFTWARE<span class="text-primary">by</span>DaW</h4>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="why.html" class="nav-item nav-link">Why</a>
+                        <a href="software.html" class="nav-item nav-link">Software</a>
+                        <a href="developer.html" class="nav-item nav-link">The Developer</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Banner Start -->
+    <div class="container-fluid pt-5 site-header mb-5">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5 pb-4">
+                <div class="col-lg-7 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-dark mb-4 animated slideInRight">"Will the money last?"</h1>
+                    <p class="text-dark mb-2 animated slideInRight" style="font-size: 1.15rem;">
+                        A retirement planner built to rival paid industry leaders — Social Security
+                        optimization, Roth conversion strategy, full federal/state/local tax modeling,
+                        and estate planning — free and open source.
+                    </p>
+                    <p class="text-muted mb-4 animated slideInRight">
+                        <i class="bi bi-shield-lock me-2"></i>All data stays on your device. No accounts,
+                        no cloud sync, no telemetry, no subscription — ever.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2">
+                        <a href="#download" class="btn btn-primary rounded-pill px-4 py-2">
+                            Download free<i class="px-2 fas fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 align-self-center text-center">
+                    <svg viewBox="0 0 400 300" width="100%" style="max-width:380px;" aria-hidden="true">
+                        <line x1="20" y1="260" x2="380" y2="260" stroke="rgba(20,24,62,.2)" stroke-width="2" />
+                        <line x1="20" y1="260" x2="20" y2="20" stroke="rgba(20,24,62,.2)" stroke-width="2" />
+                        <polyline points="20,235 80,215 140,175 200,185 260,120 320,85 375,35" fill="none"
+                            stroke="#0d6efd" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="80" cy="215" r="5" fill="#0d6efd" />
+                        <circle cx="200" cy="185" r="5" fill="#0d6efd" />
+                        <circle cx="320" cy="85" r="5" fill="#0d6efd" />
+                        <circle cx="375" cy="35" r="7" fill="#0d6efd" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Why it exists Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Why this exists</h3>
+                    <div class="bg-light rounded p-5 border-start border-primary border-4">
+                        <i class="fas fa-quote-left text-primary mb-3" style="font-size: 1.75rem;"></i>
+                        <p class="mb-0 fs-5 fst-italic">
+                            "I wanted to see every formula behind the answer, not just trust a
+                            number a piece of software handed me."
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="mb-3 fs-5">
+                        What began as one engineer's personal spreadsheet has grown into a planning
+                        tool built to rival the best paid advisory software on the market.
+                    </p>
+                    <p class="mb-0">
+                        Free. Open source. Yours to keep &mdash; no account, no subscription, no catch.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why it exists End -->
+
+    <!-- Features Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <h2 class="mb-3">What it does</h2>
+                <p>A working list, not a wish list — every item below is real and shipping today.</p>
+            </div>
+            <div class="row g-4" id="feature-grid">
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="bi bi-eye" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">See the actual calculation</h5>
+                        <p class="mb-0">The Engine Viewer shows the real intermediate values behind
+                            every number — RMD divisors, tax-bracket math, IRMAA tier assignment. Not a
+                            black box.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="bi bi-people" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">Social Security optimizer</h5>
+                        <p class="mb-0">Scores every claim-age combination for a household — a 9×9 grid
+                            including the spousal top-up — and ranks the best lifetime strategy.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="bi bi-arrow-repeat" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">Roth conversion planner</h5>
+                        <p class="mb-0">Eight ranked conversion strategies with tax-bracket and IRMAA
+                            impact previewed before you commit to a ladder.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="bi bi-graph-up" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">Tax-aware Monte Carlo</h5>
+                        <p class="mb-0">Every simulated path re-runs the full projection — taxes, RMDs,
+                            IRMAA — instead of just shocking a balance and freezing everything else.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="fas fa-heartbeat" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">Full tax &amp; IRMAA modeling</h5>
+                        <p class="mb-0">Federal, state, and county/city income tax, capital gains, and
+                            Medicare IRMAA surcharge projection with the real two-year lookback.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="fas fa-university" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">Estate &amp; legacy projection</h5>
+                        <p class="mb-0">Trusts, lifetime gifting, heir bequest splits, and inherited-account
+                            rules (10-year rule, EDB stretch) — plus an At-Death Checklist built from your
+                            own plan.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="bi bi-clock-history" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">Historical backtest since 1928</h5>
+                        <p class="mb-0">Replays your plan through every real historical retirement
+                            start-year, cross-validated against two independent datasets.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="fas fa-graduation-cap" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">Built-in guided training</h5>
+                        <p class="mb-0">43 interactive lessons walk you through the app screen by screen —
+                            not a video, not a PDF.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <div class="software-icon btn-square mx-auto mb-3">
+                            <i class="bi bi-shield-lock" style="font-size: 1.8rem; color:#999;"></i>
+                        </div>
+                        <h5 class="mb-3">Local-first &amp; private</h5>
+                        <p class="mb-0">No accounts, no cloud sync, no telemetry. Your plan never leaves
+                            your machine unless you export it yourself.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <button type="button" class="btn btn-primary rounded-pill px-4 py-2" data-bs-toggle="modal"
+                    data-bs-target="#feature-map-modal">
+                    <i class="bi bi-map me-2"></i>View the complete Feature Map</button>
+                <p class="text-muted mt-2 mb-0" style="font-size: 0.85rem;">
+                    This is a curated highlight list — opening this will show a comprehensive list of
+                    every feature in Retirement Planner, organized by category.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Comparison Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-4" style="max-width: 800px;">
+                <h2 class="mb-3">How it compares</h2>
+                <p>
+                    We asked an AI research assistant to independently study the public marketing pages
+                    of four established retirement-planning products and compare what they offer against
+                    Retirement Planner. This isn't vendor copy — it's an outside analysis with no stake in
+                    which tool you choose, built from what each company publishes about itself.
+                </p>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="text-start">Capability</th>
+                            <th>Empower</th>
+                            <th>Boldin</th>
+                            <th>ProjectionLab</th>
+                            <th>MaxiFi</th>
+                            <th class="col-best-header"><i class="bi bi-star-fill me-1"
+                                    style="color:#FFD700;"></i>Retirement&nbsp;Planner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-start">Monte Carlo simulation</td>
+                            <td class="cell-good">Free tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-good">Free tier</td>
+                            <td class="cell-mid">Paid, "Living Standard MC"</td>
+                            <td class="cell-best">Free — tax-aware on every path</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Social Security claim-age optimization</td>
+                            <td class="cell-bad">Not on free tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-mid">Paid tier, best-in-class</td>
+                            <td class="cell-best">Free — full 9×9 household grid</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Federal + state + local tax modeling</td>
+                            <td class="cell-bad">Not on free tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-best">Free — incl. county/city</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Roth conversion planning</td>
+                            <td class="cell-bad">&mdash;</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-best">Free — 8 ranked strategies</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Estate / legacy planning</td>
+                            <td class="cell-bad">&mdash;</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-mid">Paid tier</td>
+                            <td class="cell-bad">&mdash;</td>
+                            <td class="cell-best">Free — trusts, gifting, heirs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Shows the calculation, not just the answer</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-best">Yes — Engine Viewer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Open source</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-best">Yes</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Requires linking bank/brokerage accounts</td>
+                            <td class="cell-bad">Yes (core feature)</td>
+                            <td class="cell-mid">Optional, paid tier</td>
+                            <td class="cell-good">No</td>
+                            <td class="cell-good">No (manual entry)</td>
+                            <td class="cell-best">No — nothing leaves your device</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Built-in interactive training</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-mid">Live classes (paid)</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-best">Free — guided in-app lessons, plus a Course Editor to
+                                author your own</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Scenario branching (saved, independent alternatives)</td>
+                            <td class="cell-bad">Limited/basic</td>
+                            <td class="cell-mid">Yes — scenario comparison</td>
+                            <td class="cell-mid">Yes — freeform what-if (ephemeral)</td>
+                            <td class="cell-mid">Yes — scenario compare</td>
+                            <td class="cell-best">Free — real branch files you can return to, not
+                                ephemeral</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">At-death checklist derived from your plan</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-best">Free — built from your own accounts and beneficiaries</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Week-to-week cash ledger alongside the plan</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-bad">No</td>
+                            <td class="cell-best">Free — Quick Track, reconciled against the plan</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">Cost</td>
+                            <td class="cell-mid">Free tools + AUM advisory fee</td>
+                            <td class="cell-mid">Free tier + $144/yr</td>
+                            <td class="cell-mid">Free tier + $129/yr</td>
+                            <td class="cell-bad">$109&ndash;$359/yr, no free tier</td>
+                            <td class="cell-best">$0, forever</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex flex-wrap gap-3 mb-3" style="font-size: 0.85rem;">
+                <span><span class="legend-swatch cell-good"></span> Free / good</span>
+                <span><span class="legend-swatch cell-mid"></span> Paid tier / neutral</span>
+                <span><span class="legend-swatch cell-bad"></span> Not available / drawback</span>
+                <span><span class="legend-swatch cell-best"></span> Retirement Planner</span>
+            </div>
+            <p class="text-muted" style="font-size: 0.85rem;">
+                Competitor details reflect each company's own public marketing pages as researched in
+                July 2026 and may have changed since — verify current pricing and features directly with
+                each vendor before deciding. Retirement Planner's row is verified against the current
+                app and source code. Colors reflect whether a capability is free, paid, or unavailable —
+                not an opinion of overall product quality.
+            </p>
+
+            <div class="text-center my-4">
+                <button type="button" class="btn btn-primary rounded-pill px-4 py-2" data-bs-toggle="modal"
+                    data-bs-target="#feature-map-modal">
+                    <i class="bi bi-map me-2"></i>View the complete Feature Map</button>
+                <p class="text-muted mt-2 mb-0" style="font-size: 0.85rem;">
+                    The table above is a curated comparison — opening this will show a comprehensive
+                    list of every feature in Retirement Planner, organized by category.
+                </p>
+            </div>
+
+            <div class="mt-4 p-4 bg-light rounded">
+                <h5 class="mb-3"><i class="fas fa-balance-scale me-2"></i>Said plainly: what you're trading away</h5>
+                <p class="mb-2">No product is best at everything, and pretending otherwise wouldn't be
+                    honest:</p>
+                <ul class="mb-0">
+                    <li>No bank/brokerage account syncing — this is a private, offline tool by design.</li>
+                    <li>No mobile app — desktop only, for macOS, Windows, and Linux.</li>
+                    <li>No human coaching or advisor access, unlike Boldin's paid tier.</li>
+                    <li>MaxiFi's Social Security and consumption-smoothing engines carry decades more
+                        academic refinement on similar underlying ideas.</li>
+                    <li>ProjectionLab's freeform what-if exploration is still a smoother, more polished
+                        experience for quick, unstructured scenarios.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Comparison End -->
+
+    <!-- Download Start -->
+    <div class="container-fluid bg-light py-5" id="download">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-4" style="max-width: 700px;">
+                <h2 class="mb-3">Download</h2>
+                <p id="rp-download-status">Loading the latest release from GitHub&hellip;</p>
+            </div>
+            <div class="row g-4 justify-content-center text-center" id="download-grid">
+                <div class="col-md-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <i class="fab fa-apple mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="mb-3">macOS</h5>
+                        <p class="mb-3">Universal — Apple Silicon &amp; Intel</p>
+                        <a id="rp-dl-mac" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
+                            href="https://github.com/dweilert/retirement-planner/releases/latest" target="_blank">
+                            Download .dmg</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <i class="fab fa-windows mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="mb-3">Windows</h5>
+                        <p class="mb-3">NSIS installer</p>
+                        <a id="rp-dl-win" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
+                            href="https://github.com/dweilert/retirement-planner/releases/latest" target="_blank">
+                            Download .exe</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
+                        <i class="fab fa-linux mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="mb-3">Linux</h5>
+                        <p class="mb-3">AppImage, .deb, or .rpm</p>
+                        <a id="rp-dl-linux" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
+                            href="https://github.com/dweilert/retirement-planner/releases/latest" target="_blank">
+                            Download .AppImage</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-muted mt-4" style="font-size: 0.85rem;">
+                The app isn't code-signed, so macOS and Windows will warn about an unidentified
+                developer on first launch — the app is safe, signing certificates just aren't purchased
+                for this project.
+            </p>
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-primary rounded-pill px-4" id="setup-toggle" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#setup-panel" aria-expanded="false">
+                    First-time setup instructions<i class="px-2 bi bi-chevron-down" id="setup-chevron"></i>
+                </button>
+            </div>
+
+            <div class="collapse" id="setup-panel">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-8">
+                        <div class="bg-white rounded p-4 p-md-5 border">
+
+                            <h5 class="mb-3"><i class="fab fa-apple me-2"></i>macOS: "app is damaged / can't be
+                                opened"</h5>
+                            <p class="text-muted mb-2">The build isn't code-signed or notarized, so Gatekeeper
+                                quarantines it on download.</p>
+                            <ol class="text-muted mb-3">
+                                <li>Open the downloaded <code>.dmg</code> file.</li>
+                                <li><strong>Drag the Retirement Planner icon onto the Applications folder</strong>
+                                    shown in that same window &mdash; clicking or double-clicking the icon
+                                    directly from the <code>.dmg</code> window will not work.</li>
+                                <li>Once it's been dragged into Applications, open <strong>Terminal</strong> and
+                                    paste the command below to clear the quarantine flag (one-time only):</li>
+                            </ol>
+                            <div class="d-flex align-items-center flex-wrap bg-light rounded p-3 mb-4 gap-2">
+                                <code class="flex-grow-1 text-break" id="mac-cmd" style="font-size: .85rem;">xattr
+                                    -d com.apple.quarantine "/Applications/Retirement Planner.app"</code>
+                                <button class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="mac-cmd"
+                                    type="button">Copy<i class="px-2 fas fa-copy"></i></button>
+                            </div>
+
+                            <h5 class="mb-3"><i class="fab fa-windows me-2"></i>Windows: "Windows protected your
+                                PC"</h5>
+                            <p class="text-muted mb-2">The installer isn't signed, so Microsoft Defender
+                                SmartScreen shows a warning the first time you run it.</p>
+                            <ol class="text-muted mb-4">
+                                <li>If your browser blocks the download, click the warning in the download bar
+                                    (or the browser's downloads list) and choose <strong>Keep</strong> /
+                                    <strong>Keep anyway</strong>.</li>
+                                <li>Right-click the downloaded <code>.exe</code> &rarr;
+                                    <strong>Properties</strong>, then check <strong>Unblock</strong> at the
+                                    bottom of the General tab and click <strong>OK</strong> (this only appears
+                                    if Windows flagged the file).</li>
+                                <li>Double-click the installer. When <em>"Windows protected your PC"</em>
+                                    appears, click <strong>More info</strong>, then click <strong>Run
+                                        anyway</strong>, and complete the installer.</li>
+                            </ol>
+
+                            <h5 class="mb-3"><i class="fab fa-linux me-2"></i>Linux: mark the AppImage
+                                executable</h5>
+                            <p class="text-muted">AppImages aren't executable by default. Mark it once from a
+                                terminal, then run it directly (double-click, or <code>./</code> the file):</p>
+                            <div class="d-flex align-items-center flex-wrap bg-light rounded p-3 gap-2">
+                                <code class="flex-grow-1 text-break" id="linux-cmd"
+                                    style="font-size: .85rem;">chmod +x ./Retirement.Planner_*.AppImage</code>
+                                <button class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="linux-cmd"
+                                    type="button">Copy<i class="px-2 fas fa-copy"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+                <a href="https://github.com/dweilert/retirement-planner/releases" target="_blank"
+                    class="btn btn-outline-primary rounded-pill px-4 py-2">
+                    Browse all releases<i class="px-2 fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/dweilert/retirement-planner" target="_blank"
+                    class="btn btn-outline-primary rounded-pill px-4 py-2">
+                    View source on GitHub<i class="px-2 fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Download End -->
+
+    <!-- Feedback & Bugs Start -->
+    <div class="container-fluid py-5" id="feedback">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <h2 class="mb-3">Feedback &amp; bug reports</h2>
+                <p class="text-muted">Report a problem or suggest an improvement &mdash; everything
+                    here stays on this site, no GitHub account needed.</p>
+            </div>
+
+            <div class="row justify-content-center mb-4">
+                <div class="col-auto d-flex flex-wrap gap-2 justify-content-center">
+                    <button type="button" class="btn btn-primary rounded-pill px-4" id="tab-bug">
+                        <i class="bi bi-bug me-2"></i>Report a bug</button>
+                    <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="tab-enhancement">
+                        <i class="bi bi-lightbulb me-2"></i>Suggest an enhancement</button>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <form id="feedback-form" class="bg-light rounded p-4 p-md-5">
+                        <input type="hidden" id="feedback-type" name="type" value="bug">
+                        <input type="text" name="website" id="website-hp" class="d-none" tabindex="-1"
+                            autocomplete="off">
+
+                        <div class="mb-4" id="bug-report-field">
+                            <label for="appBugReport" class="form-label fw-bold">Paste your bug report</label>
+                            <p class="text-muted small mb-2">In the app, click <strong>"Copy bug
+                                    report"</strong> in the sidebar, then paste it below.</p>
+                            <textarea class="form-control" id="appBugReport" name="appBugReport" rows="6"
+                                placeholder="Paste the copied bug report here..."></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="description" class="form-label fw-bold" id="description-label">What
+                                happened?</label>
+                            <textarea class="form-control" id="description" name="description" rows="4" required
+                                placeholder="Describe what you were doing and what went wrong..."></textarea>
+                        </div>
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="contactName" class="form-label fw-bold">Your name</label>
+                                <input type="text" class="form-control" id="contactName" name="contactName">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contactEmail" class="form-label fw-bold">Email <span
+                                        class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="contactEmail" name="contactEmail"
+                                    required>
+                            </div>
+                        </div>
+                        <p class="text-muted small">Your email is only used to follow up on this &mdash; it's
+                            never shared or published.</p>
+
+                        <button type="submit" class="btn btn-primary rounded-pill px-4" id="submit-btn">
+                            Submit<i class="px-2 fas fa-paper-plane"></i></button>
+                        <span id="feedback-status" class="ms-3"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feedback & Bugs End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light footer pt-5" style="border-top: 1px solid rgba(20,24,62,.08);">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="mb-4">Open Source</h5>
+                    <p class="text-muted">All source code here is free and open.</p>
+                    <a class="btn btn-primary rounded-pill px-4" href="https://github.com/dweilert/retirement-planner"
+                        target="_blank">GitHub<i class="px-2 fab fa-github"></i></a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="mb-4">Explore</h5>
+                    <p class="mb-1"><a class="text-muted" href="software.html">Software</a></p>
+                    <p class="mb-1"><a class="text-muted" href="why.html">Why</a></p>
+                    <p class="mb-1"><a class="text-muted" href="developer.html">The Developer</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row g-5">
+                <p class="mb-0 mt-1 fa-xs text-muted">
+                    Copyright (c) 2023 David A. Weilert
+                    <br><br>
+                    Licensed under the Apache License, Version 2.0 (the "License");
+                    you may not use this file except in compliance with the License.
+                    You may obtain a copy of the License at
+                    <br><br>
+                    <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">https://www.apache.org/licenses/LICENSE-2.0</a>
+                    <br><br>
+                    Unless required by applicable law or agreed to in writing, software
+                    distributed under the License is distributed on an "AS IS" BASIS,
+                    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                    See the License for the specific language governing permissions and
+                    limitations under the License.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Feature Map Modal Start -->
+    <div class="modal fade" id="feature-map-modal" tabindex="-1" aria-labelledby="feature-map-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h5 class="modal-title" id="feature-map-modal-label">Complete Feature Map</h5>
+                        <p class="text-muted mb-0" style="font-size: 0.85rem;">Every feature in Retirement
+                            Planner, organized by category &mdash; the whole list, unfiltered.</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="feature-map-modal-body">
+                    <p class="text-muted text-center py-5">Loading the feature list&hellip;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature Map Modal End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Retirement Planner: pull latest release from GitHub -->
+    <script src="js/retirement-planner-download.js"></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/copy-clipboard.js"></script>
+
+    <script>
+        (function () {
+            var modalEl = document.getElementById("feature-map-modal");
+            var bodyEl = document.getElementById("feature-map-modal-body");
+            var loaded = false;
+            modalEl.addEventListener("shown.bs.modal", function () {
+                if (loaded) return;
+                loaded = true;
+                fetch("feature-map-content.html")
+                    .then(function (res) { return res.text(); })
+                    .then(function (html) { bodyEl.innerHTML = html; })
+                    .catch(function () {
+                        loaded = false;
+                        bodyEl.innerHTML = '<p class="text-danger text-center py-5">Couldn\'t load the feature list right now.</p>';
+                    });
+            });
+        })();
+    </script>
+</body>
+
+</html>

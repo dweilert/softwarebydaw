@@ -1,0 +1,82 @@
+name: Deploy to Amplify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: us-east-2
+  AMPLIFY_APP_ID: d2s5q12tq2w0ac
+  AMPLIFY_BRANCH: dev1442
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::785502284517:role/softwarebydaw-github-deploy
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Zip site contents
+        run: |
+          cd src
+          zip -r -q ../site.zip . -x "*.zip"
+
+      - name: Create Amplify deployment
+        id: create
+        run: |
+          RESPONSE=$(aws amplify create-deployment \
+            --app-id "$AMPLIFY_APP_ID" \
+            --branch-name "$AMPLIFY_BRANCH")
+          echo "$RESPONSE" > deployment.json
+          JOB_ID=$(node -pe "require('./deployment.json').jobId")
+          UPLOAD_URL=$(node -pe "require('./deployment.json').zipUploadUrl")
+          echo "job_id=$JOB_ID" >> "$GITHUB_OUTPUT"
+          echo "upload_url=$UPLOAD_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Upload site archive
+        run: |
+          curl -sS -X PUT "${{ steps.create.outputs.upload_url }}" \
+            --upload-file site.zip
+
+      - name: Start deployment
+        run: |
+          aws amplify start-deployment \
+            --app-id "$AMPLIFY_APP_ID" \
+            --branch-name "$AMPLIFY_BRANCH" \
+            --job-id "${{ steps.create.outputs.job_id }}"
+
+      - name: Wait for deployment to finish
+        run: |
+          JOB_ID="${{ steps.create.outputs.job_id }}"
+          for i in $(seq 1 30); do
+            STATUS=$(aws amplify get-job \
+              --app-id "$AMPLIFY_APP_ID" \
+              --branch-name "$AMPLIFY_BRANCH" \
+              --job-id "$JOB_ID" \
+              --query 'job.summary.status' --output text)
+            echo "Status: $STATUS"
+            if [ "$STATUS" = "SUCCEED" ]; then
+              echo "Deployment succeeded."
+              exit 0
+            fi
+            if [ "$STATUS" = "FAILED" ] || [ "$STATUS" = "CANCELLED" ]; then
+              echo "Deployment failed with status $STATUS"
+              exit 1
+            fi
+            sleep 10
+          done
+          echo "Timed out waiting for deployment to finish"
+          exit 1
