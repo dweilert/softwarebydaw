@@ -543,9 +543,9 @@
                 </div>
             </div>
             <p class="text-center text-muted mt-4" style="font-size: 0.85rem;">
-                The app isn't code-signed, so macOS and Windows will warn about an unidentified
-                developer on first launch — the app is safe, signing certificates just aren't purchased
-                for this project.
+                The macOS and Windows downloads are signed, and the build refuses to publish an
+                installer whose signature does not verify — so a release either carries a valid one
+                or does not exist. Linux packages are unsigned, as Linux packages normally are.
             </p>
             <div class="text-center mb-4">
                 <button class="btn btn-outline-primary rounded-pill px-4" id="setup-toggle" type="button"
@@ -559,41 +559,28 @@
                     <div class="col-lg-8">
                         <div class="bg-white rounded p-4 p-md-5 border">
 
-                            <h5 class="mb-3"><i class="fab fa-apple me-2"></i>macOS: "app is damaged / can't be
-                                opened"</h5>
-                            <p class="text-muted mb-2">The build isn't code-signed or notarized, so Gatekeeper
-                                quarantines it on download.</p>
-                            <ol class="text-muted mb-3">
+                            <h5 class="mb-3"><i class="fab fa-apple me-2"></i>macOS: drag it to Applications</h5>
+                            <p class="text-muted mb-2">Signed with a Developer ID and notarized by Apple, with
+                                the notarization ticket stapled to the <code>.dmg</code> itself. There is no
+                                right-click, no "open anyway", and no Terminal command to run. Because the ticket
+                                travels inside the file, this works with no network connection too.</p>
+                            <ol class="text-muted mb-4">
                                 <li>Open the downloaded <code>.dmg</code> file.</li>
                                 <li><strong>Drag the Retirement Planner icon onto the Applications folder</strong>
                                     shown in that same window &mdash; clicking or double-clicking the icon
                                     directly from the <code>.dmg</code> window will not work.</li>
-                                <li>Once it's been dragged into Applications, open <strong>Terminal</strong> and
-                                    paste the command below to clear the quarantine flag (one-time only):</li>
+                                <li>Open it from Applications the normal way.</li>
                             </ol>
-                            <div class="d-flex align-items-center flex-wrap bg-light rounded p-3 mb-4 gap-2">
-                                <code class="flex-grow-1 text-break" id="mac-cmd" style="font-size: .85rem;">xattr
-                                    -d com.apple.quarantine "/Applications/Retirement Planner.app"</code>
-                                <button class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="mac-cmd"
-                                    type="button">Copy<i class="px-2 fas fa-copy"></i></button>
-                            </div>
 
-                            <h5 class="mb-3"><i class="fab fa-windows me-2"></i>Windows: "Windows protected your
-                                PC"</h5>
-                            <p class="text-muted mb-2">The installer isn't signed, so Microsoft Defender
-                                SmartScreen shows a warning the first time you run it.</p>
-                            <ol class="text-muted mb-4">
-                                <li>If your browser blocks the download, click the warning in the download bar
-                                    (or the browser's downloads list) and choose <strong>Keep</strong> /
-                                    <strong>Keep anyway</strong>.</li>
-                                <li>Right-click the downloaded <code>.exe</code> &rarr;
-                                    <strong>Properties</strong>, then check <strong>Unblock</strong> at the
-                                    bottom of the General tab and click <strong>OK</strong> (this only appears
-                                    if Windows flagged the file).</li>
-                                <li>Double-click the installer. When <em>"Windows protected your PC"</em>
-                                    appears, click <strong>More info</strong>, then click <strong>Run
-                                        anyway</strong>, and complete the installer.</li>
-                            </ol>
+                            <h5 class="mb-3"><i class="fab fa-windows me-2"></i>Windows: run the installer</h5>
+                            <p class="text-muted mb-2">Signed with a Microsoft-issued certificate, timestamped so
+                                the signature stays valid after the certificate itself expires. Double-click the
+                                installer and follow it through.</p>
+                            <p class="text-muted mb-4">Windows may still show a SmartScreen warning for a while.
+                                That is not a problem with the signature &mdash; SmartScreen weighs how many
+                                people have installed builds carrying this certificate, and a new certificate
+                                starts with none. It goes away as downloads accumulate. If you meet it, check the
+                                publisher shown reads <strong>Dave Weilert</strong>.</p>
 
                             <h5 class="mb-3"><i class="fab fa-linux me-2"></i>Linux: mark the AppImage
                                 executable</h5>
