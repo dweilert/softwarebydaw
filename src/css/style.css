@@ -341,5 +341,165 @@ h6,
 }
 
 .text-primary {
-    color: #444444 important;
+    color: #444444 !important;
+}
+
+/*** Supporting Pages Color System ***/
+.supporting-page {
+    --sbd-blue: #1363C6;
+    --sbd-coral: #F26D5B;
+    --sbd-gold: #F2B84B;
+    --sbd-green: #39A96B;
+    --sbd-plum: #7C4DFF;
+    --sbd-ink: #263044;
+    background: #fffaf3;
+}
+
+.supporting-page .site-header {
+    background-image:
+        radial-gradient(circle at 14% 18%, rgba(242,184,75,.28), transparent 30%),
+        radial-gradient(circle at 84% 20%, rgba(124,77,255,.16), transparent 28%),
+        radial-gradient(circle at 74% 84%, rgba(57,169,107,.16), transparent 28%),
+        linear-gradient(135deg, #fff6df 0%, #f2fbff 50%, #fff2f3 100%);
+}
+
+.supporting-page h1,
+.supporting-page h2,
+.supporting-page h3,
+.supporting-page h4,
+.supporting-page h5,
+.supporting-page h6,
+.supporting-page .text-dark {
+    color: var(--sbd-ink) !important;
+}
+
+.supporting-page .text-primary {
+    color: #B94134 !important;
+}
+
+.supporting-page .navbar-brand .text-primary,
+.why-page h3 .text-primary {
+    display: inline-block;
+    font-weight: 800;
+    transform: translateY(-1px);
+    text-shadow: 0 2px 10px rgba(0,0,0,.12);
+}
+
+.software-page .navbar-brand .text-primary {
+    color: #00A85A !important;
+}
+
+.why-page .navbar-brand .text-primary,
+.why-page h3 .text-primary {
+    color: #F08A00 !important;
+}
+
+.developer-page .navbar-brand .text-primary {
+    color: #B000E8 !important;
+}
+
+.supporting-page .btn-primary {
+    background: linear-gradient(135deg, var(--sbd-coral), #E85D9E);
+    border-color: var(--sbd-coral);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(242,109,91,.22);
+}
+
+.supporting-page .btn-primary:hover,
+.supporting-page .btn-primary:focus {
+    background: linear-gradient(135deg, #e85c49, #d94c8d);
+    border-color: #e85c49;
+    color: #ffffff;
+}
+
+.supporting-page .btn-outline-primary {
+    border-color: var(--sbd-blue);
+    color: var(--sbd-blue);
+    background: rgba(255,255,255,.9);
+}
+
+.supporting-page .btn-outline-primary:hover,
+.supporting-page .btn-outline-primary:focus {
+    background: #eaf5ff;
+    border-color: var(--sbd-blue);
+    color: var(--sbd-blue);
+}
+
+.supporting-page .sbd-band-warm {
+    background: #fff8ef !important;
+}
+
+.supporting-page .sbd-band-green {
+    background: #f3fbf7 !important;
+}
+
+.supporting-page .sbd-panel {
+    background: #ffffff;
+    border: 1px solid rgba(38,48,68,.1);
+    border-top: 5px solid var(--sbd-coral);
+    border-radius: 8px;
+    box-shadow: 0 14px 32px rgba(38,48,68,.08);
+}
+
+.supporting-page .sbd-panel-green {
+    border-top-color: var(--sbd-green);
+}
+
+.supporting-page .sbd-panel-gold {
+    border-top-color: var(--sbd-gold);
+}
+
+.supporting-page .sbd-panel-plum {
+    border-top-color: var(--sbd-plum);
+}
+
+.supporting-page .software-item {
+    border: 1px solid rgba(38,48,68,.1);
+    border-top: 5px solid var(--sbd-coral);
+    border-radius: 8px;
+    box-shadow: 0 14px 32px rgba(38,48,68,.08);
+}
+
+.supporting-page .software-item:hover {
+    background: #ffffff;
+    transform: translateY(-4px);
+    border-color: rgba(242,109,91,.28);
+}
+
+.supporting-page .software-item:hover h5,
+.supporting-page .software-item:hover p {
+    color: inherit;
+}
+
+.supporting-page .software-item a.btn {
+    color: var(--sbd-blue);
+}
+
+.supporting-page .software-item a.btn::before {
+    background: #eaf5ff;
+}
+
+.supporting-page .product-badge {
+    background: #fff1d6 !important;
+}
+
+.supporting-page .product-badge i {
+    color: #B94134 !important;
+}
+
+.supporting-page .row.g-4 > div:nth-child(2n) .software-item,
+.supporting-page .row.g-5 > div:nth-child(2n) .sbd-panel {
+    border-top-color: var(--sbd-green);
+}
+
+.supporting-page .row.g-4 > div:nth-child(2n) .product-badge {
+    background: #eaf8ef !important;
+}
+
+.supporting-page .row.g-4 > div:nth-child(2n) .product-badge i {
+    color: #24784b !important;
+}
+
+.supporting-page .row.g-4 > div:nth-child(3n) .software-item {
+    border-top-color: var(--sbd-plum);
 }
