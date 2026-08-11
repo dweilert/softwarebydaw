@@ -81,6 +81,12 @@ aws lambda invoke --function-name softwarebydaw-access-logs-puller \
   --region us-east-2 /dev/stdout
 ```
 
+Or, to look at traffic right now without deploying anything at all:
+
+```bash
+./infra/fetch-logs.sh 7
+```
+
 Then let the crawler finish (it starts automatically at the end of a
 successful pull; a minute or two), and query in Athena using the workgroup the
 stack creates.

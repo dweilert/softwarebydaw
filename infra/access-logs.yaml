@@ -39,10 +39,12 @@ Parameters:
     Description: Amplify app ID that serves the site.
   DomainName:
     Type: String
-    Default: www.softwarebydaw.com
+    Default: softwarebydaw.com
     Description: >
-      The domain to pull logs for. Must match a domain Amplify serves — the
-      apex redirects to www, so www is where the requests actually land.
+      The domain to pull logs for. Must be the domain as ASSOCIATED in
+      Amplify, which here is the apex — `www` exists as a subdomain OF it.
+      Passing www.softwarebydaw.com returns NotFoundException, which reads
+      like missing logs rather than a wrong name.
   BucketName:
     Type: String
     Default: softwarebydaw-access-logs
