@@ -1,0 +1,284 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Daily pull of Amplify Hosting access logs into S3, catalogued for Athena.
+  Site analytics with no tracking script, no cookies, and nothing for a visitor
+  to block — the web server's own record of what it served.
+
+# WHY THIS SHAPE
+#
+#   Amplify Hosting runs on a CloudFront distribution that lives in AWS's
+#   account, not yours, so CloudFront standard access logging cannot be turned
+#   on for it. `amplify:GenerateAccessLogs` is the supported equivalent: it
+#   returns a presigned URL to a CSV for a time range you ask for. It is a PULL,
+#   which is why this exists — something has to do the asking, on a schedule.
+#
+#   Everything here runs inside AWS. No long-lived access keys, nothing on a
+#   laptop, and no GitHub Action to keep green. Deleting the stack removes the
+#   lot except the bucket, which is retained on purpose (see below).
+#
+# WHAT AWS DOCUMENTS, and what follows from it
+#
+#   - Amplify retains access logs for an app until the app is deleted, so this
+#     is not a race against expiry. A missed day can be backfilled by invoking
+#     the function with an explicit date.
+#   - Each request is limited to a TWO WEEK range. One day per run stays well
+#     inside that and keeps a day per S3 object, which is what makes the
+#     partitioning honest.
+#   - Delivery is best-effort and can be late. A log entry may arrive after the
+#     day it belongs to, so yesterday's file is not guaranteed complete. Treat
+#     these numbers as the shape of traffic, not an audit.
+#
+# COST at this site's volume: a few cents a month. S3 storage of small CSVs,
+# one short Lambda a day, and Athena at $5/TB scanned — where the whole dataset
+# is measured in megabytes.
+
+Parameters:
+  AmplifyAppId:
+    Type: String
+    Default: d2s5q12tq2w0ac
+    Description: Amplify app ID that serves the site.
+  DomainName:
+    Type: String
+    Default: www.softwarebydaw.com
+    Description: >
+      The domain to pull logs for. Must match a domain Amplify serves — the
+      apex redirects to www, so www is where the requests actually land.
+  BucketName:
+    Type: String
+    Default: softwarebydaw-access-logs
+    Description: New S3 bucket for raw logs and Athena results. Must be globally unique.
+
+Resources:
+  # RETAINED ON DELETE, deliberately. Tearing down the pipeline should not
+  # destroy the history it collected — that is the one part here which cannot
+  # be rebuilt, because Amplify's two-week request window will eventually move
+  # past it.
+  LogsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketName: !Ref BucketName
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          # Athena rewrites its results every query and never reads them again
+          # once you have looked. Raw logs are NOT expired — they are the asset.
+          - Id: expire-athena-results
+            Status: Enabled
+            Prefix: athena-results/
+            ExpirationInDays: 14
+
+  PullerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: lambda.amazonaws.com }
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: pull-and-store
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              # Scoped to this one app rather than amplify:* — the function has
+              # no business reading any other app's traffic.
+              - Effect: Allow
+                Action: amplify:GenerateAccessLogs
+                Resource: !Sub "arn:aws:amplify:${AWS::Region}:${AWS::AccountId}:apps/${AmplifyAppId}"
+              - Effect: Allow
+                Action: s3:PutObject
+                Resource: !Sub "arn:aws:s3:::${BucketName}/raw/*"
+              # Kicks the crawler at the end of a successful pull, so the table
+              # picks up the new partition without a second schedule to age.
+              - Effect: Allow
+                Action: glue:StartCrawler
+                Resource: !Sub "arn:aws:glue:${AWS::Region}:${AWS::AccountId}:crawler/${AWS::StackName}-crawler"
+
+  PullerFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-puller"
+      Runtime: python3.12
+      Handler: index.handler
+      Role: !GetAtt PullerRole.Arn
+      Timeout: 300
+      MemorySize: 512
+      Environment:
+        Variables:
+          APP_ID: !Ref AmplifyAppId
+          DOMAIN: !Ref DomainName
+          BUCKET: !Ref BucketName
+          CRAWLER: !Sub "${AWS::StackName}-crawler"
+      Code:
+        ZipFile: |
+          """Pull one day of Amplify access logs into S3, then refresh the table.
+
+          Invoke with {"date": "2026-08-01"} to backfill a specific day; with no
+          payload it takes yesterday (UTC). Backfill is the reason the date is a
+          parameter at all — delivery is best-effort, so a day can arrive thin
+          and be worth re-pulling later.
+          """
+          import boto3, datetime, os, urllib.request
+
+          amplify = boto3.client("amplify")
+          s3 = boto3.client("s3")
+          glue = boto3.client("glue")
+
+          def handler(event, _context):
+              event = event or {}
+              if event.get("date"):
+                  day = datetime.date.fromisoformat(event["date"])
+              else:
+                  day = datetime.datetime.now(datetime.timezone.utc).date() - datetime.timedelta(days=1)
+
+              start = datetime.datetime.combine(day, datetime.time.min, datetime.timezone.utc)
+              end = start + datetime.timedelta(days=1)
+
+              resp = amplify.generate_access_logs(
+                  appId=os.environ["APP_ID"],
+                  domainName=os.environ["DOMAIN"],
+                  startTime=start,
+                  endTime=end,
+              )
+              url = resp.get("logUrl")
+              if not url:
+                  # No URL means no logs for the window. Not an error worth
+                  # retrying — a quiet day is a legitimate result.
+                  print(f"{day}: no log URL returned; nothing to store")
+                  return {"date": str(day), "bytes": 0}
+
+              with urllib.request.urlopen(url) as r:
+                  body = r.read()
+
+              # Hive-style partition, so Athena can prune by date instead of
+              # scanning every day ever collected.
+              key = f"raw/dt={day.isoformat()}/access.csv"
+              s3.put_object(Bucket=os.environ["BUCKET"], Key=key, Body=body,
+                            ContentType="text/csv")
+              print(f"{day}: wrote {len(body)} bytes to {key}")
+
+              try:
+                  glue.start_crawler(Name=os.environ["CRAWLER"])
+              except glue.exceptions.CrawlerRunningException:
+                  # Already running from an earlier invocation; it will pick this
+                  # partition up on its current pass or the next one.
+                  print("crawler already running")
+              return {"date": str(day), "bytes": len(body), "key": key}
+
+  DailySchedule:
+    Type: AWS::Scheduler::Schedule
+    Properties:
+      Name: !Sub "${AWS::StackName}-daily"
+      # 07:00 UTC — comfortably after midnight UTC in every timezone the site
+      # serves, so "yesterday" is genuinely over before it is asked for.
+      ScheduleExpression: cron(0 7 * * ? *)
+      ScheduleExpressionTimezone: UTC
+      FlexibleTimeWindow: { Mode: "OFF" }
+      Target:
+        Arn: !GetAtt PullerFunction.Arn
+        RoleArn: !GetAtt SchedulerRole.Arn
+
+  SchedulerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: scheduler.amazonaws.com }
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: invoke-puller
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: lambda:InvokeFunction
+                Resource: !GetAtt PullerFunction.Arn
+
+  LogsDatabase:
+    Type: AWS::Glue::Database
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput:
+        Name: !Sub "${AWS::StackName}_db"
+        Description: Amplify Hosting access logs for the site.
+
+  CrawlerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: glue.amazonaws.com }
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole
+      Policies:
+        - PolicyName: read-logs
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [s3:GetObject, s3:ListBucket]
+                Resource:
+                  - !Sub "arn:aws:s3:::${BucketName}"
+                  - !Sub "arn:aws:s3:::${BucketName}/raw/*"
+
+  # A CRAWLER RATHER THAN A HAND-WRITTEN TABLE, deliberately. Amplify's CSV
+  # follows CloudFront's access-log fields, and AWS's own guidance is to reuse
+  # the CloudFront table definition — but the exact header is not published in
+  # the Amplify docs, and a column list guessed from a sibling service is
+  # exactly the kind of thing that is wrong in a way nobody notices until a
+  # query returns plausible nonsense. The crawler reads the real header.
+  LogsCrawler:
+    Type: AWS::Glue::Crawler
+    Properties:
+      Name: !Sub "${AWS::StackName}-crawler"
+      Role: !GetAtt CrawlerRole.Arn
+      DatabaseName: !Ref LogsDatabase
+      Targets:
+        S3Targets:
+          - Path: !Sub "s3://${BucketName}/raw/"
+      SchemaChangePolicy:
+        UpdateBehavior: UPDATE_IN_DATABASE
+        DeleteBehavior: LOG
+
+  AthenaWorkGroup:
+    Type: AWS::Athena::WorkGroup
+    Properties:
+      Name: !Sub "${AWS::StackName}-wg"
+      State: ENABLED
+      WorkGroupConfiguration:
+        ResultConfiguration:
+          OutputLocation: !Sub "s3://${BucketName}/athena-results/"
+        EnforceWorkGroupConfiguration: true
+        PublishCloudWatchMetricsEnabled: false
+
+Outputs:
+  Bucket:
+    Value: !Ref BucketName
+  Database:
+    Value: !Ref LogsDatabase
+  WorkGroup:
+    Value: !Ref AthenaWorkGroup
+  BackfillCommand:
+    Description: Pull a specific day by hand.
+    Value: !Sub >
+      aws lambda invoke --function-name ${AWS::StackName}-puller
+      --payload '{"date":"2026-08-01"}' --cli-binary-format raw-in-base64-out
+      --region ${AWS::Region} /dev/stdout
