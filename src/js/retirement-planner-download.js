@@ -70,13 +70,12 @@
             setLink("rp-dl-win", downloads.windows);
             setLink("rp-dl-linux", downloads.linux);
 
-            // The two trust artifacts the release publishes beside the
-            // installers. Their buttons sit in the "Why trust the math"
-            // section and fall back to the download anchor if a manifest
-            // predates this field, rather than becoming dead links.
+            // The validation report link. The SBOM had a button here too until
+            // 2026-08-14; it was removed from the page because a CycloneDX
+            // JSON file is not something a visitor reads, and the manifest
+            // still carries the URL for anyone who wants it.
             var reports = data.reports || {};
             setLinkOrKeep("rp-validation-report", reports.validation);
-            setLinkOrKeep("rp-sbom", reports.sbom);
 
             // The Linux instructions quote a chmod against the real filename,
             // which is only right if we know what the file is actually called.
