@@ -20,16 +20,16 @@
     // decide whether to tell a user an update exists.
     var MANIFEST_URL = "/retirement-planner/version.json";
 
-    // Where to send someone if the manifest cannot be read at all. The GitHub
-    // releases page always exists and always has every installer on it, so a
-    // failure here degrades to "you get the files from the other place"
-    // rather than to a dead button.
-    var RELEASES_URL = "https://github.com/dweilert/retirement-planner/releases/latest";
-
+    // NO GITHUB FALLBACK ANY MORE. The releases page was the fallback until
+    // the repository went private — a page the public cannot open is worse
+    // than no link. The buttons' static hrefs now point at fixed-name
+    // installer copies the release publishes under latest/, so when the
+    // manifest cannot be read the correct behaviour is to leave the hrefs
+    // exactly as the HTML wrote them.
     function setLink(id, url) {
+        if (!url) return;
         var el = document.getElementById(id);
-        if (!el) return;
-        el.href = url || RELEASES_URL;
+        if (el) el.href = url;
     }
 
     // Unlike setLink, this leaves the element alone when there is no URL —
@@ -90,9 +90,9 @@
                 : "Browse the latest release below.");
         })
         .catch(function () {
-            // Every button already points at the GitHub release page in the
-            // HTML, so leaving them untouched is the correct failure: the
-            // visitor can still download, they just do not get the direct link.
-            setStatus("Couldn't load the latest version automatically — the links below go to the release page.");
+            // The static hrefs point at the fixed-name latest/ copies, so a
+            // visitor can still download the current release — they just do
+            // not get versioned filenames or the version line.
+            setStatus("Couldn't load the version details — the download buttons still work.");
         });
 })();
