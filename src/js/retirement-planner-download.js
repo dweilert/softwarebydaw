@@ -1,24 +1,49 @@
 (function () {
     "use strict";
 
-    var REPO = "dweilert/retirement-planner";
-    var RELEASES_URL = "https://github.com/" + REPO + "/releases/latest";
+    // WHERE THE DOWNLOAD LINKS COME FROM.
+    //
+    // This used to call the GitHub API and read the latest release's assets.
+    // That worked, but it meant the page's buttons pointed at github.com and
+    // the page depended on an unauthenticated API with a shared rate limit —
+    // a visitor behind a busy network could get a 403 and the fallback text.
+    //
+    // The release workflow in the retirement-planner repository now publishes
+    // a manifest with the version AND a direct URL per platform, so this reads
+    // one small file from our own site. Same-origin, no rate limit, and a
+    // release can rename or add an installer without this file changing.
+    //
+    // The path is served by an Amplify REWRITE that proxies it to the S3
+    // bucket the release uploads to. It is deliberately NOT a file in this
+    // repository: a copy committed here would be hand-maintained, would go
+    // stale the first time somebody forgot, and the app reads this same URL to
+    // decide whether to tell a user an update exists.
+    var MANIFEST_URL = "/retirement-planner/version.json";
 
-    function findAsset(assets, patterns) {
-        for (var p = 0; p < patterns.length; p++) {
-            for (var i = 0; i < assets.length; i++) {
-                if (patterns[p].test(assets[i].name)) {
-                    return assets[i];
-                }
-            }
-        }
-        return null;
-    }
+    // Where to send someone if the manifest cannot be read at all. The GitHub
+    // releases page always exists and always has every installer on it, so a
+    // failure here degrades to "you get the files from the other place"
+    // rather than to a dead button.
+    var RELEASES_URL = "https://github.com/dweilert/retirement-planner/releases/latest";
 
-    function setLink(id, asset, fallbackUrl) {
+    function setLink(id, url) {
         var el = document.getElementById(id);
         if (!el) return;
-        el.href = asset ? asset.browser_download_url : fallbackUrl;
+        el.href = url || RELEASES_URL;
+    }
+
+    // Unlike setLink, this leaves the element alone when there is no URL —
+    // the HTML fallback for these two is an in-page anchor, and replacing it
+    // with the GitHub release page would send a reader somewhere the site no
+    // longer points.
+    function setLinkOrKeep(id, url) {
+        if (!url) return;
+        var el = document.getElementById(id);
+        if (el) {
+            el.href = url;
+            el.setAttribute("target", "_blank");
+            el.setAttribute("rel", "noreferrer");
+        }
     }
 
     function setStatus(text) {
@@ -26,27 +51,39 @@
         if (el) el.textContent = text;
     }
 
-    fetch("https://api.github.com/repos/" + REPO + "/releases/latest")
+    function fileNameFrom(url) {
+        if (!url) return "";
+        var parts = url.split("/");
+        return parts[parts.length - 1] || "";
+    }
+
+    fetch(MANIFEST_URL, { cache: "no-cache" })
         .then(function (res) {
-            if (!res.ok) throw new Error("GitHub API returned " + res.status);
+            if (!res.ok) throw new Error("manifest returned " + res.status);
             return res.json();
         })
         .then(function (data) {
-            var version = (data.tag_name || "").replace(/^v/, "");
-            var assets = data.assets || [];
+            var version = (data.version || "").replace(/^v/, "");
+            var downloads = data.downloads || {};
 
-            var mac = findAsset(assets, [/\.dmg$/i]);
-            var win = findAsset(assets, [/-setup\.exe$/i, /\.exe$/i, /\.msi$/i]);
-            var linux = findAsset(assets, [/\.AppImage$/i, /\.deb$/i, /\.rpm$/i]);
-            var linuxAppImage = findAsset(assets, [/\.AppImage$/i]);
+            setLink("rp-dl-mac", downloads.macos);
+            setLink("rp-dl-win", downloads.windows);
+            setLink("rp-dl-linux", downloads.linux);
 
-            setLink("rp-dl-mac", mac, RELEASES_URL);
-            setLink("rp-dl-win", win, RELEASES_URL);
-            setLink("rp-dl-linux", linux, RELEASES_URL);
+            // The two trust artifacts the release publishes beside the
+            // installers. Their buttons sit in the "Why trust the math"
+            // section and fall back to the download anchor if a manifest
+            // predates this field, rather than becoming dead links.
+            var reports = data.reports || {};
+            setLinkOrKeep("rp-validation-report", reports.validation);
+            setLinkOrKeep("rp-sbom", reports.sbom);
 
+            // The Linux instructions quote a chmod against the real filename,
+            // which is only right if we know what the file is actually called.
             var linuxCmdEl = document.getElementById("linux-cmd");
-            if (linuxCmdEl && linuxAppImage) {
-                linuxCmdEl.textContent = "chmod +x ./" + linuxAppImage.name;
+            var linuxName = fileNameFrom(downloads.linux);
+            if (linuxCmdEl && /\.AppImage$/i.test(linuxName)) {
+                linuxCmdEl.textContent = "chmod +x ./" + linuxName;
             }
 
             setStatus(version
@@ -54,6 +91,9 @@
                 : "Browse the latest release below.");
         })
         .catch(function () {
-            setStatus("Couldn't load the latest release automatically — the links below go straight to GitHub.");
+            // Every button already points at the GitHub release page in the
+            // HTML, so leaving them untouched is the correct failure: the
+            // visitor can still download, they just do not get the direct link.
+            setStatus("Couldn't load the latest version automatically — the links below go to the release page.");
         });
 })();
