@@ -728,10 +728,19 @@
                              harmless when a re-record only meant fresher screenshots; it
                              stopped being harmless on 2026-08-16, when a cut was made
                              specifically to remove spoken pricing claims and the stale copy
-                             was the one still making them. BUMP THIS DATE whenever the video
-                             is re-recorded. -->
+                             was the one still making them.
+
+                             IT IS THE FILE'S OWN HASH, not a date. It was a date for
+                             exactly one day: the second re-record landed on 2026-08-16 too,
+                             so "bump the date" produced the value already there and would
+                             have shipped the new video behind the old cache entry. A hash
+                             cannot collide with the cut it replaces.
+
+                             Regenerate with:
+                               md5 -q src/media/retirement-planner-overview.mp4 | cut -c1-10
+                          -->
                         <video controls preload="metadata" playsinline
-                            src="media/retirement-planner-overview.mp4?v=2026-08-16">
+                            src="media/retirement-planner-overview.mp4?v=fb68d366f9">
                             Your browser does not support embedded video. Download the overview video from the Retirement Planner release page.
                         </video>
                     </div>
