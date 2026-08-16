@@ -3,239 +3,31 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Software - SoftwareByDaW</title>
+    <title>Moved to Retirement Planner | SoftwareByDaW</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="retirement planner, VpK, Kubernetes visualization, developer tools" name="keywords">
-    <meta content="Software by Dave Weilert: Retirement Planner, plus the open-source VpK, dataloader, and datapull." name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css?v=22" rel="stylesheet">
-
-    <style>
-        .product-badge.small {
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url=index.html">
+    <link rel="canonical" href="index.html">
+    <script>
+        window.location.replace("index.html");
+    </script>
 </head>
 
-<body class="supporting-page software-page">
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
+<!--
+    A REDIRECT STUB, NOT A DELETED PAGE, 2026-08-16. The site narrowed to
+    Retirement Planner alone and this page's content went with the change.
 
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a href="index.html" class="navbar-brand">
-                    <h4 class="text-dark">SOFTWARE<span class="text-primary">by</span>DaW</h4>
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="why.html" class="nav-item nav-link">Why</a>
-                        <a href="software.html" class="nav-item nav-link active">Software</a>
-                        <a href="developer.html" class="nav-item nav-link">The Developer</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
+    It is a stub rather than nothing because this repository already had the
+    pattern: retirement-planner.html has been a stub since that page became the
+    home page. A removed URL that 404s costs whatever inbound links, bookmarks
+    and search results it had accumulated, and those cost nothing to keep.
 
-    <!-- Banner Start -->
-    <div class="container-fluid pt-5 site-header mb-5">
-        <div class="container pt-5">
-            <div class="row g-5 pt-5 pb-4">
-                <div class="col-12 text-center">
-                    <h1 class="display-4 text-dark mb-3 animated slideInRight">SoftwareByDaW Projects</h1>
-                    <p class="text-muted">This deeper directory collects the software projects available
-                        from Dave Weilert. Retirement Planner is the main public product; VpK and the
-                        command-line utilities remain available for technical users.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Banner End -->
+    noindex so search engines drop the old page rather than keep serving a
+    redirect to a page whose content no longer matches the old title.
+-->
 
-    <!-- Product: Retirement Planner Start -->
-    <div class="container-fluid py-5 sbd-band-warm" id="retirement-planner">
-        <div class="container py-4">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-4 text-center">
-                    <img src="img/retirement-planner.png" style="width:160px;height:160px;">
-                </div>
-                <div class="col-lg-8">
-                    <span class="text-primary fw-bold text-uppercase" style="letter-spacing:.05em;">01 &mdash; Flagship project</span>
-                    <h2 class="mb-3 mt-1">Retirement Planner</h2>
-                    <p class="mb-4">
-                        A private retirement planner that helps you test whether you can retire,
-                        compare what-if choices, and keep your plan on your own device. No account
-                        linking, no cloud sync, no telemetry.
-                    </p>
-                    <a class="btn btn-primary rounded-pill px-4" href="index.html">
-                        Learn more<i class="px-2 fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Product: Retirement Planner End -->
-
-    <!-- Product: VpK Start -->
-    <div class="container-fluid py-5 sbd-band-green" id="vpk">
-        <div class="container py-4">
-            <div class="row g-5 align-items-center flex-row-reverse">
-                <div class="col-lg-4 text-center">
-                    <img src="img/vpk-icon.png" style="width:160px;height:160px;">
-                </div>
-                <div class="col-lg-8">
-                    <span class="text-primary fw-bold text-uppercase" style="letter-spacing:.05em;">02 &mdash; Flagship project</span>
-                    <h2 class="mb-3 mt-1">VpK</h2>
-                    <p class="mb-4">
-                        Visually presented Kubernetes (VpK) turns a live cluster's tangle of resources
-                        into an interactive diagram &mdash; see what's deployed and how it's wired
-                        together, without memorizing <code>kubectl</code> output. Open source, built for
-                        anyone who has ever lost time hunting through YAML to understand what's actually
-                        running.
-                    </p>
-                    <a class="btn btn-primary rounded-pill px-4" href="https://k8svisual.github.io/vpk-docs/"
-                        target="_blank">
-                        Open site<i class="px-2 fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Product: VpK End -->
-
-    <!-- CLI Tools Start -->
-    <div class="container-fluid py-5 sbd-band-warm" id="cli-tools">
-        <div class="container py-4">
-            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-                <span class="text-primary fw-bold text-uppercase" style="letter-spacing:.05em;">03 &amp; 04 &mdash; Developer utilities</span>
-                <h2 class="mb-3 mt-1">dataloader &amp; datapull</h2>
-                <p class="text-muted">A small paired set of command-line tools for moving data in and
-                    out of Apache CouchDB or IBM Cloudant.</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-5">
-                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
-                        <div class="product-badge small rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="background-color: rgba(19,99,198,.1);">
-                            <i class="bi bi-cloud-upload" style="font-size: 2.5rem; color:#0d6efd;"></i>
-                        </div>
-                        <h5 class="mb-3">dataloader</h5>
-                        <p class="mb-3">Loads delimited data files straight into Apache CouchDB or IBM
-                            Cloudant. Point it at a file, and your documents are in the database.</p>
-                        <a class="btn px-3 mt-auto mx-auto" href="https://github.com/daveweilert/dataloader"
-                            target="_blank">
-                            View on GitHub<i class="px-2 fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <div class="software-item h-100 d-flex flex-column text-center rounded p-4">
-                        <div class="product-badge small rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="background-color: rgba(19,99,198,.1);">
-                            <i class="bi bi-cloud-download" style="font-size: 2.5rem; color:#0d6efd;"></i>
-                        </div>
-                        <h5 class="mb-3">datapull</h5>
-                        <p class="mb-3">Pulls data back out of Apache CouchDB or IBM Cloudant and writes
-                            it to a delimited file &mdash; the companion to dataloader, for extracting or
-                            migrating what's already there.</p>
-                        <a class="btn px-3 mt-auto mx-auto" href="https://github.com/daveweilert/datapull"
-                            target="_blank">
-                            View on GitHub<i class="px-2 fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CLI Tools End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-light footer pt-5" style="border-top: 1px solid rgba(20,24,62,.08);">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3">
-                    <h5 class="mb-4">License</h5>
-                    <p class="text-muted">Retirement Planner is commercial software, licensed by
-                        annual subscription. There is no free tier.</p>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <h5 class="mb-4">Explore</h5>
-                    <p class="mb-1"><a class="text-muted" href="index.html">Retirement Planner</a></p>
-                    <p class="mb-1"><a class="text-muted" href="why.html">Why</a></p>
-                    <p class="mb-1"><a class="text-muted" href="developer.html">The Developer</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row g-5">
-                <p class="mb-0 mt-1 fa-xs text-muted">
-                    Copyright (c) 2017&ndash;2026 David A. Weilert. All rights reserved.
-                    Copyright remains with the author; UIK Properties licenses and distributes
-                    the software under authority from him.
-                    <br><br>
-                    Retirement Planner is commercial software, licensed and not sold, under the
-                    Retirement Planner End User License Agreement. It is licensed by annual
-                    subscription: personal use covers one household on up to three devices, and
-                    business and adviser use is licensed per named seat. There is no free tier.
-                    The full agreement ships with the application and is readable inside it on the
-                    License screen.
-                    <br><br>
-                    Copies distributed before 16 August 2026 were released under the PolyForm
-                    Noncommercial License 1.0.0 and remain under it &mdash; the change of licence
-                    governs the versions released under it and does not withdraw rights anyone
-                    already received.
-                    <br><br>
-                    As far as the law allows, the software is provided as is and as available,
-                    without warranty of any kind. It is a modelling tool and is not financial, tax
-                    or legal advice. Governed by the laws of the State of Texas.
-                    <br><br>
-                    Other projects on this site carry their own licenses.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-
-    <!-- Javascript -->
-    <script src="js/main.js"></script>
+<body>
+    <p>This site is now about Retirement Planner. <a href="index.html">Continue</a>.</p>
 </body>
 
 </html>

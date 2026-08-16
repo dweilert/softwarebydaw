@@ -31,6 +31,20 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+        /* SCROLL MARGIN FOR THE ANCHOR NAV, added 2026-08-16 with it.
+           The navbar is `sticky-top`, so an anchor jump puts the section's top
+           edge at viewport 0 and the navbar then covers it — measured at 75px
+           of the heading gone. Every in-page nav target needs to stop clear of
+           it. 96px is the nav's height plus breathing room, so the heading
+           lands just below the bar rather than touching it. */
+        #overview,
+        #feature-grid,
+        #trust,
+        #compare,
+        #download {
+            scroll-margin-top: 96px;
+        }
+
         .copy-btn { cursor: pointer; }
         .copy-btn.copied { background-color: #43A047 !important; border-color: #43A047 !important; color: #fff !important; }
 
@@ -559,12 +573,29 @@
                     data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- SECTION LINKS, NOT PAGES, since 2026-08-16. This was a
+                     multi-product catalogue with Why / Software / The Developer
+                     as siblings of this page. It is now one product's site, so
+                     the nav points at this page's own sections instead.
+
+                     ORDER FOLLOWS THE PAGE, deliberately — overview, what it
+                     does, why trust it, compare, download, which is the order
+                     the sections physically appear in. A nav whose order
+                     disagrees with the scroll order makes a long page feel like
+                     a maze. This was written the wrong way round on the first
+                     attempt (compare before trust) and caught by measuring the
+                     sections' real offsets rather than trusting the reading.
+
+                     Download is last and is the button, because it is the one
+                     thing a visitor came here to do. -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="why.html" class="nav-item nav-link">Why</a>
-                        <a href="software.html" class="nav-item nav-link">Software</a>
-                        <a href="developer.html" class="nav-item nav-link">The Developer</a>
+                    <div class="navbar-nav ms-auto align-items-lg-center">
+                        <a href="#overview" class="nav-item nav-link">Overview</a>
+                        <a href="#feature-grid" class="nav-item nav-link">What it does</a>
+                        <a href="#trust" class="nav-item nav-link">Why trust it</a>
+                        <a href="#compare" class="nav-item nav-link">Compare</a>
+                        <a href="#download"
+                            class="btn btn-primary rounded-pill px-4 py-2 ms-lg-3 my-2 my-lg-0">Download</a>
                     </div>
                 </div>
             </nav>
@@ -1668,10 +1699,12 @@
                         annual subscription. There is no free tier.</p>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <h5 class="mb-4">Explore</h5>
-                    <p class="mb-1"><a class="text-muted" href="software.html">Software</a></p>
-                    <p class="mb-1"><a class="text-muted" href="why.html">Why</a></p>
-                    <p class="mb-1"><a class="text-muted" href="developer.html">The Developer</a></p>
+                    <h5 class="mb-4">On this page</h5>
+                    <p class="mb-1"><a class="text-muted" href="#overview">Overview video</a></p>
+                    <p class="mb-1"><a class="text-muted" href="#feature-grid">What it does</a></p>
+                    <p class="mb-1"><a class="text-muted" href="#trust">Why trust the numbers</a></p>
+                    <p class="mb-1"><a class="text-muted" href="#compare">How it compares</a></p>
+                    <p class="mb-1"><a class="text-muted" href="#download">Download</a></p>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h5 class="mb-4">Help improve it</h5>
