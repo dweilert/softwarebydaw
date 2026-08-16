@@ -1101,6 +1101,89 @@
                         background: rgba(255,255,255,.86);
                         box-shadow: 0 12px 30px rgba(21,32,50,.08);
                     }
+                    #rp-feature-comparison .standouts {
+                        margin-top: 22px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 14px;
+                    }
+                    #rp-feature-comparison .standout {
+                        position: relative;
+                        overflow: hidden;
+                        min-height: 156px;
+                        border-radius: 16px;
+                        padding: 18px;
+                        color: #fff;
+                        box-shadow: 0 16px 34px rgba(21,32,50,.14);
+                    }
+                    #rp-feature-comparison .standout::after {
+                        content: "";
+                        position: absolute;
+                        right: -38px;
+                        bottom: -42px;
+                        width: 140px;
+                        height: 140px;
+                        border-radius: 50%;
+                        background: rgba(255,255,255,.18);
+                    }
+                    #rp-feature-comparison .standout small {
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        font-weight: 900;
+                        letter-spacing: .07em;
+                        text-transform: uppercase;
+                        opacity: .88;
+                    }
+                    /* h3 on the page where the source document used h2 — same
+                       reason the headline dropped a level: these cards sit under
+                       the section heading, and jumping back up to h2 inside it
+                       breaks the outline for anyone navigating by heading. */
+                    #rp-feature-comparison .standout h3 {
+                        margin: 0;
+                        font-size: 23px;
+                        line-height: 1.05;
+                        letter-spacing: 0;
+                        color: #ffffff;
+                        font-family: inherit;
+                        font-weight: 700;
+                    }
+                    #rp-feature-comparison .standout p {
+                        position: relative;
+                        z-index: 1;
+                        margin: 12px 0 0;
+                        max-width: 460px;
+                        font-size: 14px;
+                        line-height: 1.38;
+                        opacity: .94;
+                    }
+                    #rp-feature-comparison .feature-bands {
+                        margin-top: 16px;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 10px;
+                    }
+                    #rp-feature-comparison .feature-band {
+                        background: rgba(255,255,255,.86);
+                        border: 1px solid rgba(21,32,50,.12);
+                        border-left: 6px solid var(--accent);
+                        border-radius: 12px;
+                        padding: 14px;
+                        box-shadow: 0 10px 24px rgba(21,32,50,.07);
+                    }
+                    #rp-feature-comparison .feature-band h3 {
+                        margin: 0 0 8px;
+                        font-size: 15px;
+                        color: #202c3d;
+                        font-family: inherit;
+                        font-weight: 700;
+                    }
+                    #rp-feature-comparison .feature-band p {
+                        margin: 0;
+                        color: #5f6b7d;
+                        font-size: 12.5px;
+                        line-height: 1.36;
+                    }
                     #rp-feature-comparison table {
                         width: 100%;
                         min-width: 980px;
@@ -1207,6 +1290,8 @@
                     @media (max-width: 860px) {
                         #rp-feature-comparison { padding: 18px; }
                         #rp-feature-comparison .top,
+                        #rp-feature-comparison .standouts,
+                        #rp-feature-comparison .feature-bands,
                         #rp-feature-comparison .callout-row { grid-template-columns: 1fr; }
                         #rp-feature-comparison .lanes { grid-template-columns: repeat(2, 1fr); }
                     }
@@ -1232,6 +1317,38 @@
                             <li><span class="dot"></span><span><b>Calculation maintenance:</b> the tax, Medicare, and Social Security numbers are reviewed, checked, and re-tested before updates go out.</span></li>
                         </ul>
                     </aside>
+                </section>
+
+                <section class="standouts" aria-label="Retirement Planner standout features">
+                    <div class="standout" style="background:linear-gradient(135deg,#7c4dff,#1363c6)">
+                        <small>Standout feature</small>
+                        <h3>FlowThru linked estate plans</h3>
+                        <p>Retirement Planner can turn an estate plan into linked successor plans for heirs, so the conversation does not stop at &ldquo;what is left?&rdquo; It can continue into what that inheritance means for each person receiving it.</p>
+                    </div>
+                    <div class="standout" style="background:linear-gradient(135deg,#20a464,#15ace1)">
+                        <small>Standout feature</small>
+                        <h3>Affordable Spending from two lenses</h3>
+                        <p>Retirement Planner combines consumption smoothing with guardrails: one side solves a sustainable living standard, the other tests how spending can adapt. Together they produce an Affordable Spending view instead of a single brittle number.</p>
+                    </div>
+                </section>
+
+                <section class="feature-bands" aria-label="Retirement Planner strategy and what-if depth">
+                    <div class="feature-band" style="--accent:#1363c6">
+                        <h3>What-If stress lab</h3>
+                        <p>Market history, Monte Carlo, longevity, early retirement, income shock, high inflation, Social Security cuts, survivor IRMAA, relocation, and affordability checks.</p>
+                    </div>
+                    <div class="feature-band" style="--accent:#20a464">
+                        <h3>Decision tools</h3>
+                        <p>Roth, withdrawal order, claim age, contributions, retirement timing, pension vs. lump sum, debt vs. invest, insurance surrender, and asset sales.</p>
+                    </div>
+                    <div class="feature-band" style="--accent:#f2b84b">
+                        <h3>Joint optimizers</h3>
+                        <p>Retirement Planner does not only test one knob at a time: it can cross Social Security with Roth conversions, and Roth conversions with withdrawal order.</p>
+                    </div>
+                    <div class="feature-band" style="--accent:#7c4dff">
+                        <h3>Household risk</h3>
+                        <p>Survivor protection, lifetime income floor, long-term care exposure, estate flow, and at-death actions are connected to the actual plan.</p>
+                    </div>
                 </section>
 
                 <section class="matrix-wrap" aria-label="Feature comparison matrix">
@@ -1320,6 +1437,46 @@
                                 <td><span class="strong">Strong</span></td>
                             </tr>
                             <tr>
+                                <td>Broad What-If stress suite</td>
+                                <td class="rp-col"><span class="strong">Strong</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="strong">Strong</span></td>
+                                <td><span class="yes">Yes</span></td>
+                                <td><span class="partial">Some</span></td>
+                                <td><span class="strong">Strong</span></td>
+                                <td><span class="yes">Yes</span></td>
+                            </tr>
+                            <tr>
+                                <td>Joint strategy optimizers</td>
+                                <td class="rp-col"><span class="strong">Strong</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="yes">Yes</span></td>
+                            </tr>
+                            <tr>
+                                <td>Survivor protection / insurance need solving</td>
+                                <td class="rp-col"><span class="strong">Strong</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="partial">Some</span></td>
+                                <td><span class="yes">Yes</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                            </tr>
+                            <tr>
+                                <td>Relocation / affordability stress</td>
+                                <td class="rp-col"><span class="strong">Strong</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="partial">Some</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                            </tr>
+                            <tr>
                                 <td>Living standard / guardrails</td>
                                 <td class="rp-col"><span class="strong">Strong</span></td>
                                 <td><span class="unknown">Verify</span></td>
@@ -1328,6 +1485,26 @@
                                 <td><span class="strong">Strong</span></td>
                                 <td><span class="strong">Strong</span></td>
                                 <td><span class="strong">Strong</span></td>
+                            </tr>
+                            <tr>
+                                <td>Affordable Spending: smoothing + guardrails combined</td>
+                                <td class="rp-col"><span class="strong">Strong</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                            </tr>
+                            <tr>
+                                <td>Estate FlowThru: linked plans for heirs</td>
+                                <td class="rp-col"><span class="strong">Strong</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
+                                <td><span class="unknown">Verify</span></td>
                             </tr>
                             <tr>
                                 <td>Human coaching / advisor workflow</td>
@@ -1364,7 +1541,7 @@
                     </div>
                     <div class="callout" style="background:linear-gradient(135deg,#20a464,#7c4dff)">
                         <h3>Fair statement</h3>
-                        <p>Retirement Planner is not &ldquo;better than all paid tools.&rdquo; It is the privacy-and-proof alternative.</p>
+                        <p>Retirement Planner is not &ldquo;better than every other tool.&rdquo; It is the privacy-and-proof alternative.</p>
                     </div>
                 </section>
 
