@@ -631,7 +631,7 @@
                     <div class="rp-proof-strip">
                         <div class="rp-proof-item">
                             <strong>Desktop</strong>
-                            <span>macOS, Windows, and Linux</span>
+                            <span>macOS and Windows</span>
                         </div>
                         <div class="rp-proof-item">
                             <strong>Private</strong>
@@ -1351,7 +1351,7 @@
                     <aside class="hero-card">
                         <h3>Why Retirement Planner is different</h3>
                         <ul class="proof-list">
-                            <li><span class="dot"></span><span><b>Installable app:</b> macOS, Windows, and Linux delivery path exists.</span></li>
+                            <li><span class="dot"></span><span><b>Installable app:</b> a real desktop install for macOS and Windows.</span></li>
                             <li><span class="dot"></span><span><b>Local-first:</b> plan files stay on the user's device.</span></li>
                             <li><span class="dot"></span><span><b>Guided training:</b> in-app lessons walk users through the product.</span></li>
                             <li><span class="dot"></span><span><b>Calculation maintenance:</b> the tax, Medicare, and Social Security numbers are reviewed, checked, and re-tested before updates go out.</span></li>
@@ -1609,7 +1609,7 @@
                 <p id="rp-download-status" class="text-muted small">Loading the latest version&hellip;</p>
             </div>
             <div class="row g-4 justify-content-center text-center" id="download-grid">
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <div class="rp-card text-center">
                         <i class="fab fa-apple mb-3" style="font-size: 2rem;"></i>
                         <h5 class="mb-3">macOS</h5>
@@ -1619,7 +1619,7 @@
                             Download .dmg</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <div class="rp-card text-center">
                         <i class="fab fa-windows mb-3" style="font-size: 2rem;"></i>
                         <h5 class="mb-3">Windows</h5>
@@ -1627,16 +1627,6 @@
                         <a id="rp-dl-win" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
                             href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/latest/retirement-planner-windows-setup.exe">
                             Download .exe</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="rp-card text-center">
-                        <i class="fab fa-linux mb-3" style="font-size: 2rem;"></i>
-                        <h5 class="mb-3">Linux</h5>
-                        <p class="mb-3">AppImage, .deb, or .rpm</p>
-                        <a id="rp-dl-linux" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
-                            href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/latest/retirement-planner-linux.AppImage">
-                            Download .AppImage</a>
                     </div>
                 </div>
             </div>
@@ -1653,7 +1643,7 @@
                         <div class="bg-white rounded p-4 p-md-5 border">
 
                             <div class="row g-4">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <h5 class="mb-3"><i class="fab fa-apple me-2"></i>macOS</h5>
                                     <ol class="text-muted mb-0">
                                         <li>Download the <code>.dmg</code>.</li>
@@ -1661,7 +1651,7 @@
                                         <li>Open it from Applications.</li>
                                     </ol>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <h5 class="mb-3"><i class="fab fa-windows me-2"></i>Windows</h5>
                                     <ol class="text-muted mb-0">
                                         <li>Download the <code>.exe</code> installer.</li>
@@ -1669,30 +1659,11 @@
                                         <li>Follow the installer prompts.</li>
                                     </ol>
                                 </div>
-                                <div class="col-md-4">
-                                    <h5 class="mb-3"><i class="fab fa-linux me-2"></i>Linux</h5>
-                                    <ol class="text-muted mb-3">
-                                        <li>Download the AppImage, <code>.deb</code>, or <code>.rpm</code>.</li>
-                                        <li>For AppImage, make it executable once.</li>
-                                        <li>Open the app.</li>
-                                    </ol>
-                                    <div class="d-flex align-items-center flex-wrap bg-light rounded p-2 gap-2">
-                                        <code class="flex-grow-1 text-break" id="linux-cmd"
-                                            style="font-size: .8rem;">chmod +x ./Retirement.Planner_*.AppImage</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="linux-cmd"
-                                            type="button">Copy<i class="px-2 fas fa-copy"></i></button>
-                                    </div>
-                                </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
-                <a href="#trust" class="btn btn-outline-primary rounded-pill px-4 py-2">
-                    How the numbers are checked<i class="px-2 fas fa-arrow-down"></i></a>
             </div>
         </div>
     </div>
@@ -1735,11 +1706,7 @@
                     business and adviser use is licensed per named seat. There is no free tier.
                     The full agreement ships with the application and is readable inside it on the
                     License screen.
-                    <br><br>
-                    Copies distributed before 16 August 2026 were released under the PolyForm
-                    Noncommercial License 1.0.0 and remain under it &mdash; the change of licence
-                    governs the versions released under it and does not withdraw rights anyone
-                    already received.
+
                     <br><br>
                     As far as the law allows, the software is provided as is and as available,
                     without warranty of any kind. It is a modelling tool and is not financial, tax
@@ -1764,7 +1731,7 @@
     <!-- Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- Retirement Planner: pull latest release from GitHub -->
+    <!-- Retirement Planner: resolve the current release from the download manifest -->
     <script src="js/retirement-planner-download.js"></script>
     <script src="js/copy-clipboard.js"></script>
 </body>
