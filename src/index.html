@@ -690,8 +690,17 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="rp-video-wrap">
+                        <!-- The ?v= is a cache buster, and it is load-bearing rather than
+                             decorative. The file name never changes between cuts, so a
+                             returning visitor's browser and the CDN in front of this site
+                             will both keep serving the cut they already have. That was
+                             harmless when a re-record only meant fresher screenshots; it
+                             stopped being harmless on 2026-08-16, when a cut was made
+                             specifically to remove spoken pricing claims and the stale copy
+                             was the one still making them. BUMP THIS DATE whenever the video
+                             is re-recorded. -->
                         <video controls preload="metadata" playsinline
-                            src="media/retirement-planner-overview.mp4">
+                            src="media/retirement-planner-overview.mp4?v=2026-08-16">
                             Your browser does not support embedded video. Download the overview video from the Retirement Planner release page.
                         </video>
                     </div>
