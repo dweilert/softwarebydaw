@@ -1922,9 +1922,112 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row justify-content-center mt-2">
+                <div class="col-lg-8">
+                    <div class="rp-card text-center">
+                        <h5 class="mb-2">Are you an agency or advisory practice?</h5>
+                        <p class="text-muted mb-3">The Agency edition adds the practice layer &mdash; client
+                            catalog, branded client reports, presentation snapshots, the Practice Worklist and
+                            Pro-Active monitoring, FlowThru retention and your own custom training. Ask for an
+                            evaluation and we will get in touch.</p>
+                        <button type="button" class="btn btn-primary rounded-pill px-4"
+                            data-bs-toggle="modal" data-bs-target="#agencyRequestModal">
+                            Request the Agency edition for review<i class="px-2 fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Download End -->
+
+    <!-- Agency request modal Start -->
+    <div class="modal fade" id="agencyRequestModal" tabindex="-1" aria-labelledby="agencyRequestLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="agencyRequestLabel">Request the Agency edition for review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="agency-request-form" novalidate>
+                    <div class="modal-body">
+                        <div id="agency-fields">
+                            <p class="text-muted small">Tell us who you are and we will be in touch about an
+                                evaluation. Only the first three are required.</p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="agency-firm">Firm or agency name *</label>
+                                    <input type="text" class="form-control" id="agency-firm" required
+                                        autocomplete="organization" maxlength="200">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="agency-contact">Your name *</label>
+                                    <input type="text" class="form-control" id="agency-contact" required
+                                        autocomplete="name" maxlength="200">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="agency-email">Email *</label>
+                                    <input type="email" class="form-control" id="agency-email" required
+                                        autocomplete="email" maxlength="200">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="agency-phone">Phone</label>
+                                    <input type="tel" class="form-control" id="agency-phone"
+                                        autocomplete="tel" maxlength="60">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="agency-role">Your role</label>
+                                    <input type="text" class="form-control" id="agency-role"
+                                        placeholder="Principal, advisor, operations&hellip;" maxlength="120">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="agency-advisors">Advisors in the practice</label>
+                                    <input type="text" class="form-control" id="agency-advisors"
+                                        placeholder="1, 2&ndash;5, 6&ndash;20, 20+" maxlength="40">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="agency-website">Firm website</label>
+                                    <input type="text" class="form-control" id="agency-website"
+                                        autocomplete="url" maxlength="300">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="agency-notes">What are you hoping it will
+                                        do for you?</label>
+                                    <textarea class="form-control" id="agency-notes" rows="3"
+                                        maxlength="4000"></textarea>
+                                </div>
+                            </div>
+                            <p class="text-muted small mt-3 mb-0">What you send here is stored so we can reply to
+                                you, and is not shared, sold or added to any mailing list.</p>
+                            <!-- Honeypot: hidden from people, filled by bots. Named `hp` and not
+                                 `website`, because this form has a real website field. -->
+                            <div class="d-none" aria-hidden="true">
+                                <label for="agency-hp">Leave this empty</label>
+                                <input type="text" id="agency-hp" tabindex="-1" autocomplete="off">
+                            </div>
+                        </div>
+                        <div id="agency-done" class="d-none text-center py-4">
+                            <i class="fas fa-check-circle text-success mb-3" style="font-size: 2.5rem;"></i>
+                            <h5 class="mb-2">Thank you &mdash; that has been sent.</h5>
+                            <p class="text-muted mb-0">We will be in touch at the address you gave us.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between align-items-center">
+                        <p id="agency-status" class="small mb-0"></p>
+                        <div>
+                            <button type="button" class="btn btn-outline-secondary rounded-pill px-4"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="submit" id="agency-submit"
+                                class="btn btn-primary rounded-pill px-4">Send request</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Agency request modal End -->
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-light footer pt-5" style="border-top: 1px solid rgba(20,24,62,.08);">
@@ -1990,6 +2093,7 @@
 
     <!-- Retirement Planner: resolve the current release from the download manifest -->
     <script src="js/retirement-planner-download.js"></script>
+    <script src="js/agency-request.js"></script>
     <script src="js/copy-clipboard.js"></script>
 </body>
 
