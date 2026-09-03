@@ -51,12 +51,6 @@
         if (el) el.textContent = text;
     }
 
-    function fileNameFrom(url) {
-        if (!url) return "";
-        var parts = url.split("/");
-        return parts[parts.length - 1] || "";
-    }
-
     fetch(MANIFEST_URL, { cache: "no-cache" })
         .then(function (res) {
             if (!res.ok) throw new Error("manifest returned " + res.status);
@@ -68,7 +62,6 @@
 
             setLink("rp-dl-mac", downloads.macos);
             setLink("rp-dl-win", downloads.windows);
-            setLink("rp-dl-linux", downloads.linux);
 
             // The validation report link. The SBOM had a button here too until
             // 2026-08-14; it was removed from the page because a CycloneDX
@@ -76,14 +69,6 @@
             // still carries the URL for anyone who wants it.
             var reports = data.reports || {};
             setLinkOrKeep("rp-validation-report", reports.validation);
-
-            // The Linux instructions quote a chmod against the real filename,
-            // which is only right if we know what the file is actually called.
-            var linuxCmdEl = document.getElementById("linux-cmd");
-            var linuxName = fileNameFrom(downloads.linux);
-            if (linuxCmdEl && /\.AppImage$/i.test(linuxName)) {
-                linuxCmdEl.textContent = "chmod +x ./" + linuxName;
-            }
 
             setStatus(version
                 ? "Latest version: " + version
