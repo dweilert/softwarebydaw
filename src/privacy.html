@@ -115,6 +115,11 @@
                 advisory edition. Local-first, no account, no collection. Everything in this policy applies to you
                 except the Pro-Active Connect section.</p>
 
+            <p><strong>RP-Hub</strong> &mdash; only advisors and practice staff who have connected their own
+                work mailbox to it, so that RP can send e-mail and manage calendar entries on their behalf. If you
+                are a client of a practice rather than someone who works there, you have never seen its consent
+                screen and that section describes nothing that has happened to your data.</p>
+
             <p><strong>Pro-Active Connect</strong> — only households whose advisor uses it and who have personally
                 completed a consent flow. It is not part of the application, cannot be switched on from inside it,
                 and does not exist for you unless you were invited to it and said yes. If you have never seen a
@@ -371,6 +376,107 @@
                 are single-use, short-lived, rate limited, and never logged.</p>
 
             <p>The developer's information security policy for Connect is available on request.</p>
+
+            <hr class="my-5">
+
+            <h2 id="rp-hub">RP-Hub</h2>
+
+            <p>This section applies only if you work at a practice and have connected your own mailbox to RP-Hub. It
+                is about a service that acts on your work e-mail and calendar, not about the application on your
+                computer.</p>
+
+            <h3>What it is</h3>
+
+            <p>RP-Hub is what the RP products call when they need to reach outside: to send correspondence you have
+                composed &mdash; a meeting follow-up, an annual review packet, a document request &mdash; or to put a
+                meeting you have already scheduled onto your calendar. It then reports back whether the message
+                actually went, so the practice's records reflect what happened rather than what was intended.</p>
+
+            <h3>It is send-only, structurally</h3>
+
+            <p>RP-Hub <strong>cannot read your mailbox.</strong> The permission it asks for &mdash;
+                <code>gmail.send</code> at Google, <code>Mail.Send</code> at Microsoft &mdash; permits sending and
+                nothing else. It confers no ability to list, open or search your messages, and RP-Hub requests no
+                permission that would. Your incoming mail is not copied, indexed or stored.</p>
+
+            <p>Where calendar sync is switched on, RP-Hub can create, update and remove events. That permission is
+                necessarily broader, and it is asked for separately.</p>
+
+            <h3>How consent works</h3>
+
+            <p>You connect your own account through Google's or Microsoft's own consent screen. The grant is
+                <strong>delegated</strong>: it covers your mailbox, granted by you, and it is yours to withdraw. We do
+                not ask for the tenant-wide kind of permission that would let the software send as anyone in your
+                organisation.</p>
+
+            <p>Signing in to an RP product with Google or Microsoft does not by itself grant any mailbox access.
+                Connecting a mailbox is a separate, deliberate act, and the two are recorded separately.</p>
+
+            <h3>What is stored, and for how long</h3>
+
+            <p>To send a message reliably, and to retry when a provider is briefly unavailable, RP-Hub has to hold
+                that message until it is accepted. So it does store the subject, recipients and body of what it is
+                asked to send. It does not keep them indefinitely.</p>
+
+            <table class="table table-sm align-top">
+                <thead>
+                    <tr>
+                        <th scope="col">What</th>
+                        <th scope="col">Kept for</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The body of a message</td>
+                        <td>Erased seven days after it is sent or finally fails.</td>
+                    </tr>
+                    <tr>
+                        <td>Subject, recipients, delivery outcome, timestamps</td>
+                        <td>Ninety days, so a practice can show whether correspondence was delivered.</td>
+                    </tr>
+                    <tr>
+                        <td>Calendar subject, location and attendees</td>
+                        <td>Erased seven days after the event is synced.</td>
+                    </tr>
+                    <tr>
+                        <td>The authorisation your provider issued</td>
+                        <td>Until you disconnect it, or revoke it with the provider.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>The authorisation itself is encrypted before it is stored, under a key kept outside the database. It is
+                never returned to the RP products, never written to logs, and never shared.</p>
+
+            <p>RP-Hub also records that an operation happened &mdash; which product asked, which account, which
+                provider, whether it worked &mdash; for ninety days, to support troubleshooting and audit. Those
+                records deliberately hold counts and lengths rather than contents: not the recipients, not the subject
+                line, not the body.</p>
+
+            <p>When support needs more than that to explain a fault, an operator can switch on a short diagnostic
+                capture. It is limited to four hours, strips sensitive fields before anything is written down, deletes
+                itself, and every time one is enabled, read or exported it is recorded against the person who did
+                it.</p>
+
+            <h3>Google user data</h3>
+
+            <p>RP-Hub's use and transfer of information received from Google APIs adheres to the
+                <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API
+                    Services User Data Policy</a>, including the Limited Use requirements. Data obtained through
+                Google APIs is used only to provide the features you connected your account for; is not transferred to
+                others except as needed to provide those features, to comply with the law, or in a merger or
+                acquisition; is not used for advertising; and is not used to develop, improve or train generalised
+                artificial intelligence or machine learning models. No human reads it, except with your explicit
+                consent for a specific support issue, where security or the law requires it, or where it has been
+                aggregated and anonymised.</p>
+
+            <h3>Withdrawing access</h3>
+
+            <p>Disconnect the mailbox from inside the RP product and the stored authorisation is destroyed
+                immediately. You can also revoke it directly with your provider, which takes effect whatever the
+                product does:
+                <a href="https://myaccount.google.com/permissions" rel="noopener">Google</a> or
+                <a href="https://microsoft.com/consent" rel="noopener">Microsoft</a>.</p>
 
             <hr class="my-5">
 
