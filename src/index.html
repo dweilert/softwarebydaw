@@ -1974,6 +1974,7 @@
                 <h2 class="mb-3">Download and install in minutes</h2>
                 <p class="text-muted mb-2">Choose your computer, download the installer, and open RP like any other desktop app.</p>
                 <p id="rp-download-status" class="text-muted small">Loading the latest version&hellip;</p>
+                <p class="text-muted small mb-0"><strong>Preview</strong> builds are early releases for evaluation — signed and notarized, but not through the full validation suite. Use the main download unless you were sent here for the preview.</p>
             </div>
             <div class="row g-4 justify-content-center text-center" id="download-grid">
                 <div class="col-md-5">
@@ -1984,6 +1985,17 @@
                         <a id="rp-dl-mac" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
                             href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/latest/retirement-planner-macos.dmg">
                             Download .dmg</a>
+                        <!-- PREVIEW BUILD. A fixed href on purpose:
+                             retirement-planner-download.js only rewrites
+                             rp-dl-mac / rp-dl-win from version.json, and the
+                             manifest deliberately does not carry a preview —
+                             the app reads that same manifest to decide whether
+                             to offer an update, and a preview must never be
+                             offered to every installed copy. -->
+                        <a id="rp-dl-mac-preview"
+                            class="btn btn-outline-secondary btn-sm rounded-pill px-3 mt-3 mx-auto"
+                            href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/v1.11.2-preview/installers/RP_1.11.2-preview_universal.dmg">
+                            Preview .dmg</a>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -1994,6 +2006,11 @@
                         <a id="rp-dl-win" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
                             href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/latest/retirement-planner-windows-setup.exe">
                             Download .exe</a>
+                        <!-- See the note on the macOS preview button above. -->
+                        <a id="rp-dl-win-preview"
+                            class="btn btn-outline-secondary btn-sm rounded-pill px-3 mt-3 mx-auto"
+                            href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/v1.11.2-preview/installers/RP_1.11.2-preview_x64-setup.exe">
+                            Preview .exe</a>
                     </div>
                 </div>
             </div>
