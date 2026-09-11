@@ -1972,30 +1972,72 @@
         <div class="container py-5">
             <div class="text-center mx-auto mb-4" style="max-width: 760px;">
                 <h2 class="mb-3">Download and install in minutes</h2>
-                <p class="text-muted mb-2">Choose your computer, download the installer, and open RP like any other desktop app.</p>
-                <p id="rp-download-status" class="text-muted small">Loading the latest version&hellip;</p>
-                <p class="text-muted small mb-0"><strong>Preview</strong> builds are early releases for evaluation — signed and notarized, but not through the full validation suite. Use the main download unless you were sent here for the preview.</p>
+                <p class="text-muted mb-2">Choose your edition and your computer, download the installer, and open RP like any other desktop app.</p>
+                <p id="rp-download-status" class="text-muted small mb-0">Loading the latest version&hellip;</p>
+            </div>
+
+            <!-- TWO EDITIONS, TWO SETS OF BUTTONS.
+                 The manifest has carried both since the release workflow began
+                 building two installers per platform: `downloads` is the Agency
+                 edition and `individualDownloads` the personal one. This page
+                 offered a single pair wired to `downloads`, so every visitor got
+                 the Agency installer whichever product they came for.
+
+                 THEY INSTALL SIDE BY SIDE. The two builds carry different
+                 product names and different bundle identifiers on purpose, so
+                 an advisor evaluating both does not have to uninstall one. -->
+
+            <div class="text-center mx-auto mb-4" style="max-width: 760px;">
+                <h4 class="mb-2">Personal edition</h4>
+                <p class="text-muted small mb-0">For your own household&rsquo;s plan. Installs as <strong>RP Individual</strong>.</p>
+            </div>
+            <div class="row g-4 justify-content-center text-center mb-5" id="download-grid-individual">
+                <div class="col-md-5">
+                    <div class="rp-card text-center">
+                        <i class="fab fa-apple mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="mb-3">macOS</h5>
+                        <p class="mb-3">Universal &mdash; Apple Silicon &amp; Intel</p>
+                        <!-- A VERSIONED href, unlike the Agency buttons below.
+                             The release publishes fixed `latest/` names for the
+                             Agency installers ONLY, so there is no stable URL to
+                             point the personal edition at. This href is rewritten
+                             from the manifest on load; it is the fallback for the
+                             rare visit where that fetch fails, and it goes a
+                             release stale rather than 404ing, which is the better
+                             of the two failures. Fix properly by having the
+                             release publish `latest/` fixed names for both
+                             editions, then point these at those. -->
+                        <a id="rp-dl-mac-individual" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
+                            href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/v1.12.0/installers/RP.Individual_1.12.0_universal.dmg">
+                            Download .dmg</a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="rp-card text-center">
+                        <i class="fab fa-windows mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="mb-3">Windows</h5>
+                        <p class="mb-3">NSIS installer</p>
+                        <!-- See the note on the macOS personal button above. -->
+                        <a id="rp-dl-win-individual" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
+                            href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/v1.12.0/installers/RP.Individual_1.12.0_x64-setup.exe">
+                            Download .exe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mx-auto mb-4" style="max-width: 760px;">
+                <h4 class="mb-2">Agency edition</h4>
+                <p class="text-muted small mb-0">Everything in the personal edition, plus the practice layer &mdash; client catalog, branded reports, snapshots, work queue and daily monitoring. Installs as <strong>RP</strong>.</p>
             </div>
             <div class="row g-4 justify-content-center text-center" id="download-grid">
                 <div class="col-md-5">
                     <div class="rp-card text-center">
                         <i class="fab fa-apple mb-3" style="font-size: 2rem;"></i>
                         <h5 class="mb-3">macOS</h5>
-                        <p class="mb-3">Universal — Apple Silicon &amp; Intel</p>
+                        <p class="mb-3">Universal &mdash; Apple Silicon &amp; Intel</p>
                         <a id="rp-dl-mac" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
                             href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/latest/retirement-planner-macos.dmg">
                             Download .dmg</a>
-                        <!-- PREVIEW BUILD. A fixed href on purpose:
-                             retirement-planner-download.js only rewrites
-                             rp-dl-mac / rp-dl-win from version.json, and the
-                             manifest deliberately does not carry a preview —
-                             the app reads that same manifest to decide whether
-                             to offer an update, and a preview must never be
-                             offered to every installed copy. -->
-                        <a id="rp-dl-mac-preview"
-                            class="btn btn-outline-secondary btn-sm rounded-pill px-3 mt-3 mx-auto"
-                            href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/v1.11.2-preview/installers/RP_1.11.2-preview_universal.dmg">
-                            Preview .dmg</a>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -2006,11 +2048,33 @@
                         <a id="rp-dl-win" class="btn btn-primary rounded-pill px-3 mt-auto mx-auto"
                             href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/latest/retirement-planner-windows-setup.exe">
                             Download .exe</a>
-                        <!-- See the note on the macOS preview button above. -->
-                        <a id="rp-dl-win-preview"
-                            class="btn btn-outline-secondary btn-sm rounded-pill px-3 mt-3 mx-auto"
-                            href="https://softwarebydaw-downloads.s3.us-east-2.amazonaws.com/retirement-planner/v1.11.2-preview/installers/RP_1.11.2-preview_x64-setup.exe">
-                            Preview .exe</a>
+                    </div>
+                </div>
+            </div>
+            <!-- THE ASK, NOT THE GATE.
+                 This card used to be the only route to an Agency evaluation:
+                 the download buttons above did not exist, so the form stood
+                 between a practice and the product. It no longer does. The
+                 wording below has to make that unmistakable, because a form
+                 that LOOKS like a gate is one whether or not it is, and the
+                 people most likely to bounce off it are exactly the practices
+                 we want evaluating.
+
+                 Moved up here from below the installation steps, where it sat
+                 after the collapsed panel and most of a screen away from the
+                 buttons it talks about. -->
+            <div class="row justify-content-center mt-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="rp-card text-center">
+                        <h5 class="mb-2">Downloading the Agency edition? Tell us who you are.</h5>
+                        <p class="text-muted mb-3">You no longer have to send us anything to evaluate it &mdash;
+                            the Agency download above is the full product. But if you tell us about your
+                            practice we can keep you up to date: what is coming, what has changed, and how to
+                            license it when the evaluation period ends. It takes a minute, and what you send is
+                            never shared or sold.</p>
+                        <button type="button" class="btn btn-primary rounded-pill px-4"
+                            data-bs-toggle="modal" data-bs-target="#agencyRequestModal">
+                            Tell us about your practice<i class="px-2 fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -2049,21 +2113,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row justify-content-center mt-2">
-                <div class="col-lg-8">
-                    <div class="rp-card text-center">
-                        <h5 class="mb-2">Are you an agency or advisory practice?</h5>
-                        <p class="text-muted mb-3">The Agency edition adds the practice layer &mdash; client
-                            catalog, branded client reports, presentation snapshots, the Practice Worklist and
-                            Pro-Active monitoring, FlowThru retention and your own custom training. Ask for an
-                            evaluation and we will get in touch.</p>
-                        <button type="button" class="btn btn-primary rounded-pill px-4"
-                            data-bs-toggle="modal" data-bs-target="#agencyRequestModal">
-                            Request the Agency edition for review<i class="px-2 fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Download End -->
@@ -2074,14 +2123,20 @@
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="agencyRequestLabel">Request the Agency edition for review</h5>
+                    <h5 class="modal-title" id="agencyRequestLabel">Tell us about your practice</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form id="agency-request-form" novalidate>
                     <div class="modal-body">
                         <div id="agency-fields">
-                            <p class="text-muted small">Tell us who you are and we will be in touch about an
-                                evaluation. Only the first three are required.</p>
+                            <!-- SAYS IT AGAIN HERE ON PURPOSE. Somebody who
+                                 opened this modal may have arrived expecting the
+                                 old gate, and the sentence that matters most is
+                                 the one telling them they have already got the
+                                 software. -->
+                            <p class="text-muted small">The Agency edition is downloadable without this &mdash;
+                                nothing here stands between you and evaluating it. Fill it in so we can keep you
+                                up to date as the product moves. Only the first three are required.</p>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label" for="agency-firm">Firm or agency name *</label>
@@ -2125,8 +2180,14 @@
                                         maxlength="4000"></textarea>
                                 </div>
                             </div>
+                            <!-- THE OLD LINE PROMISED "not added to any mailing
+                                 list", which this card now contradicts: keeping a
+                                 practice up to date IS mail. Saying both would be
+                                 a quiet lie, so the promise is narrowed to the part
+                                 that stays true — it goes to us and nowhere else. -->
                             <p class="text-muted small mt-3 mb-0">What you send here is stored so we can reply to
-                                you, and is not shared, sold or added to any mailing list.</p>
+                                you and send you product news. It is never shared or sold, and you can ask us to
+                                stop or to delete it at any time.</p>
                             <!-- Honeypot: hidden from people, filled by bots. Named `hp` and not
                                  `website`, because this form has a real website field. -->
                             <div class="d-none" aria-hidden="true">
@@ -2137,7 +2198,7 @@
                         <div id="agency-done" class="d-none text-center py-4">
                             <i class="fas fa-check-circle text-success mb-3" style="font-size: 2.5rem;"></i>
                             <h5 class="mb-2">Thank you &mdash; that has been sent.</h5>
-                            <p class="text-muted mb-0">We will be in touch at the address you gave us.</p>
+                            <p class="text-muted mb-0">We will keep you up to date at the address you gave us.</p>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-between align-items-center">
@@ -2146,7 +2207,7 @@
                             <button type="button" class="btn btn-outline-secondary rounded-pill px-4"
                                 data-bs-dismiss="modal">Close</button>
                             <button type="submit" id="agency-submit"
-                                class="btn btn-primary rounded-pill px-4">Send request</button>
+                                class="btn btn-primary rounded-pill px-4">Send details</button>
                         </div>
                     </div>
                 </form>

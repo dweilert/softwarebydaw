@@ -60,8 +60,22 @@
             var version = (data.version || "").replace(/^v/, "");
             var downloads = data.downloads || {};
 
+            // TWO EDITIONS, TWO KEYS IN THE MANIFEST. `downloads` is the
+            // Agency edition and has been since the release began building
+            // both; `individualDownloads` is the personal one. The page wired
+            // only the first pair until 2026-09-11, so every visitor was handed
+            // the Agency installer whichever product they came for.
+            //
+            // setLink leaves an element alone when its URL is missing, which is
+            // what should happen if an older manifest is ever served: the
+            // personal buttons keep the versioned hrefs the HTML wrote rather
+            // than going dead.
             setLink("rp-dl-mac", downloads.macos);
             setLink("rp-dl-win", downloads.windows);
+
+            var individual = data.individualDownloads || {};
+            setLink("rp-dl-mac-individual", individual.macos);
+            setLink("rp-dl-win-individual", individual.windows);
 
             // The validation report link. The SBOM had a button here too until
             // 2026-08-14; it was removed from the page because a CycloneDX

@@ -73,7 +73,7 @@
             .finally(function () {
                 if (!submitBtn.classList.contains("d-none")) {
                     submitBtn.disabled = false;
-                    submitBtn.textContent = "Send request";
+                    submitBtn.textContent = "Send details";
                 }
             });
     });
