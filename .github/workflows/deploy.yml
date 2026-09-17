@@ -49,6 +49,22 @@ jobs:
           role-to-assume: arn:aws:iam::785502284517:role/softwarebydaw-github-deploy
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Keep the validation report URL reader-friendly
+        run: |
+          CURRENT_RULES=$(aws amplify get-app \
+            --app-id "$AMPLIFY_APP_ID" \
+            --region "$AWS_REGION" \
+            --query 'app.customRules' \
+            --output json)
+          UPDATED_RULES=$(jq -c '
+            map(select(.source != "/public-knowledge/data/validation-report.md"))
+            + [{"source":"/public-knowledge/data/validation-report.md","status":"301","target":"/math-proof/report.html","condition":null}]
+          ' <<< "$CURRENT_RULES")
+          aws amplify update-app \
+            --app-id "$AMPLIFY_APP_ID" \
+            --region "$AWS_REGION" \
+            --custom-rules "$UPDATED_RULES" >/dev/null
+
       - name: Zip site contents
         run: |
           cd src
