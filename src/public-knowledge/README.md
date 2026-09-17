@@ -16,3 +16,6 @@ The three public pages consume this bundle:
 - `/reference-data/` — current data vintage, categories, and citations.
 - `/math-proof/` — generated calculation-validation results and limitations.
 - `/methodology/` — the plain-language explanation of the shared planning model.
+The formatted validation report is `/math-proof/report.html`. The Markdown and
+JSON files under `data/` are source/download artifacts, not the reader-facing
+presentation.

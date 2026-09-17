@@ -10,6 +10,8 @@
  * checkout should pass --rp-repo explicitly so the source is never ambiguous.
  */
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -19,6 +21,7 @@ const rpRoot = resolve(
   argIndex >= 0 ? process.argv[argIndex + 1] : (process.env.RP_REPO ?? "/Users/bob/rp-desktop-product-split"),
 );
 const outputRoot = join(siteRoot, "src/public-knowledge/data");
+const execFileAsync = promisify(execFile);
 
 async function copyRequired(source, destination) {
   await mkdir(dirname(destination), { recursive: true });
@@ -56,6 +59,15 @@ await copyRequired(
 await copyRequired(
   join(rpRoot, "app/src/engine/validation/reports/PUBLIC-VALIDATION-REPORT.md"),
   join(outputRoot, "validation-report.md"),
+);
+await execFileAsync(
+  process.execPath,
+  [
+    join(rpRoot, "app/scripts/render-validation-report.mjs"),
+    join(rpRoot, "app/src/engine/validation/reports/PUBLIC-VALIDATION-REPORT.md"),
+    join(siteRoot, "src/math-proof/report.html"),
+  ],
+  { cwd: rpRoot },
 );
 
 const manifest = JSON.parse(await readFile(join(refDir, "manifest.json"), "utf8"));

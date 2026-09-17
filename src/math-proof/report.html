@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculation Validation Report 1.12.0 | RP</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Every RP calculation checked against the IRS, CMS or SSA publication it comes from." name="description">
+    <link href="/img/favicon.ico" rel="icon">
+    <style>
+        :root {
+            --ink: #14183e;
+            --muted: #6b7280;
+            --rule: rgba(20, 24, 62, .12);
+            --accent: #0d6efd;
+            --pass: #0f766e;
+            --surface: #f7f8fc;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--ink);
+            line-height: 1.65;
+            background: #fff;
+        }
+
+        .topbar {
+            border-bottom: 1px solid var(--rule);
+            padding: 1rem 1.25rem;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .topbar a { color: var(--ink); text-decoration: none; font-weight: 700; letter-spacing: .01em; }
+        .topbar a:hover { color: var(--accent); }
+
+        main { max-width: 62rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+
+        h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); line-height: 1.2; margin: .5rem 0 1rem; }
+        h2 { font-size: 1.3rem; margin: 2.25rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+        h3 { font-size: 1.05rem; margin: 1.5rem 0 .5rem; }
+        h2:first-of-type { border-top: 0; padding-top: 0; }
+
+        p, li { color: #303650; }
+        a { color: var(--accent); }
+
+        /* Wide tables must scroll inside their own box rather than pushing the
+           page sideways on a phone — the report has several with many columns. */
+        .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; border: 1px solid var(--rule); border-radius: .5rem; }
+        table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+        th, td { text-align: left; padding: .55rem .75rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+        th { background: var(--surface); font-weight: 700; white-space: nowrap; }
+        tr:last-child td { border-bottom: 0; }
+        td:nth-child(n+2) { white-space: nowrap; }
+
+        code {
+            background: var(--surface);
+            padding: .1rem .35rem;
+            border-radius: .25rem;
+            font-size: .9em;
+        }
+
+        blockquote {
+            margin: 1rem 0;
+            padding: .5rem 1rem;
+            border-left: 3px solid var(--pass);
+            background: var(--surface);
+            color: #303650;
+        }
+
+        .footer {
+            border-top: 1px solid var(--rule);
+            margin-top: 3rem;
+            padding-top: 1.25rem;
+            font-size: .82rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 640px) {
+            td:nth-child(n+2) { white-space: normal; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <a href="/">&larr; SoftwareByDaW</a>
+    </div>
+    <main>
+<h1>RP — Calculation Validation Report</h1>
+<p><strong>Version:</strong> 1.12.0 | <strong>Generated:</strong> 2026-09-13</p>
+<h2>✅ Every calculation passed independent verification</h2>
+<p>RP is a planning <strong>model</strong>, not a licensed financial advisor — but we hold its calculations to a high bar for accuracy. This report is regenerated for every release: every calculation below has its expected result checked directly against a primary government source (the U.S. Internal Revenue Service, Centers for Medicare &amp; Medicaid Services, or Social Security Administration) or an independently reimplemented calculation — never a third-party summary treated as if it were the original.</p>
+<h2>Confidence levels</h2>
+<ul>
+<li><strong>Authority-validated</strong> — the expected result is taken directly from an IRS, CMS, or SSA publication, worksheet, or published example.</li>
+<li><strong>Cross-validated</strong> — checked against an independent reimplementation of the same published methodology; used when the specific numbers being tested are our own choice rather than a government-published example, or when a parameter (like a multi-year inflation projection) is this app&#39;s own forward-looking assumption rather than an already-published fact.</li>
+<li><strong>Vetted-secondary</strong> — used only when a primary government source was confirmed unreachable or the figure genuinely isn&#39;t published yet; in that case, and only then, we require at least two independent, editorially accountable sources that agree and that themselves cite their own primary source — never an unverified blog or AI-generated summary. Always the last resort, always disclosed, never treated as equivalent to a primary source.</li>
+</ul>
+<p>97 authority-validated, 66 cross-validated, 0 vetted-secondary, 0 regression-only.</p>
+<h2>Results by area</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Area</th>
+<th align="right">Cases</th>
+<th align="right">Passed</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Federal Income Tax</td>
+<td align="right">27</td>
+<td align="right">27 (100.0%)</td>
+</tr>
+<tr>
+<td>income-tax-treatment</td>
+<td align="right">1</td>
+<td align="right">1 (100.0%)</td>
+</tr>
+<tr>
+<td>State Tax</td>
+<td align="right">10</td>
+<td align="right">10 (100.0%)</td>
+</tr>
+<tr>
+<td>Medicare IRMAA (Income-Related Monthly Adjustment)</td>
+<td align="right">26</td>
+<td align="right">26 (100.0%)</td>
+</tr>
+<tr>
+<td>Medicaid Long-Term Care — Spousal Impoverishment Protections</td>
+<td align="right">12</td>
+<td align="right">12 (100.0%)</td>
+</tr>
+<tr>
+<td>Social Security — Benefit Formula (PIA)</td>
+<td align="right">5</td>
+<td align="right">5 (100.0%)</td>
+</tr>
+<tr>
+<td>Social Security — Benefit Estimate from Earnings History</td>
+<td align="right">6</td>
+<td align="right">6 (100.0%)</td>
+</tr>
+<tr>
+<td>Social Security — Claiming-Age Adjustments</td>
+<td align="right">4</td>
+<td align="right">4 (100.0%)</td>
+</tr>
+<tr>
+<td>Social Security — Retirement Earnings Test</td>
+<td align="right">2</td>
+<td align="right">2 (100.0%)</td>
+</tr>
+<tr>
+<td>Social Security — Spousal Benefits</td>
+<td align="right">2</td>
+<td align="right">2 (100.0%)</td>
+</tr>
+<tr>
+<td>Social Security — Survivor Benefits</td>
+<td align="right">4</td>
+<td align="right">4 (100.0%)</td>
+</tr>
+<tr>
+<td>family-maximum</td>
+<td align="right">5</td>
+<td align="right">5 (100.0%)</td>
+</tr>
+<tr>
+<td>Required Minimum Distributions — Your Own Accounts</td>
+<td align="right">7</td>
+<td align="right">7 (100.0%)</td>
+</tr>
+<tr>
+<td>Required Minimum Distributions — QLAC Exclusion</td>
+<td align="right">3</td>
+<td align="right">3 (100.0%)</td>
+</tr>
+<tr>
+<td>Required Minimum Distributions — Inherited Accounts</td>
+<td align="right">8</td>
+<td align="right">8 (100.0%)</td>
+</tr>
+<tr>
+<td>Multi-Year Plan Simulation (Income → Tax → Medicare, End to End)</td>
+<td align="right">1</td>
+<td align="right">1 (100.0%)</td>
+</tr>
+<tr>
+<td>Multi-Year Plan Simulation — Roth Conversion</td>
+<td align="right">7</td>
+<td align="right">7 (100.0%)</td>
+</tr>
+<tr>
+<td>Multi-Year Plan Simulation — Survivor Filing-Status Transition</td>
+<td align="right">2</td>
+<td align="right">2 (100.0%)</td>
+</tr>
+<tr>
+<td>Multi-Year Plan Simulation — Survivor Social Security Step-Up</td>
+<td align="right">3</td>
+<td align="right">3 (100.0%)</td>
+</tr>
+<tr>
+<td>ACA Marketplace Premium Tax Credit</td>
+<td align="right">4</td>
+<td align="right">4 (100.0%)</td>
+</tr>
+<tr>
+<td>Equity Compensation — Incentive Stock Options (ISO)</td>
+<td align="right">1</td>
+<td align="right">1 (100.0%)</td>
+</tr>
+<tr>
+<td>Equity Compensation — Employee Stock Purchase Plan (ESPP)</td>
+<td align="right">1</td>
+<td align="right">1 (100.0%)</td>
+</tr>
+<tr>
+<td>Property Sale — Home Sale (Section 121 Exclusion)</td>
+<td align="right">1</td>
+<td align="right">1 (100.0%)</td>
+</tr>
+<tr>
+<td>Property Sale — Rental (Depreciation Recapture)</td>
+<td align="right">1</td>
+<td align="right">1 (100.0%)</td>
+</tr>
+<tr>
+<td>Early-Withdrawal Penalty (10%, Pre-59½)</td>
+<td align="right">2</td>
+<td align="right">2 (100.0%)</td>
+</tr>
+<tr>
+<td>property-step-up</td>
+<td align="right">8</td>
+<td align="right">8 (100.0%)</td>
+</tr>
+<tr>
+<td>self-employment-tax</td>
+<td align="right">5</td>
+<td align="right">5 (100.0%)</td>
+</tr>
+<tr>
+<td>step-up-basis</td>
+<td align="right">5</td>
+<td align="right">5 (100.0%)</td>
+</tr>
+</tbody></table></div>
+<h2>State income tax — why few cases, and what else holds it</h2>
+<p>A golden case needs an expected answer that some authority has actually published. The IRS, CMS and the Social Security Administration publish worked examples and tables, so their rules can be checked that way. Most states publish a bracket schedule and nothing else — no worked return, no citable answer to compare against — and for tax year 2026 most have not yet published their inflation-indexed figures at all; those arrive with filing-season instructions. This project&#39;s rule is that an unpublished figure is left absent rather than invented, so state golden cases are written only where a state&#39;s own schedule is published and unambiguous. The count in the table above is small on purpose, and it is not the only evidence behind state tax.</p>
+<p><strong>Every taxing jurisdiction is gated, whether or not it has a golden case.</strong> The data carries 51 jurisdictions, of which 42 levy an ordinary income tax; the rest (AK, FL, NH, NV, SD, TN, TX, WA, WY) have no state income tax arithmetic to check. For all 42, automated gates compare the shipped top marginal rate and bracket count, and the shipped standard deduction, against an archived rate table on every push. That table is a <strong>tripwire, not an authority</strong>: when it disagrees, the fix is taken from the state&#39;s own statute, never from the table. Ohio&#39;s correction was made exactly that way — the disagreement surfaced in the gate, and the rate came from ORC 5747.02.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>State-tax evidence</th>
+<th align="right">Jurisdictions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Levy an ordinary income tax</td>
+<td align="right">42</td>
+</tr>
+<tr>
+<td>Figures cited to the state&#39;s own statute or revenue agency</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>Figures cited to a vetted secondary, pending publication</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>No structured citation recorded yet</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>Disagreeing with the tripwire table, awaiting a statute reading</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>Exempting Social Security from state tax</td>
+<td align="right">38</td>
+</tr>
+<tr>
+<td>Modeling a capped or phased retirement-income exclusion</td>
+<td align="right">18</td>
+</tr>
+</tbody></table></div>
+<p><strong>Last primary-source pass.</strong> 2026-08-06 — every state whose rates disagreed with the archived rate table has been corrected against that state&#39;s own statute or its revenue agency&#39;s published schedule: OH, AR, GA, ID, KY, MD, MT, NE, OK, SC, UT, WV, IN and MO. Each state&#39;s notes name the document read. Where a threshold is inflation-indexed by the state and the current year&#39;s table is not yet published, the indexed figure comes from the archived rate table and the state&#39;s notes say so. Standard deductions were not re-verified in this pass. Standard deductions reviewed 2026-08-06: seven federal-conformity states set to the verified 2026 federal amount, Kansas and Virginia confirmed against their own revenue agencies, and the remainder taken from the archived rate table because no state had published a tax-year-2026 figure yet. Each state&#39;s notes say which.</p>
+<p>The states whose retirement-income relief this app cannot apply are named in the limitations below, with the direction the error runs. A state with no exclusion recorded is treated as taxing retirement income in full — which overstates that household&#39;s tax rather than understating it.</p>
+<h2>Where the lines are drawn</h2>
+<p>Some rules change the answer the moment income crosses a number. A Medicare surcharge tier is the clearest: a dollar either way is worth over a thousand dollars a year. Whether income landing EXACTLY on such a number falls in the band below or the band above is decided by the wording the agency publishes, and it is not always the same wording — Medicare&#39;s own table is inclusive at four boundaries and exclusive at the fifth.</p>
+<p><strong>This is where this project shipped a wrong number.</strong> Until 2026-08-12 an income landing exactly on a Medicare threshold was charged the higher tier. It was corrected, and the table below now exists so it cannot happen quietly again: every one of these boundaries has a test case sitting exactly on it, another on the far side, and the agency&#39;s own comparative wording recorded beside it. A case whose expected value was read off this app&#39;s own output is refused the authority-validated label outright.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>An exact landing falls</th>
+<th>What the authority says</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$109,000 — Part B premium and Part D surcharge jump a whole tier</td>
+<td>in the lower band</td>
+<td>&quot;Less than or equal to $109,000&quot;</td>
+</tr>
+<tr>
+<td>$137,000 — Part B premium and Part D surcharge jump a whole tier</td>
+<td>in the lower band</td>
+<td>&quot;Greater than $109,000 and less than or equal to $137,000&quot;</td>
+</tr>
+<tr>
+<td>$171,000 — Part B premium and Part D surcharge jump a whole tier</td>
+<td>in the lower band</td>
+<td>&quot;Greater than $137,000 and less than or equal to $171,000&quot;</td>
+</tr>
+<tr>
+<td>$205,000 — Part B premium and Part D surcharge jump a whole tier</td>
+<td>in the lower band</td>
+<td>&quot;Greater than $171,000 and less than or equal to $205,000&quot;</td>
+</tr>
+<tr>
+<td>$500,000 — the top tier begins</td>
+<td>in the upper band</td>
+<td>&quot;Greater than or equal to $500,000&quot;</td>
+</tr>
+<tr>
+<td>$218,000 — Part B premium and Part D surcharge jump a whole tier</td>
+<td>in the lower band</td>
+<td>&quot;Less than or equal to $218,000&quot;</td>
+</tr>
+<tr>
+<td>$274,000 — Part B premium and Part D surcharge jump a whole tier</td>
+<td>in the lower band</td>
+<td>&quot;Greater than $218,000 and less than or equal to $274,000&quot;</td>
+</tr>
+<tr>
+<td>$342,000 — Part B premium and Part D surcharge jump a whole tier</td>
+<td>in the lower band</td>
+<td>&quot;Greater than $274,000 and less than or equal to $342,000&quot;</td>
+</tr>
+<tr>
+<td>$410,000 — Part B premium and Part D surcharge jump a whole tier</td>
+<td>in the lower band</td>
+<td>&quot;Greater than $342,000 and less than or equal to $410,000&quot;</td>
+</tr>
+<tr>
+<td>$750,000 — the top tier begins</td>
+<td>in the upper band</td>
+<td>&quot;Greater than or equal to $750,000&quot;</td>
+</tr>
+<tr>
+<td>$109,000 — the separate lived-with-spouse table jumps straight to its middle band</td>
+<td>in the lower band</td>
+<td>&quot;Less than or equal to $109,000&quot;</td>
+</tr>
+<tr>
+<td>$391,000 — the separate lived-with-spouse table reaches its top band</td>
+<td>in the upper band</td>
+<td>&quot;Greater than or equal to $391,000&quot;</td>
+</tr>
+<tr>
+<td>$62,600 — the premium tax credit disappears entirely — a cliff, not a taper</td>
+<td>in the lower band</td>
+<td>&quot;At least 300% but not more than 400% (Rev. Proc. 2025-25 Sec. 3.01 applicable-percentage table), and an applicable taxpayer is one whose household income &quot;equals or exceeds 100 percent but does not exceed 400 percent&quot; of the poverty line (26 U.S.C. Sec. 36B(c)(1)(A))&quot;</td>
+</tr>
+</tbody></table></div>
+<p>Thresholds deliberately not in that table, because landing exactly on them gives the same answer either way:</p>
+<ul>
+<li><strong>Federal ordinary income tax bracket edges, all four filing statuses</strong> — Each rate applies only to the excess above its own floor, so taxable income landing exactly on a bracket edge produces identical tax whichever band claims it — the excess is zero either way.</li>
+<li><strong>Long-term capital gains rate breakpoints</strong> — Same piecewise structure as the ordinary brackets: the 15% and 20% rates apply only to the gain above each breakpoint, so a taxable income landing exactly on one is taxed identically whichever band claims it.</li>
+<li><strong>Net investment income tax thresholds ($200,000 / $250,000 / $125,000)</strong> — IRC §1411 applies 3.8% to the LESSER of net investment income or the excess of MAGI over the threshold. At exactly the threshold the excess is zero, so the tax is zero under either reading. Verified at all three points by FED-2026-012.</li>
+<li><strong>Social Security taxability bases ($25,000 / $32,000) and upper thresholds ($34,000 / $44,000)</strong> — IRC §86 taxes 50% of the excess over the base, then 85% of the excess over the upper threshold. Exactly at a base, the excess is zero and nothing is taxable — the same answer whichever side claims it.</li>
+<li><strong>The Social Security taxable maximum and the FICA wage base</strong> — A ceiling on what is taxed, not a selector. Earnings exactly at the base are fully taxed under either reading; the next dollar is not taxed under either.</li>
+<li><strong>The SSA retirement earnings test exempt amounts</strong> — Withholding is $1 for every $2 (or $3) of earnings ABOVE the exempt amount. At exactly the exempt amount the excess is zero.</li>
+<li><strong>OBBBA senior deduction and itemized deduction phase-out bands</strong> — Phase-outs reduce an amount per dollar of income above a floor. Exactly at the floor, the reduction is zero.</li>
+<li><strong>Georgia retirement-income exclusion tiers (62, 65)</strong> — Selected on AGE, where statutes are worded inclusively — O.C.G.A. §48-7-27(a)(5): &quot;65 or older&quot;, &quot;ages 62-64&quot;. The engine&#39;s &quot;or older&quot; comparison is correct here; the dollar-band convention that went wrong is the opposite one.</li>
+<li><strong>Colorado pension/annuity subtraction tiers (55, 65)</strong> — Selected on AGE, where statutes are worded inclusively — C.R.S. §39-22-104(4)(f): &quot;65 or older&quot;, &quot;55 through 64&quot;. The engine&#39;s &quot;or older&quot; comparison is correct here; the dollar-band convention that went wrong is the opposite one.</li>
+<li><strong>Virginia age deduction (65)</strong> — Selected on AGE, where statutes are worded inclusively — Code of Virginia §58.1-322.02: &quot;age 65 or older&quot;. The engine&#39;s &quot;or older&quot; comparison is correct here; the dollar-band convention that went wrong is the opposite one.</li>
+<li><strong>South Carolina retirement deduction (65)</strong> — Selected on AGE, where statutes are worded inclusively — S.C. Code Ann. §12-6-1170(B): &quot;aged 65 or older&quot;. The engine&#39;s &quot;or older&quot; comparison is correct here; the dollar-band convention that went wrong is the opposite one.</li>
+<li><strong>New York pension and annuity exclusion (59½)</strong> — Selected on AGE, where statutes are worded inclusively — NY Tax Law §612(c)(3-a): &quot;59½ or older for the entire tax year&quot; — modeled at 60, a documented simplification rather than a boundary question. The engine&#39;s &quot;or older&quot; comparison is correct here; the dollar-band convention that went wrong is the opposite one.</li>
+</ul>
+<h2>Known limitations — what this app does not (yet) model</h2>
+<p>Being upfront about gaps is part of being trustworthy about what&#39;s verified. None of these are silent — each is a deliberate, documented scope decision, not an oversight discovered by a user.</p>
+<ul>
+<li>The app cannot tell you how long you will live. Your planning horizon is something you set. The app uses published life-expectancy tables to suggest a starting point and to compare claim ages, but it never predicts your own lifespan. Since 2026-08-09 the claim-age comparison can also report how often one age beat the other across hundreds of sampled lifetimes as well as hundreds of market histories — a probability rather than a prediction, offered beside the deterministic answer and never in place of it. Matters when you are comparing options whose ranking depends on living longer or less long.</li>
+<li>A stream&#39;s first and last year is prorated by whole months. When an income stream starts or stops mid-year, the app counts the months it was active and takes that share of the annual amount. Matters when a stream pays in a few large installments rather than monthly.</li>
+<li>Two kinds of state retirement relief this app cannot apply. Every state that taxes income, and the District, has had its retirement-income treatment read from its own statute or revenue department. Most are modeled. Two groups are not, for two different reasons. The app cannot express the relief in Arizona, Idaho, Indiana, Massachusetts, Minnesota, Missouri, Montana, Nebraska and North Carolina, because those states relieve retirement income by its SOURCE — a state or local government pension, a particular retirement system, service before a given year — and a plan records what an account is, not which employer it came from. And Michigan and Rhode Island have not yet published the figure for this tax year, so their cap is left unapplied rather than carried forward at last year&#39;s amount. All eleven are treated as taxing retirement income in full. Matters when you live in one of the eleven and draw a pension, or draw retirement income in Michigan or Rhode Island.</li>
+<li>The strategy search tries a shortlist, and does not prove anything is best. The Strategy Search scores four decisions together — when to claim Social Security, what to convert to Roth, which accounts to draw from and which spending rule to follow — by running a full projection for each combination it considers. It does not consider every combination. It works through the claim ages and conversion policies in full, takes the strongest of those forward against the withdrawal orders, then against each spending rule, and stops at a work limit that is stated on screen alongside the count of projections it actually ran. Your retirement year is a frame it runs inside rather than an axis it sweeps. Matters when you are choosing between rows that sit close together, or you have a strategy in mind that is not on the list.</li>
+<li>An income rider&#39;s arithmetic is not validated against any contract. The app models a Guaranteed Lifetime Withdrawal Benefit from the figures you enter: the benefit base rolls up while income is deferred, the rider fee is charged as a percentage of that base and taken out of the account value, income starts at the age you set and is fixed at your payout factor times the base, and once the account is empty the payments continue as the insurer&#39;s obligation. Every one of those steps follows the design&#39;s reading of how these contracts work — not a carrier&#39;s contract that anybody has checked it against. Matters when you hold a contract with a living benefit and are relying on the projected income rather than on your carrier&#39;s illustration.</li>
+<li>Donating appreciated shares is not modeled. Charitable giving is modeled as cash, as an itemized deduction, or as a distribution straight from a retirement account. Giving shares that have grown in value is not compared. Matters when you give from a taxable account holding a large unrealised gain.</li>
+<li>Itemized deductions are entered by hand, not derived. Mortgage interest, state and local tax, charitable giving and medical expenses are annual figures you type. Mortgage interest is not calculated from a tracked mortgage balance, and county or city tax is not folded into the state-and-local figure. Matters when your itemized deductions are close to the standard deduction.</li>
+<li>The claim-age search resolves to one lifespan, not a range of them. Every claim-age pair is projected against the lifespan your plan states — a death you have entered if you entered one, otherwise the horizon you set. It is a thorough search along every other axis: every month from 62 through 70 for both of you, each one a complete projection, and since 2026-08-12 each one scored on what is left at the end, on what you get to spend, and on whether the plan ever falls short. What it does not do is re-run that search across a range of lifespans and weight the answers by how likely each is. Matters when your real lifespan differs materially from the one your plan states, and the surface around the best pair is a ridge rather than a plateau.</li>
+<li>The household claim-age grid is drawn in whole years. The matrix of claim-age pairs you read is nine ages by nine ages. Claiming is a monthly decision, so the full picture would be ninety-seven by ninety-seven, and that is not something anybody reads. A button searches every month between 62 and 70 and reports the best pair it finds, which you can apply — but the colored grid itself stays in whole years. Matters when you read only the colored grid and never press &quot;Search every month&quot;.</li>
+<li>The household claim-age grid counts Social Security dollars only. The colored grid scores lifetime benefits from a closed-form calculation. It does not run the projection, so on its own it cannot see the earnings test withholding a benefit while you are still working, the tax on the benefit itself, or the Medicare surcharge a bigger benefit can trigger. Since 2026-08-09 that grid is the first of two stages: &quot;Rank the best pairs through the whole plan&quot; takes the best pair from each region of it, re-simulates your entire plan once for each, and ranks those on what the household is left with — which does see all three. Matters when you claim before full retirement age and keep earning, and you read the grid without running the full-plan ranking below it.</li>
+<li>The claim-and-conversion search tries a shortlist of claim ages, not all of them. Solving the claim age and Roth conversions together means one full projection per combination, so the claim ages it crosses with the conversion strategies are a shortlist: the pairs the household grid rates highest, claiming as early as possible, claiming at full retirement age, claiming at 70, and whatever your plan says today. A claim age outside that list is never priced against a conversion schedule, however well it might have done. Matters when your best claim age is driven by a tax feature the benefit-dollar grid cannot see and does not fall on one of the reference points.</li>
+<li>The instant claim-pair ranking samples — and the app will show you exactly what that costs. The full-plan ranking under the household grid does not simulate every claim-age pair. The closed-form grid picks the candidates — the best month inside every whole-year region of it, plus the pair your plan already uses — and only those are re-simulated. Which MONTH represents a region is chosen on Social Security dollars, so where the full projection would have preferred a different month of the same year, that month is never proposed. Since 2026-08-10 the search also scores against a death your plan states, if it states one, rather than assuming both of you live to the end age, and it will not propose a claim age someone does not live to reach. THIS LIMITATION HAS AN ESCAPE HATCH, which is unusual for anything in this register: the Every Claim Age, Checked screen runs the full projection on all 9,409 pairs with no shortlist at all, and when it finishes it names the pair the instant search picked, the best pair that exists, and the difference between them in dollars — for your household, not for an example. You do not have to take this disclosure on trust; you can measure it. Matters when the tax picture, not the benefit total, is what decides the claim age for your household — and you can settle it either way by running the exhaustive search.</li>
+<li>A Social Security benefit entered as a plain amount tells us less about a survivor. When you enter Social Security as a full-retirement-age benefit plus a claim age, a survivor&#39;s benefit gets both of the rules Social Security applies: the survivor&#39;s own reduction for claiming early, and the limit that protects them when the person who died had claimed early. When you enter it as a plain monthly amount instead, only the first of those can be applied — the second is measured against a figure the plan does not have. Matters when the person who died had claimed well before their own full retirement age.</li>
+<li>A child&#39;s Social Security is counted as the parent&#39;s income for tax. A benefit paid on a parent&#39;s record to their child is legally the child&#39;s income, and a child with little other income usually owes no tax on it. This app counts it with the parent&#39;s, because a plan describes one household of at most two adults and has nowhere to put a third person&#39;s tax return. Matters when a child&#39;s benefit is a large share of household income, which is when the family maximum is binding.</li>
+</ul>
+<h2>How to check this yourself</h2>
+<p>Every case&#39;s exact inputs, expected value, actual engine output, and source citation — including the exact quote pulled from the original government publication — is in this project&#39;s public repository under <code>app/src/engine/validation/</code>. The full technical report (diff tables, tolerances, per-field results) is attached alongside this document.</p>
+
+        <div class="footer">
+            <p>This report is regenerated by the test suite for every release and published with
+               it. It describes version 1.12.0 of RP and no other.
+               <a href="/#download">Download the app</a>.</p>
+        </div>
+    </main>
+</body>
+
+</html>
