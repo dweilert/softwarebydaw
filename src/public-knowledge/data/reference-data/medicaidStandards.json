@@ -1,0 +1,25 @@
+{
+  "sourceIds": [
+    "cms-ssi-spousal-impoverishment-2026",
+    "ssa-act-1924-spousal-impoverishment",
+    "dra-2005-ltc-partnership"
+  ],
+  "source": "CMS CMCS Informational Bulletin, Updated 2026 SSI and Spousal Impoverishment Standards (April 27, 2026); 42 U.S.C. §1396r-5 for the allowance arithmetic; 42 U.S.C. §1396p(b)(1)(C)(iii) for the partnership inflation ages",
+  "sourceUrls": [
+    "https://www.medicaid.gov/federal-policy-guidance/downloads/cib04272026.pdf",
+    "https://www.law.cornell.edu/uscode/text/42/1396r-5",
+    "https://www.law.cornell.edu/uscode/text/42/1396p"
+  ],
+  "retrievedDate": "2026-09-09",
+  "verifiedAgainstPrimarySource": "2026-09-09 — every figure read from the April 2026 bulletin's chart (the July MMMNA revision), archived under refdata-snapshots/2026/cms-ssi-spousal-impoverishment-2026/ and re-derived by the cmsSpousalImpoverishment extractor from that archive. The income cap is 3 × $994 and each housing allowance is 30% of its MMMNA, both as the bulletin itself states them, and the schema refuses a file where either relationship fails. The partnership ages are the statute's own words — 'has not attained age 61', 'has attained age 61 but has not attained age 76'.",
+  "year": 2026,
+  "ssiFederalBenefitRate": { "individual": 994, "couple": 1491 },
+  "ssiResourceStandard": { "individual": 2000, "couple": 3000 },
+  "incomeCap": 2982,
+  "mmmna": { "standard": 2705, "alaska": 3381.25, "hawaii": 3111.25, "effective": "2026-07-01" },
+  "mmmnaMaximum": 4066.5,
+  "housingAllowance": { "standard": 811.5, "alaska": 1014.38, "hawaii": 933.38, "effective": "2026-07-01" },
+  "csra": { "minimum": 32532, "maximum": 162660 },
+  "homeEquity": { "minimum": 752000, "maximum": 1130000 },
+  "partnershipInflation": { "compoundRequiredBelowAge": 61, "someInflationRequiredBelowAge": 76 }
+}

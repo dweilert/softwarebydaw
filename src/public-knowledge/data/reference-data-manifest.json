@@ -1,0 +1,37 @@
+{
+ "bundleId": "rp-refdata",
+ "bundleVersion": "2026.1",
+ "taxYear": 2026,
+ "minAppVersion": "1.9.1",
+ "shapes": {
+  "federal": 1,
+  "states": 1,
+  "irmaa": 1,
+  "rmd": 1,
+  "colaCpi": 1,
+  "lifeExpectancy": 1,
+  "costOfLiving": 1,
+  "modestBudget": 1,
+  "parameters": 1,
+  "awiSeries": 1,
+  "medicaidStandards": 1,
+  "ltcByState": 1,
+  "homeCareWageByState": 1
+ },
+ "builtOn": "2026-08-06T00:00:00Z",
+ "domains": [
+  "federal",
+  "states",
+  "irmaa",
+  "rmd",
+  "colaCpi",
+  "lifeExpectancy",
+  "costOfLiving",
+  "modestBudget",
+  "parameters",
+  "awiSeries",
+  "medicaidStandards",
+  "ltcByState",
+  "homeCareWageByState"
+ ]
+}

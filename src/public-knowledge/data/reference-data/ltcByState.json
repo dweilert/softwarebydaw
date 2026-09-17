@@ -1,0 +1,676 @@
+{
+  "sourceIds": [
+    "naic-ltc-regulation-provisions"
+  ],
+  "source": "NAIC Model Laws, Regulations, Guidelines and Other Resources — Long-Term Care Insurance Regulation Provisions (chart HS-15), Spring 2024; each state block carries its own citations",
+  "sourceUrls": [
+    "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf"
+  ],
+  "retrievedDate": "2026-09-11",
+  "verifiedAgainstPrimarySource": "2026-09-11 — every inflation-offer row below was read from the chart and quoted rather than paraphrased. content.naic.org answers 403 to this repository's fetch tool, so the chart is recorded in scripts/refdata/blockedSources.ts with its manual step; David saved it from a browser and it is now archived at refdata-snapshots/2026/naic-ltc-regulation-provisions/ with its hash and a record saying a person supplied it, which makes the next review a diff rather than a re-reading of every state. Where the PDF renders small capitals or opens a kerning gap, the citation is given as the document reads rather than as the text extractor returns it. COLORADO CORRECTED: its citation previously read 3 CCR 702-4:4-4-4, which composed the state's Cite line with the row's own reference; the chart gives Reg. 4-4-4 on that row and that is what now stands. NO MEDICAID OR PARTNERSHIP BLOCK IS CURATED: those figures live in each state's own Medicaid manual and insurance-department pages, the two secondary lists consulted on 2026-09-09 disagreed about several states' partnership status, and the aggregator that carries a full asset-limit table forbids commercial reuse. A block absent here is a block nobody has read, which resolveLtcStateRules reports as uncurated rather than filling in.",
+  "states": {
+    "AK": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The ALASKA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "3 AAC 28.560"
+      }
+    },
+    "AL": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The ALABAMA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "AAC 482-1-091-.11"
+      }
+    },
+    "AR": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The ARKANSAS (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "AR ADC 054.00.13-13"
+      }
+    },
+    "AZ": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The ARIZONA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "AZ ADC R20-6-1006"
+      }
+    },
+    "CA": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The CALIFORNIA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Lists exemptions, offer requirements and mandatory disclosures. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "Ins. § 10237.1"
+      }
+    },
+    "CO": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The COLORADO (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Optional inflation protection increases benefit levels. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases.",
+        "stateCitation": "Reg. 4-4-4"
+      }
+    },
+    "CT": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The CONNECTICUT (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "§ 38a-501-20"
+      }
+    },
+    "DC": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The DISTRICT OF COLUMBIA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "§ 2624"
+      }
+    },
+    "DE": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The DELAWARE (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "1404-13.0"
+      }
+    },
+    "FL": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The FLORIDA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Provision in statutes, not in regulations. Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases.",
+        "stateCitation": "F.S.A. § 627.94072"
+      }
+    },
+    "GA": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The GEORGIA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Optional benefit rider to cover inflation may be offered. Must provide reasonable protection of LTC benefit. Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges, a graphic comparison of the benefit levels over a 20 year period.",
+        "stateCitation": "GA ADC 120-2-16-.13"
+      }
+    },
+    "HI": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The HAWAII (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "§ 431:10H-220"
+      }
+    },
+    "IA": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The IOWA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "IAC 191-39.10(514G)"
+      }
+    },
+    "ID": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The IDAHO (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "IDAPA 18.04.11.017"
+      }
+    },
+    "IL": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The ILLINOIS (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "50 IL ADC 2012.80"
+      }
+    },
+    "IN": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The INDIANA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "760 IAC 2-7-1 to 760 IAC 2-7-4"
+      }
+    },
+    "KS": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The KANSAS (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "K.A.R. 40-4-37O; 40-4-37j"
+      }
+    },
+    "KY": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The KENTUCKY (11/21) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "KAR 17:081 § 10"
+      }
+    },
+    "LA": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The LOUISIANA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "LAC 37:XIII.1919"
+      }
+    },
+    "MA": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The MASSACHUSETTS (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "211 CMR 65.06"
+      }
+    },
+    "MD": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The MARYLAND (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "COMAR 31.14.01.12"
+      }
+    },
+    "ME": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The MAINE (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "Ch 425 § 13"
+      }
+    },
+    "MI": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The MICHIGAN (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges.",
+        "stateCitation": "§ 500.3909"
+      }
+    },
+    "MN": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The MINNESOTA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "§ 62S.23"
+      }
+    },
+    "MO": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The MISSOURI (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "20 CSR 400-4.100 § 11"
+      }
+    },
+    "MS": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The MISSISSIPPI (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Optional inflation protection increases benefit levels. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases.",
+        "stateCitation": "Rule 8.11"
+      }
+    },
+    "MT": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The MONTANA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "ARM 6.6.3108"
+      }
+    },
+    "NC": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The NORTH CAROLINA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "11 NC ADC 12.1009"
+      }
+    },
+    "ND": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The NORTH DAKOTA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "ND ADC 45-06-05.1-11"
+      }
+    },
+    "NE": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The NEBRASKA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "210 NE ADC § 46-011"
+      }
+    },
+    "NH": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The NEW HAMPSHIRE (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "NH ADC Ins. 3601.12"
+      }
+    },
+    "NJ": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The NEW JERSEY (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "N.J.A.C. 11:4-34.11"
+      }
+    },
+    "NM": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The NEW MEXICO (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "NM ADC 13.10.15.24"
+      }
+    },
+    "NV": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The NEVADA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "NAC 687B.076"
+      }
+    },
+    "NY": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The NEW YORK (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases.",
+        "stateCitation": "11 NY ADC 52.25"
+      }
+    },
+    "OH": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The OHIO (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "OH ADC 3901-4-01(M)"
+      }
+    },
+    "OK": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The OKLAHOMA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "OAC 365:10-5-44.3"
+      }
+    },
+    "OR": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The OREGON (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "OAR 836-052-0616"
+      }
+    },
+    "PA": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The PENNSYLVANIA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "§ 89a.112"
+      }
+    },
+    "RI": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The RHODE ISLAND (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "230-RICR-20-35-1.13"
+      }
+    },
+    "SC": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The SOUTH CAROLINA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection must be offered as an optional benefit.",
+        "stateCitation": "69-44 § 13"
+      }
+    },
+    "SD": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The SOUTH DAKOTA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Exceptions are listed. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "20:06:21:06 to 20:06:21:06.5"
+      }
+    },
+    "TN": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The TENNESSEE (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "0780-01-61-.13"
+      }
+    },
+    "TX": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The TEXAS (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "28 TAC § 3.3820"
+      }
+    },
+    "UT": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The UTAH (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "UT ADC R590-148-13"
+      }
+    },
+    "VA": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The VIRGINIA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases.",
+        "stateCitation": "14 VAC 5-200-100"
+      }
+    },
+    "VT": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The VERMONT (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases.",
+        "stateCitation": "4-5-16:13"
+      }
+    },
+    "WA": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The WASHINGTON (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "WA ADC 284-54-270; 284-83-055"
+      }
+    },
+    "WI": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The WISCONSIN (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges.",
+        "stateCitation": "Ins. § 3.46(11)"
+      }
+    },
+    "WV": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The WEST VIRGINIA (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases. Inflation protection shall be included unless insurer obtains a rejection as part of the application.",
+        "stateCitation": "WV ADC 114-32-11"
+      }
+    },
+    "WY": {
+      "inflationOffer": {
+        "reviewedOn": "2026-09-11",
+        "citations": [
+          {
+            "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+            "what": "The WYOMING (1/24) block's Offer of Inflation Protection row, read from the archived chart at refdata-snapshots/2026/naic-ltc-regulation-provisions/document.pdf and quoted; the date in brackets is when NAIC last reviewed that state's block, not when the state last changed its rule"
+          }
+        ],
+        "offerStandard": "Inflation protection feature must be no less favorable than one of the following: increasing benefit levels (compounded annually at a rate not less than 5%); guaranteeing right to increase without providing evidence of insurability; covering specified percentage of actual or reasonable charges. Insurers shall provide a graphic comparison of benefit levels over at least 20 years and disclose expected premium increases.",
+        "stateCitation": "WY ADC INS GEN Ch. 37, § 10"
+      }
+    }
+  }
+}

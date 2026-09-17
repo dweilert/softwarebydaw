@@ -1,0 +1,36 @@
+{
+  "sourceIds": [
+    "ssa-bend-points-wage-base",
+    "ssa-contribution-benefit-base",
+    "ssa-earnings-test",
+    "ssa-family-maximum-bend-points"
+  ],
+  "source": "Social Security Administration \u2014 PIA bend points (bendpoints.html) and the contribution and benefit base (cbb.html); retirement earnings-test exempt amounts (whileworking.html); family-maximum bend points (POMS RS 00605.910)",
+  "sourceUrls": [
+    "https://www.ssa.gov/oact/cola/bendpoints.html",
+    "https://www.ssa.gov/oact/cola/cbb.html",
+    "https://www.ssa.gov/benefits/retirement/planner/whileworking.html",
+    "https://secure.ssa.gov/poms.nsf/lnx/0300605910"
+  ],
+  "retrievedDate": "2026-05-07",
+  "verifiedAgainstPrimarySource": "2026-08-06 \u2014 bend points re-derived from ssa.gov/oact/cola/bendpoints.html and the taxable maximum from ssa.gov/oact/cola/cbb.html, which now has a registry entry of its own and is archived; the same figure is independently confirmed by the annual COLA announcement. 2026-08-07 \u2014 earnings-test exempt amounts ($24,480 under-FRA, $65,160 FRA-year) taken from SSA's own benefits-planner page and cross-confirmed by the 2026 COLA fact sheet; both were previously hardcoded plan defaults. NOTE: retrievedDate moved BACK to 2026-05-07 when the earnings-test exempt amounts joined this file \u2014 a file is only as fresh as its stalest source, and ssa-earnings-test was last pulled in May. The figures themselves were confirmed 2026-08-07 against the archived snapshot, which is weaker than a re-pull and is why the date was not bumped instead. 2026-08-08 \u2014 family-maximum bend points ($1,643 / $2,371 / $3,093 for 2026 eligibility) read from POMS RS 00605.910, which secure.ssa.gov serves to an automated client even though www.ssa.gov does not. These are a DIFFERENT set from bendFirst/bendSecond above, which are the PIA formula's bend points over AIME \u2014 confusing the two is the obvious way to get the family maximum silently wrong, which is why they sit in the same object with distinct names.",
+  "socialSecurity": {
+    "year": 2026,
+    "bendFirst": 1286,
+    "bendSecond": 7749,
+    "wageBase": 184500,
+    "awiLatestYear": 2024,
+    "earningsTestExempt": {
+      "underFra": 24480,
+      "fraYear": 65160
+    },
+    "familyMaximumBend": {
+      "first": 1643,
+      "second": 2371,
+      "third": 3093
+    }
+  },
+  "payroll": {
+    "ficaWageBase": 184500
+  }
+}

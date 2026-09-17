@@ -1,0 +1,158 @@
+{
+  "$comment": [
+    "Named periods a household recognises, mapped onto start years in the",
+    "historical record (see historicalReturns.json for the returns themselves).",
+    "",
+    "WHAT AN EPISODE IS HERE: a retirement START YEAR, plus the name people use",
+    "for what happened around it. Picking one runs the ordinary cohort walk from",
+    "that year — it does not overlay the episode's years onto a different",
+    "retirement, and it makes no claim that this episode is the one that matters",
+    "to any particular plan. The severity ranking still answers that question.",
+    "",
+    "EVERY EPISODE CARRIES ITS SOURCE. Dates that an authority publishes are",
+    "taken from that authority and nowhere else: NBER for business-cycle peaks",
+    "and troughs, FDIC for the savings-and-loan chronology, BLS for the price",
+    "record. Where a range is editorial rather than published — 'stagflation' is",
+    "a characterisation, not a dated event — the entry says so in `dateBasis`.",
+    "",
+    "`anchorYear` is the year the RETIREE feels it, which is not always the year",
+    "the episode is named after; each entry says why it was anchored where it",
+    "was. Changing an anchor changes what the app shows a client, so the reason",
+    "belongs beside the number."
+  ],
+  "schemaVersion": 1,
+  "sources": {
+    "nber": {
+      "name": "NBER — US Business Cycle Expansions and Contractions",
+      "url": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions",
+      "retrievedDate": "2026-09-09"
+    },
+    "fdic-sl": {
+      "name": "FDIC — S&L Crisis: A Chrono-Bibliography",
+      "url": "https://www.fdic.gov/publications/sl-crisis-chrono-bibliography",
+      "retrievedDate": "2026-09-09"
+    },
+    "bls-cpi": {
+      "name": "U.S. Bureau of Labor Statistics — Consumer Price Index",
+      "url": "https://www.bls.gov/cpi/",
+      "retrievedDate": "2026-09-09"
+    },
+    "series": {
+      "name": "The bundled returns record itself — see historicalReturns.json",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html",
+      "retrievedDate": "2026-09-09"
+    }
+  },
+  "episodes": [
+    {
+      "id": "crash-1929",
+      "name": "The Crash and the Depression",
+      "anchorYear": 1929,
+      "rangeLabel": "1929–1933",
+      "dateBasis": "published",
+      "sourceId": "nber",
+      "anchorReason": "The contraction's peak month falls in 1929, so a household retiring that year meets it immediately.",
+      "blurb": "Retiring the year the market broke, into the longest contraction in the record and years of falling prices."
+    },
+    {
+      "id": "recession-1937",
+      "name": "The 1937 recession",
+      "anchorYear": 1937,
+      "rangeLabel": "1937–1938",
+      "dateBasis": "published",
+      "sourceId": "nber",
+      "anchorReason": "The peak month is in 1937 and the whole contraction is short, so the start year is the episode.",
+      "blurb": "A second downturn before the first recovery had finished — the part of the thirties most plans forget to imagine."
+    },
+    {
+      "id": "postwar-inflation-1946",
+      "name": "Post-war inflation",
+      "anchorYear": 1946,
+      "rangeLabel": "1946–1948",
+      "dateBasis": "editorial",
+      "sourceId": "bls-cpi",
+      "anchorReason": "Anchored where the price record turns sharply after wartime controls ended; the range is a characterisation of that stretch, not a dated event.",
+      "blurb": "Prices climbed hard while markets went nowhere — the combination that empties a portfolio without a crash to point at."
+    },
+    {
+      "id": "stagflation-1966",
+      "name": "Stagflation",
+      "anchorYear": 1966,
+      "rangeLabel": "1966–1982",
+      "dateBasis": "editorial",
+      "sourceId": "bls-cpi",
+      "anchorReason": "A characterisation of a long stretch rather than a dated event; anchored at its usual opening year so the whole of it falls inside the run.",
+      "blurb": "A long stretch where prices climbed and real returns did not. Withdrawal plans are broken by this shape more often than by a crash."
+    },
+    {
+      "id": "oil-shock-1973",
+      "name": "The oil shock",
+      "anchorYear": 1973,
+      "rangeLabel": "1973–1975",
+      "dateBasis": "published",
+      "sourceId": "nber",
+      "anchorReason": "The contraction's peak month falls in 1973. The sharp version of the stagflation era, for a household that wants the acute case rather than the long one.",
+      "blurb": "The steepest part of the stagflation years, met in the first two years of a retirement."
+    },
+    {
+      "id": "black-monday-1987",
+      "name": "Black Monday",
+      "anchorYear": 1987,
+      "rangeLabel": "1987",
+      "dateBasis": "editorial",
+      "sourceId": "series",
+      "anchorReason": "A single-day fall with no recession beside it, so the year of the fall is the only sensible anchor.",
+      "blurb": "A violent fall and a fast recovery — worth walking precisely because it frightened people far more than it cost a patient retiree."
+    },
+    {
+      "id": "savings-and-loan-1990",
+      "name": "The savings & loan crisis",
+      "anchorYear": 1990,
+      "rangeLabel": "1980–1989, with a recession in 1990–1991",
+      "dateBasis": "published",
+      "sourceId": "fdic-sl",
+      "anchorReason": "The thrift failures span the eighties, but what reaches a retirement plan is the recession and bear market at the turn of the decade — so the walk starts there, and the name keeps the longer range.",
+      "blurb": "A banking crisis rather than a market one. What a plan actually meets is the recession at the end of it: this walk shows the returns and prices a retiree lived through, not the thrift failures themselves."
+    },
+    {
+      "id": "dot-com-2000",
+      "name": "Dot-com",
+      "anchorYear": 2000,
+      "rangeLabel": "2000–2002",
+      "dateBasis": "published",
+      "sourceId": "nber",
+      "anchorReason": "Anchored at the market's turn rather than the recession's peak month the following year, because the losing years are what a retiree draws against.",
+      "blurb": "Losing years stacked at the very start of a retirement — the sequence-of-returns case, in the form clients remember."
+    },
+    {
+      "id": "financial-crisis-2008",
+      "name": "The financial crisis",
+      "anchorYear": 2008,
+      "rangeLabel": "2007–2009",
+      "dateBasis": "published",
+      "sourceId": "nber",
+      "anchorReason": "The contraction's peak month falls in late 2007, but 2008 is the year a household saw its balance halve, and the year they name.",
+      "blurb": "The one clients ask about without being prompted."
+    },
+    {
+      "id": "covid-2020",
+      "name": "COVID",
+      "anchorYear": 2020,
+      "rangeLabel": "2020",
+      "dateBasis": "published",
+      "sourceId": "nber",
+      "anchorReason": "Peak and trough both fall in 2020 — the shortest contraction in the record.",
+      "blurb": "A steep fall and an unusually quick recovery, both inside one year."
+    },
+    {
+      "id": "inflation-shock-2022",
+      "name": "The inflation shock",
+      "anchorYear": 2022,
+      "rangeLabel": "2022",
+      "dateBasis": "editorial",
+      "sourceId": "bls-cpi",
+      "anchorReason": "No recession is dated here; the episode is a price and market year, so it is anchored on that year.",
+      "blurb": "Stocks and bonds fell together while prices rose — the year the usual hedge stopped hedging."
+    }
+  ]
+}

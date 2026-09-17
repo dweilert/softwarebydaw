@@ -1,0 +1,1817 @@
+[
+ {
+  "id": "irs-rev-proc-2025-32",
+  "category": "federal-tax",
+  "title": "Tax Inflation Adjustments for Tax Year 2026",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/irb/2025-45_IRB",
+  "version": "Rev. Proc. 2025-32",
+  "publishedDate": "2025-10-15",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "federal-brackets-2026",
+   "federal-standard-deduction",
+   "additional-standard-deduction-age-65"
+  ],
+  "expectedNextUpdate": "Mid-October each year (Rev. Proc. for following year)",
+  "notes": "Source for tax-data/federal/2026.json. Verify single + MFJ brackets, std deduction, and §63(f) age-65 add-on at every annual refresh.",
+  "dataUrl": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill"
+ },
+ {
+  "id": "irs-rev-proc-2025-19",
+  "category": "federal-tax",
+  "title": "2026 Inflation Adjusted Amounts for Health Savings Accounts",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-drop/rp-25-19.pdf",
+  "version": "Rev. Proc. 2025-19",
+  "retrievedDate": "2026-07-23",
+  "appliesTo": [
+   "hsa-contribution-limits"
+  ],
+  "expectedNextUpdate": "Spring each year (Rev. Proc. for following year, published earlier than the main brackets Rev. Proc.)",
+  "notes": "Source for tax-data/federal/2026.json's hsaContributionLimits (self-only $4,400, family $8,750). The $1,000 age-55+ catch-up is a fixed statutory amount under IRC §223(b)(3), not itself re-indexed — not in this Rev. Proc.'s adjusted-items list. See app/src/engine/validation/sources/irs-rev-proc-2025-19.md for the full quote."
+ },
+ {
+  "id": "irs-notice-2025-67",
+  "category": "federal-tax",
+  "title": "2026 Amounts Relating to Retirement Plans and IRAs, as Adjusted for Changes in Cost-of-Living",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-drop/n-25-67.pdf",
+  "version": "Notice 2025-67",
+  "retrievedDate": "2026-07-27",
+  "appliesTo": [
+   "elective-deferral-limits",
+   "ira-contribution-limits",
+   "simple-contribution-limits",
+   "qcd-annual-limit"
+  ],
+  "expectedNextUpdate": "Late October / early November each year (Notice for the following year)",
+  "notes": "Source for tax-data/federal/2026.json's electiveDeferralLimits, iraContributionLimits, and simpleContributionLimits, and for qcdAnnualLimitPerIndividual ($111,000, §408(d)(8)(A)). Transcribed from the notice PDF itself on 2026-07-27 — the earlier 2026-07-22 pass had only secondary-source agreement. See app/src/engine/validation/sources/irs-notice-2025-67.md for the quoted text."
+ },
+ {
+  "id": "irc-section-1",
+  "category": "federal-tax",
+  "title": "Tax imposed (federal income-tax rate schedules)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/1",
+  "version": "IRC §1",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "federal-bracket-schedule-structure"
+  ],
+  "expectedNextUpdate": "On legislative amendment only (e.g. TCJA in 2017, OBBBA in 2025)",
+  "notes": "Statutory authority for the bracket schedules. Rates change rarely; the indexed thresholds change annually via §1(f)."
+ },
+ {
+  "id": "irc-section-63f",
+  "category": "federal-tax",
+  "title": "Additional standard deduction for the elderly (age 65+)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/63",
+  "version": "IRC §63(f)",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "additional-standard-deduction-age-65"
+  ],
+  "expectedNextUpdate": "On legislative amendment only",
+  "notes": "2026: $1,600 per spouse 65+ MFJ, $2,000 Single — indexed via §1(f)(3)."
+ },
+ {
+  "id": "hr1-section-70102",
+  "category": "obbba",
+  "title": "One Big Beautiful Bill Act — Senior bonus standard deduction",
+  "publisher": "U.S. Congress",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/1",
+  "version": "H.R.1 §70102 (2025)",
+  "publishedDate": "2025-09-30",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "obbba-senior-bonus-deduction",
+   "obbba-phase-out-magi-thresholds",
+   "obbba-expiry-year"
+  ],
+  "expectedNextUpdate": "Only if Congress amends or extends the provision (current expiry: 2028)",
+  "notes": "$6,000 per filer 65+, tax years 2025–2028. Phase-out: 6¢/$1 above $75K Single / $150K MFJ MAGI."
+ },
+ {
+  "id": "irc-section-1h",
+  "category": "ltcg",
+  "title": "Maximum capital gains rate (LTCG bracket structure)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/1#h",
+  "version": "IRC §1(h)",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "ltcg-rates",
+   "ltcg-stacking-rule"
+  ],
+  "expectedNextUpdate": "On legislative amendment only",
+  "notes": "Defines the 0%/15%/20% LTCG rate structure and the stacking rule (ordinary income fills brackets first). Indexed thresholds change annually."
+ },
+ {
+  "id": "irs-cola-ltcg-2026",
+  "category": "ltcg",
+  "title": "2026 LTCG bracket thresholds",
+  "publisher": "IRS",
+  "url": "https://www.kiplinger.com/taxes/irs-updates-capital-gains-tax-thresholds",
+  "version": "2026 cost-of-living adjustments",
+  "publishedDate": "2025-10-15",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "ltcg-thresholds-2026"
+  ],
+  "expectedNextUpdate": "Mid-October each year (bundled with Rev. Proc.)",
+  "notes": "0% bracket: $49,450 Single / $98,900 MFJ. 15%/20% top per IRS COLA release."
+ },
+ {
+  "id": "irc-section-1411-niit",
+  "category": "ltcg",
+  "title": "Net Investment Income Tax (3.8% surtax)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/1411",
+  "version": "IRC §1411",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "niit-3.8-percent"
+  ],
+  "expectedNextUpdate": "Statutory; thresholds NOT indexed (frozen at $200K Single / $250K MFJ)",
+  "notes": "NIIT thresholds are NOT inflation-adjusted by statute. Matters over a 40-year horizon — more retirees crossing the threshold each year."
+ },
+ {
+  "id": "cms-irmaa-2026",
+  "category": "irmaa",
+  "title": "2026 Medicare Parts B Premiums + IRMAA brackets",
+  "publisher": "CMS",
+  "url": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
+  "version": "CMS fact sheet, Nov 2025",
+  "publishedDate": "2025-11-10",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "irmaa-tier-thresholds",
+   "part-b-base-premium",
+   "irmaa-multipliers"
+  ],
+  "expectedNextUpdate": "Early November each year (CMS fact sheet for following coverage year)",
+  "notes": "Source for tax-data/irmaa/2026.json. Note CMS publishes IRMAA surcharges as multiples of the base Part B; our schema mirrors that structure."
+ },
+ {
+  "id": "ssa-poms-irmaa",
+  "category": "irmaa",
+  "title": "SSA POMS — IRMAA reference (operational)",
+  "publisher": "SSA",
+  "url": "https://secure.ssa.gov/poms.nsf/lnx/0601101020",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "irmaa-magi-lookback",
+   "irmaa-tier-structure"
+  ],
+  "expectedNextUpdate": "Updated when SSA's operating procedures change (rare; usually mirrors CMS)",
+  "notes": "Stable cross-reference for the 2-year MAGI lookback rule. CMS publishes the tier dollar amounts; SSA implements the means-test."
+ },
+ {
+  "id": "irs-pub-915",
+  "category": "social-security",
+  "title": "Social Security and Equivalent Railroad Retirement Benefits",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/forms-pubs/about-publication-915",
+  "version": "Pub 915 (2024 ed.)",
+  "publishedDate": "2025-01-15",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "ss-taxability-worksheet",
+   "provisional-income"
+  ],
+  "expectedNextUpdate": "January each year (next year's edition).",
+  "notes": "Source for the SS taxability worksheet. Thresholds ($25K/$32K/$34K/$44K) are STATUTORY and NOT indexed — they've been frozen since 1993."
+ },
+ {
+  "id": "ssa-cola",
+  "category": "social-security",
+  "title": "Social Security Cost-of-Living Adjustments",
+  "publisher": "SSA",
+  "url": "https://www.ssa.gov/cola/",
+  "version": "2026 COLA announcement",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "ss-cola-rate-annual"
+  ],
+  "expectedNextUpdate": "Mid-October each year (announcement for following January)",
+  "notes": "Historical COLA series is in reference-data/colaCpi.json; cross-checked against this page each fall."
+ },
+ {
+  "id": "ssa-section-218",
+  "category": "social-security",
+  "title": "Section 218 Agreements — State and Local Government Employers",
+  "publisher": "SSA",
+  "url": "https://www.ssa.gov/slge/sect_218_agree.htm",
+  "retrievedDate": "2026-08-02",
+  "appliesTo": [
+   "non-covered-public-employment"
+  ],
+  "expectedNextUpdate": "Rarely — the Section 218 framework changes only when Congress amends the Social Security Act",
+  "notes": "The PRIMARY source for why some teachers and public employees pay no Social Security tax, and it deliberately does not answer 'which states'. All 50 states hold a Section 218 Agreement; coverage is granted per RETIREMENT-SYSTEM COVERAGE GROUP (SSA's own example is \"teachers in City A who are members of the Teachers Retirement System\"), so it varies by district and system rather than cleanly by state. SSA directs individuals to their State Social Security Administrator. That is why this app names the commonly cited states as a prompt to check rather than as a determination — see ssa-non-covered-states-secondary."
+ },
+ {
+  "id": "ssa-non-covered-states-secondary",
+  "category": "social-security",
+  "title": "States where public-school teachers are largely outside Social Security",
+  "publisher": "Bellwether (TeacherPensions.org) and Equable Institute",
+  "url": "https://www.teacherpensions.org/topics/teachers-and-social-security",
+  "retrievedDate": "2026-08-02",
+  "appliesTo": [
+   "non-covered-public-employment"
+  ],
+  "expectedNextUpdate": "Annual — both publishers refresh their coverage research each year",
+  "notes": "SECONDARY, and used only because no primary equivalent exists — SSA publishes no state list (see ssa-section-218). Two independent research organisations were read and they DISAGREE on categorisation, which is itself the finding. Bellwether names 15 states with a substantial share of uncovered teachers: AK, CA, CO, CT, GA, IL, KY, LA, ME, MA, MO, NV, OH, RI, TX. Equable (https://equable.org/where-are-teachers-allowed-to-join-social-security/, retrieved the same day) splits its list differently — full exclusion vs mixed-by-district — placing CA, TX and MO in MIXED, and adding MN and UT, which Bellwether's 15 omit. Because the two conflict, the app must not present any list as a determination of an individual's coverage. Both agree roughly 40% of US K-12 teachers are outside Social Security. Revisit if SSA or a state administrator ever publishes an authoritative roster."
+ },
+ {
+  "id": "ssa-earnings-test",
+  "category": "social-security",
+  "title": "Retirement Earnings Test Exempt Amounts",
+  "publisher": "SSA",
+  "url": "https://www.ssa.gov/benefits/retirement/planner/whileworking.html",
+  "version": "2026 exempt amounts",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "ssa-earnings-test-annual-limit"
+  ],
+  "expectedNextUpdate": "Mid-October each year (bundled with COLA announcement)",
+  "notes": "Engine uses plan.retirement.ssaEarningsTestAnnualLimit. Updated by shipping new bundled data or a remote import — the per-category editor this note used to name was removed on 2026-07-31. url and dataUrl were split on 2026-08-06. The Income screen sends the reader to the retirement planner page, which explains the earnings test in plain language; the exempt amounts themselves live on the actuarial rtea.html page, which is what change detection fetches. Before the split the registry knew only the actuarial page, so a reader following the app's own link landed somewhere nothing was watching.",
+  "dataUrl": "https://www.ssa.gov/oact/cola/rtea.html"
+ },
+ {
+  "id": "ssa-bend-points-wage-base",
+  "category": "social-security",
+  "title": "PIA Bend Points",
+  "publisher": "SSA",
+  "url": "https://www.ssa.gov/oact/cola/bendpoints.html",
+  "version": "2026 automatic determinations",
+  "retrievedDate": "2026-07-14",
+  "appliesTo": [
+   "ssa-pia-bend-points"
+  ],
+  "expectedNextUpdate": "Mid-October each year (bundled with COLA announcement)",
+  "notes": "Two figures from two pages, cited together because the app treats them as one refresh: the PIA formula's first and second bend points (monthly AIME dollars), and the taxable maximum — the same wage base FICA is withheld against (reference-data/parameters.json's payroll.ficaWageBase is asserted equal to socialSecurity.wageBase; see D1, 2026-08-06, for why that assertion exists). The wage base's own page is https://www.ssa.gov/oact/cola/cbb.html."
+ },
+ {
+  "id": "ssa-contribution-benefit-base",
+  "category": "social-security",
+  "title": "Contribution and Benefit Base (Social Security taxable maximum)",
+  "publisher": "Social Security Administration",
+  "url": "https://www.ssa.gov/oact/cola/cbb.html",
+  "retrievedDate": "2026-08-06",
+  "appliesTo": [
+   "ssa-taxable-maximum",
+   "fica-wage-base",
+   "taxable-maximum-history"
+  ],
+  "expectedNextUpdate": "Mid-October each year, with the COLA announcement",
+  "notes": "Split out of ssa-bend-points-wage-base on 2026-08-06. One entry cannot honestly cite two documents: change detection fetches a single URL, so the bend-points page was being watched while this one — which carries the taxable maximum — was never fetched at all. The figure is also stated in the annual COLA announcement, and that is where the extractor reads it from, because ssa.gov intermittently refuses this client on the oact pages. The page also carries the full 1937-2026 history of the base, transcribed into engine/ssa/taxableMaximumSeries.ts so each year of an entered work history is capped at the figure that actually applied in it."
+ },
+ {
+  "id": "rrb-tier2-cola",
+  "category": "social-security",
+  "title": "Railroad Retirement Tier II Cost-of-Living Adjustment",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/45/231f",
+  "version": "45 U.S.C. § 231f(c)(2)",
+  "retrievedDate": "2026-08-07",
+  "appliesTo": [
+   "railroad-tier2-cola"
+  ],
+  "expectedNextUpdate": "Statutory; the 32.5% share is fixed in law and amended only by Congress. The CPI increase it applies to is announced by the RRB each October.",
+  "notes": "Tier II rises by 32.5% of the CPI increase, not the whole of it — the share the Railroad Retirement Solvency Act of 1983 set. Tier I tracks the CPI in full, like Social Security. The RRB's own announcement for January 2026 shows the gap plainly: tier I up 2.8%, tier II up 0.9%."
+ },
+ {
+  "id": "ssa-awi-series",
+  "category": "social-security",
+  "title": "National Average Wage Index (AWI), 1951-present",
+  "publisher": "SSA",
+  "url": "https://www.ssa.gov/oact/cola/AWI.html",
+  "retrievedDate": "2026-07-22",
+  "appliesTo": [
+   "ssa-wage-indexing",
+   "pia-from-earnings-estimator"
+  ],
+  "expectedNextUpdate": "Late October each year — SSA appends the prior year's figure; the series is never revised.",
+  "notes": "Historical series is in reference-data/awiSeries.json, wage-indexing methodology and the full quoted series are in app/src/engine/validation/sources/ssa-awi-wage-indexing.md. Used to wage-index an entered earnings history for the PIA-from-earnings estimator; the app's own future-growth assumption for years beyond the published series is NOT sourced from here — see AWI_DEFAULT_FUTURE_GROWTH_RATE's own @provenance ours comment."
+ },
+ {
+  "id": "ssa-trustees-2025",
+  "category": "social-security",
+  "title": "Annual Trustees Report (OASI/DI trust fund projections)",
+  "publisher": "SSA Board of Trustees",
+  "url": "https://www.ssa.gov/oact/TR/",
+  "version": "2025 report",
+  "publishedDate": "2025-05-01",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "trust-fund-depletion-year",
+   "post-depletion-payable-percent"
+  ],
+  "expectedNextUpdate": "Annual report, typically May",
+  "notes": "Drives the What If Explorer 'trust-fund shortfall' scenario. 2025 report projects OASI depletion ~2034 with 77% payable thereafter absent congressional action."
+ },
+ {
+  "id": "irs-pub-590b",
+  "category": "rmd",
+  "title": "Distributions from Individual Retirement Arrangements (IRAs)",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/forms-pubs/about-publication-590-b",
+  "version": "Pub 590-B",
+  "retrievedDate": "2026-08-06",
+  "appliesTo": [
+   "rmd-uniform-lifetime-table",
+   "rmd-start-age",
+   "inherited-ira-10-year-rule"
+  ],
+  "expectedNextUpdate": "Annually, January (for prior tax year)",
+  "notes": "Source for reference-data/rmdUniformLifetime.json. Also documents the SECURE 2.0 RMD start ages (73 for those born 1951–1959, 75 for 1960+).",
+  "dataUrl": "https://www.irs.gov/pub/irs-pdf/p590b.pdf"
+ },
+ {
+  "id": "secure-2-act",
+  "category": "rmd",
+  "title": "SECURE 2.0 Act (RMD age changes, inherited-IRA rules)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.congress.gov/bill/117th-congress/house-bill/2954",
+  "version": "P.L. 117-328 §107 (Dec 2022)",
+  "publishedDate": "2022-12-29",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "rmd-start-age-73",
+   "rmd-start-age-75",
+   "inherited-ira-10-year-drain"
+  ],
+  "expectedNextUpdate": "On legislative amendment only",
+  "notes": "Raised RMD start age 72 → 73 (effective 2023), 73 → 75 (effective 2033). Inherited-IRA 10-year drain rule for non-spouse heirs."
+ },
+ {
+  "id": "irc-section-2010",
+  "category": "estate",
+  "title": "Unified credit against estate tax",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/2010",
+  "version": "IRC §2010",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "federal-estate-tax-exemption"
+  ],
+  "expectedNextUpdate": "On legislative amendment only (OBBBA 2025 made the higher exemption permanent)",
+  "notes": "2026: $13.99M per individual (indexed). Top rate 40%. H.R.1 (2025) removed the end-of-2025 sunset."
+ },
+ {
+  "id": "tax-foundation-state-brackets",
+  "category": "state-tax",
+  "title": "State Individual Income Tax Rates and Brackets",
+  "publisher": "Tax Foundation",
+  "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates/",
+  "version": "2026 state brackets edition",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "state-tax-brackets",
+   "state-standard-deduction"
+  ],
+  "expectedNextUpdate": "Annually, typically February",
+  "notes": "Source for tax-data/states/2026.json. Cross-check against per-state DoR sites for outliers.",
+  "dataUrl": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+ },
+ {
+  "id": "state-retirement-exclusion-ga",
+  "category": "state-tax",
+  "title": "Georgia Retirement Income Exclusion",
+  "publisher": "Georgia Department of Revenue",
+  "url": "https://dor.georgia.gov/retirement-income-exclusion",
+  "version": "O.C.G.A. §48-7-27(a)(5)",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Dollar caps in these sections are not inflation-indexed unless the statute says so.",
+  "notes": "Up to $65,000 of retirement income per person aged 65+, $35,000 for ages 62-64, each spouse individually entitled. The single largest state retirement exclusion this app models."
+ },
+ {
+  "id": "state-retirement-exclusion-ny",
+  "category": "state-tax",
+  "title": "New York Information for Retired Persons",
+  "publisher": "New York State Department of Taxation and Finance",
+  "url": "https://www.tax.ny.gov/pit/file/information_for_seniors.htm",
+  "version": "NY Tax Law §612(c)(3-a)",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Dollar caps in these sections are not inflation-indexed unless the statute says so.",
+  "notes": "Up to $20,000 of private pension and annuity income per person from age 59.5. Government pensions are fully exempt and are not modelled separately."
+ },
+ {
+  "id": "state-retirement-exclusion-sc",
+  "category": "state-tax",
+  "title": "South Carolina Code §12-6-1170",
+  "publisher": "South Carolina General Assembly",
+  "url": "https://law.justia.com/codes/south-carolina/title-12/chapter-6/section-12-6-1170/",
+  "version": "S.C. Code Ann. §12-6-1170",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Dollar caps in these sections are not inflation-indexed unless the statute says so.",
+  "notes": "Subsection (B) allows up to $15,000 against ANY taxable income at age 65+, reduced by the subsection (A) retirement deduction claimed."
+ },
+ {
+  "id": "state-retirement-exclusion-va",
+  "category": "state-tax",
+  "title": "Code of Virginia §58.1-322.02",
+  "publisher": "Virginia General Assembly",
+  "url": "https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-322.02/",
+  "version": "Code of Virginia §58.1-322.02",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Dollar caps in these sections are not inflation-indexed unless the statute says so.",
+  "notes": "Age deduction of up to $12,000 per person 65+, phased out $1 per $1 of adjusted FAGI above $50,000 single / $75,000 married. Adjusted FAGI excludes Social Security taxable under IRC §86."
+ },
+ {
+  "id": "state-retirement-exclusion-co",
+  "category": "state-tax",
+  "title": "Colorado Income Tax Topics: Social Security, Pensions and Annuities",
+  "publisher": "Colorado Department of Revenue",
+  "url": "https://tax.colorado.gov/income-tax-topics-social-security-pensions-and-annuities",
+  "version": "C.R.S. §39-22-104(4)(f)",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Dollar caps in these sections are not inflation-indexed unless the statute says so.",
+  "notes": "Pension and annuity subtraction capped at $24,000 per person 65+, $20,000 for ages 55-64. Age-tiered, which is why the schema carries tiers rather than one cap."
+ },
+ {
+  "id": "state-retirement-exclusion-nj",
+  "category": "state-tax",
+  "title": "New Jersey Retirement Income Exclusions",
+  "publisher": "New Jersey Division of Taxation",
+  "url": "https://www.nj.gov/treasury/taxation/njit7.shtml",
+  "version": "N.J.S.A. 54A:6-15",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature.",
+  "notes": "Per-RETURN exclusion from age 62: $100,000 joint, $75,000 single, $50,000 MFS, with a hard $100,000 gross-income limit above which it is zero."
+ },
+ {
+  "id": "state-retirement-review-or",
+  "category": "state-tax",
+  "title": "Oregon Revised Statutes Sec. 316.157",
+  "publisher": "Oregon Legislature",
+  "url": "https://law.justia.com/codes/oregon/volume-08/chapter-316/section-316-157/",
+  "version": "ORS 316.157",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature.",
+  "notes": "Reviewed 2026-08-08: Oregon relieves retirement income with a credit rather than an exclusion, so nothing is carried in the exclusion model."
+ },
+ {
+  "id": "state-retirement-review-ut",
+  "category": "state-tax",
+  "title": "Utah Code Sec. 59-10-1019",
+  "publisher": "Utah Legislature",
+  "url": "https://le.utah.gov/xcode/Title59/Chapter10/59-10-S1019.html",
+  "version": "Utah Code 59-10-1019",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature.",
+  "notes": "Reviewed 2026-08-08: a nonrefundable credit of up to $450 per person 65+, phased out from $32,000 MFJ. A credit, not an exclusion."
+ },
+ {
+  "id": "state-retirement-review-ks",
+  "category": "state-tax",
+  "title": "Kansas Statutes Sec. 79-32,117",
+  "publisher": "Kansas Office of Revisor of Statutes",
+  "url": "https://ksrevisor.gov/statutes/chapters/ch79/079_032_0117.html",
+  "version": "K.S.A. 79-32,117(c)",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature.",
+  "notes": "Reviewed 2026-08-08: Social Security fully exempt, plus a PUBLIC-pension (KPERS) exemption this app cannot express without wrongly exempting private pensions too."
+ },
+ {
+  "id": "state-retirement-review-ca",
+  "category": "state-tax",
+  "title": "FTB Publication 1005, Pension and Annuity Guidelines",
+  "publisher": "California Franchise Tax Board",
+  "url": "https://www.ftb.ca.gov/forms/2025/2025-1005-publication.pdf",
+  "version": "FTB Pub. 1005",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory or annually published, depending on the state; see notes.",
+  "notes": "Reviewed 2026-08-08: California conforms to federal treatment and has no capped or age-based retirement exclusion. The app was already correct."
+ },
+ {
+  "id": "state-retirement-review-nc",
+  "category": "state-tax",
+  "title": "Bailey Decision Concerning Federal, State and Local Retirement Benefits",
+  "publisher": "North Carolina Department of Revenue",
+  "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax/filing-topics/bailey-decision-concerning-federal-state-and-local-retirement-benefits",
+  "version": "Bailey v. State of North Carolina",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory or annually published, depending on the state; see notes.",
+  "notes": "Reviewed 2026-08-08: exclusion turns on government employment and 1989 vesting, which this app does not record."
+ },
+ {
+  "id": "state-retirement-review-ma",
+  "category": "state-tax",
+  "title": "Tax Treatment of Pensions in Massachusetts",
+  "publisher": "Massachusetts Department of Revenue",
+  "url": "https://www.mass.gov/info-details/tax-treatment-of-pensions-in-massachusetts",
+  "version": "Mass.gov pension guidance",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory or annually published, depending on the state; see notes.",
+  "notes": "Reviewed 2026-08-08: contributory GOVERNMENT pensions are exempt; private pensions and IRA distributions are fully taxable."
+ },
+ {
+  "id": "state-retirement-review-az",
+  "category": "state-tax",
+  "title": "Arizona Revised Statutes Sec. 43-1022",
+  "publisher": "Arizona Legislature",
+  "url": "https://www.azleg.gov/ars/43/01022.htm",
+  "version": "A.R.S. 43-1022",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory or annually published, depending on the state; see notes.",
+  "notes": "Reviewed 2026-08-08: $2,500 subtraction for federal and Arizona government pensions only; private retirement income gets nothing."
+ },
+ {
+  "id": "state-retirement-review-mi",
+  "category": "state-tax",
+  "title": "Michigan Revenue Administrative Bulletin 2026-1",
+  "publisher": "Michigan Department of Treasury",
+  "url": "https://www.michigan.gov/taxes/rep-legal/rab/2026-revenue-administrative-bulletins/revenue-administrative-bulletin-2026-1",
+  "version": "RAB 2026-1",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory or annually published, depending on the state; see notes.",
+  "notes": "Reviewed 2026-08-08: Public Act 4 of 2023 fully phased in for 2026, but the bulletin states only the 2025 caps ($65,897 / $131,794) and leaves 2026's as inflation-adjusted. Revisit when the figure is published."
+ },
+ {
+  "id": "state-retirement-review-mn",
+  "category": "state-tax",
+  "title": "Minnesota Statutes Sec. 290.0132",
+  "publisher": "Minnesota Office of the Revisor of Statutes",
+  "url": "https://www.revisor.mn.gov/statutes/cite/290.0132",
+  "version": "Minn. Stat. 290.0132",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature.",
+  "notes": "Reviewed 2026-08-08: public pension subtraction, and only for years not covered by Social Security."
+ },
+ {
+  "id": "state-retirement-review-ct",
+  "category": "state-tax",
+  "title": "A Guide to Connecticut's Personal Income Tax (OLR 2024-R-0130)",
+  "publisher": "Connecticut General Assembly, Office of Legislative Research",
+  "url": "https://cga.ct.gov/2024/rpt/pdf/2024-R-0130.pdf",
+  "version": "OLR Report 2024-R-0130",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature.",
+  "notes": "Reviewed 2026-08-08: 100% of pension and annuity income below an AGI threshold, tapering to zero. Needs a percent-of-eligible mechanism."
+ },
+ {
+  "id": "state-retirement-review-wv",
+  "category": "state-tax",
+  "title": "TSD-413 West Virginia Tax Tips for Senior Citizens",
+  "publisher": "West Virginia Tax Division",
+  "url": "https://tax.wv.gov/Documents/TSD/tsd413.pdf",
+  "version": "TSD-413",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature.",
+  "notes": "Reviewed 2026-08-08: $8,000 senior modification, taken as the HIGHER of that or other decreasing modifications including Social Security."
+ },
+ {
+  "id": "state-ss-exemption-nm",
+  "category": "state-tax",
+  "title": "Social Security Income Tax Exemption",
+  "publisher": "New Mexico Taxation and Revenue Department",
+  "url": "https://www.tax.newmexico.gov/social-security-income-tax-exemption/",
+  "version": "Enacted 2022",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-social-security-exemption"
+  ],
+  "expectedNextUpdate": "Statutory; the income thresholds are set in law and amended by the legislature.",
+  "notes": "100% exemption below $100,000 single / $150,000 joint / $75,000 MFS. A cliff, not a taper."
+ },
+ {
+  "id": "state-ss-exemption-ct",
+  "category": "state-tax",
+  "title": "Connecticut Tax Tips for Senior Citizens",
+  "publisher": "Connecticut Department of Revenue Services",
+  "url": "https://portal.ct.gov/drs/individuals/connecticut-tax-tips-for-senior-citizens",
+  "version": "DRS senior guidance",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-social-security-exemption"
+  ],
+  "expectedNextUpdate": "Statutory; thresholds are amended by the legislature and several are inflation-adjusted annually.",
+  "notes": "Social Security fully exempt below federal AGI of $75,000 single / $100,000 joint. Above, Connecticut taxes at most 50% of benefits received."
+ },
+ {
+  "id": "state-ss-exemption-vt",
+  "category": "state-tax",
+  "title": "Social Security Exemption",
+  "publisher": "Vermont Department of Taxes",
+  "url": "https://tax.vermont.gov/individuals/income-tax-returns/social-security-exemption",
+  "version": "32 V.S.A. 5830e",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-social-security-exemption"
+  ],
+  "expectedNextUpdate": "Statutory; thresholds are amended by the legislature and several are inflation-adjusted annually.",
+  "notes": "Full exemption below $65,000 joint / $50,000 otherwise, phasing out to zero at $75,000 / $60,000."
+ },
+ {
+  "id": "state-ss-review-ri",
+  "category": "state-tax",
+  "title": "Rhode Island Retirement Income Tax Guide (PUB 2024-01)",
+  "publisher": "Rhode Island Division of Taxation",
+  "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2024-03/PUB_2024-01_retirement_income_guide.pdf",
+  "version": "R.I.G.L. 44-30-12",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-social-security-exemption"
+  ],
+  "expectedNextUpdate": "Statutory; thresholds are amended by the legislature and several are inflation-adjusted annually.",
+  "notes": "Reviewed 2026-08-08: exemption at full retirement age below inflation-adjusted income thresholds; the 2026 figures were not obtained."
+ },
+ {
+  "id": "state-ss-review-mt",
+  "category": "state-tax",
+  "title": "Individual Income Tax",
+  "publisher": "Montana Department of Revenue",
+  "url": "https://revenue.mt.gov/taxes/individual-income-tax/",
+  "version": "Montana Publication 1",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-social-security-exemption"
+  ],
+  "expectedNextUpdate": "Statutory; thresholds are amended by the legislature and several are inflation-adjusted annually.",
+  "notes": "Reviewed 2026-08-08: Montana taxes Social Security substantially as the federal return does, via its own worksheet rather than a flat exemption or an income ceiling. The Publication 1 PDF URL first cited returned HTTP 404 -- a dead citation is worse than a blocked one, so this points at the Department's individual income tax page instead."
+ },
+ {
+  "id": "state-retirement-review-ky",
+  "category": "state-tax",
+  "title": "Kentucky Schedule P, Kentucky Pension Income Exclusion",
+  "publisher": "Kentucky Department of Revenue",
+  "url": "https://revenue.ky.gov/Forms/Schedule%20P%202023.pdf",
+  "version": "KRS 141.010",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Up to $31,110 per person of all pension and retirement income, no age test."
+ },
+ {
+  "id": "state-retirement-review-wi",
+  "category": "state-tax",
+  "title": "How Your Retirement Benefits Are Taxed (Publication 126)",
+  "publisher": "Wisconsin Department of Revenue",
+  "url": "https://www.revenue.wi.gov/DOR%20Publications/pb126.pdf",
+  "version": "Wis. Stat. 71.05",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "From 2025: up to $24,000 per person aged 67+ of qualifying retirement income."
+ },
+ {
+  "id": "state-retirement-review-la",
+  "category": "state-tax",
+  "title": "La. R.S. 47:44.1, Annual retirement or disability income exemption",
+  "publisher": "Louisiana State Legislature",
+  "url": "https://www.legis.la.gov/legis/LawPrint.aspx?d=102133",
+  "version": "La. R.S. 47:44.1",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "$12,000 per person 65+, from 2025, CPI-adjusted annually thereafter."
+ },
+ {
+  "id": "state-retirement-review-me",
+  "category": "state-tax",
+  "title": "Maine Individual Income Tax Instructions",
+  "publisher": "Maine Revenue Services",
+  "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/25_1040me_gen_instr_w_cover_pg.pdf",
+  "version": "36 M.R.S. 5122",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Pension deduction, $35,000 statutory for 2026 with a COLA on top."
+ },
+ {
+  "id": "state-retirement-review-al",
+  "category": "state-tax",
+  "title": "Ala. Code Sec. 40-18-19, Exemptions",
+  "publisher": "Alabama Legislature",
+  "url": "https://law.justia.com/codes/alabama/title-40/chapter-18/article-1/section-40-18-19/",
+  "version": "Ala. Code 40-18-19",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Defined benefit plan distributions exempt; $6,000 of other retirement income at 65+."
+ },
+ {
+  "id": "state-retirement-review-ar",
+  "category": "state-tax",
+  "title": "Ark. Code Ann. Sec. 26-51-307",
+  "publisher": "Arkansas General Assembly",
+  "url": "https://law.justia.com/codes/arkansas/title-26/subtitle-5/chapter-51/subchapter-3/section-26-51-307/",
+  "version": "Ark. Code 26-51-307",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "First $6,000 of IRA or employment retirement benefits, per taxpayer."
+ },
+ {
+  "id": "state-retirement-review-de",
+  "category": "state-tax",
+  "title": "30 Del. C. Chapter 11, Personal Income Tax",
+  "publisher": "Delaware General Assembly",
+  "url": "https://delcode.delaware.gov/title30/c011/sc02/index.html",
+  "version": "30 Del. C. 1106",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "$12,500 per person 60+ of pension and eligible retirement income."
+ },
+ {
+  "id": "state-retirement-review-ia",
+  "category": "state-tax",
+  "title": "Retirement Income Tax Guidance",
+  "publisher": "Iowa Department of Revenue",
+  "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/retirement-income-tax-guidance",
+  "version": "Iowa Code 422.7(31)",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "From 2023: ALL retirement income exempt at age 55+, no cap."
+ },
+ {
+  "id": "state-retirement-review-mo",
+  "category": "state-tax",
+  "title": "Pension Exemption and Social Security Deduction",
+  "publisher": "Missouri Department of Revenue",
+  "url": "https://dor.mo.gov/taxation/individual/tax-types/property-tax-credit/pension.html",
+  "version": "RSMo 143.124",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Public pension exemption only; Social Security 100% exempt at 62+ from 2024."
+ },
+ {
+  "id": "state-retirement-review-oh",
+  "category": "state-tax",
+  "title": "Ohio Rev. Code Sec. 5747.055",
+  "publisher": "Ohio Laws and Administrative Rules",
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-5747.055",
+  "version": "ORC 5747.055",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Retirement income relieved by CREDITS, not exclusions."
+ },
+ {
+  "id": "state-retirement-review-in",
+  "category": "state-tax",
+  "title": "Income Tax Information Bulletin #6",
+  "publisher": "Indiana Department of Revenue",
+  "url": "https://www.in.gov/dor/files/ib06.pdf",
+  "version": "IC 6-3-2",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Military retirement only, $5,000 per person 60+."
+ },
+ {
+  "id": "state-retirement-review-ne",
+  "category": "state-tax",
+  "title": "Neb. Rev. Stat. Sec. 77-2716",
+  "publisher": "Nebraska Legislature",
+  "url": "https://www.nebraskalegislature.gov/laws/statutes.php?statute=77-2716",
+  "version": "Neb. Rev. Stat. 77-2716",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Military retirement 100% exempt; Social Security 100% exempt from 2024."
+ },
+ {
+  "id": "state-retirement-review-id",
+  "category": "state-tax",
+  "title": "Idaho Code Sec. 63-3022A",
+  "publisher": "Idaho State Legislature",
+  "url": "https://legislature.idaho.gov/statutesrules/idstat/title63/t63ch30/sect63-3022a/",
+  "version": "Idaho Code 63-3022A",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Firefighter, city police and federal civil service retirement only."
+ },
+ {
+  "id": "state-retirement-review-nd",
+  "category": "state-tax",
+  "title": "North Dakota Century Code Chapter 57-38",
+  "publisher": "North Dakota Legislative Branch",
+  "url": "https://ndlegis.gov/cencode/t57c38.html",
+  "version": "N.D.C.C. 57-38-30.3(7)",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Social Security deduction, income threshold removed in 2021."
+ },
+ {
+  "id": "state-retirement-review-dc",
+  "category": "state-tax",
+  "title": "D.C. Code Sec. 47-1803.02",
+  "publisher": "D.C. Law Library",
+  "url": "https://code.dccouncil.gov/us/dc/council/code/sections/47-1803.02",
+  "version": "D.C. Code 47-1803.02",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "The $3,000 government-retiree exclusion was repealed effective 2015."
+ },
+ {
+  "id": "state-retirement-review-ok",
+  "category": "state-tax",
+  "title": "Oklahoma Resident Individual Income Tax Forms and Instructions (511 Packet)",
+  "publisher": "Oklahoma Tax Commission",
+  "url": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/511-Pkt.pdf",
+  "version": "68 O.S. 2358",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "$10,000 retirement exclusion; scope between government and general unresolved."
+ },
+ {
+  "id": "state-retirement-exclusion-md-worksheet",
+  "category": "state-tax",
+  "title": "Maryland Pension Exclusion Computation Worksheet (13A)",
+  "publisher": "Comptroller of Maryland",
+  "url": "https://www.marylandtaxes.gov/forms/worksheets/Pension-Exclusion-Worksheet.pdf",
+  "version": "Worksheet 13A",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Published annually with the year's forms; both figures are inflation-adjusted.",
+  "notes": "Maximum allowable exclusion $41,200 per person 65+, reduced by TOTAL Social Security and Railroad Retirement received whether taxable or not."
+ },
+ {
+  "id": "state-retirement-exclusion-ct-1040",
+  "category": "state-tax",
+  "title": "2025 Form CT-1040 Instructions",
+  "publisher": "Connecticut Department of Revenue Services",
+  "url": "https://portal.ct.gov/-/media/drs/forms/2025/income/2025-ct-1040-instructions_1225.pdf",
+  "version": "Form CT-1040 Instructions, Line 48b",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Published annually with the year's forms; both figures are inflation-adjusted.",
+  "notes": "Below federal AGI $100,000 single / $150,000 joint: 100% of pension and annuity income plus 75% of IRA distributions."
+ },
+ {
+  "id": "state-retirement-review-pa",
+  "category": "state-tax",
+  "title": "Pennsylvania Department of Revenue",
+  "publisher": "Pennsylvania Department of Revenue",
+  "url": "https://www.revenue.pa.gov/",
+  "version": "72 P.S. 7301",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Confirmation only: Social Security, qualified withdrawals and pensions all exempt."
+ },
+ {
+  "id": "state-retirement-review-il",
+  "category": "state-tax",
+  "title": "Illinois Department of Revenue",
+  "publisher": "Illinois Department of Revenue",
+  "url": "https://tax.illinois.gov/",
+  "version": "35 ILCS 5/203(a)(2)",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Confirmation only: Social Security, qualified withdrawals and pensions all exempt."
+ },
+ {
+  "id": "state-retirement-review-ms",
+  "category": "state-tax",
+  "title": "Mississippi Department of Revenue",
+  "publisher": "Mississippi Department of Revenue",
+  "url": "https://www.dor.ms.gov/",
+  "version": "Miss. Code Ann. 27-7-15",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Confirmation only: Social Security, qualified withdrawals and pensions all exempt."
+ },
+ {
+  "id": "state-retirement-review-hi",
+  "category": "state-tax",
+  "title": "Hawaii Department of Taxation",
+  "publisher": "Hawaii Department of Taxation",
+  "url": "https://tax.hawaii.gov/",
+  "version": "Haw. Rev. Stat. 235-7(a)(3)",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "state-retirement-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended by the state legislature. Several caps are inflation-adjusted annually.",
+  "notes": "Confirmation only: Social Security and employer-funded pension income exempt."
+ },
+ {
+  "id": "fta-state-tax-agencies",
+  "category": "state-tax",
+  "title": "Federation of Tax Administrators — Directory of state tax agencies",
+  "publisher": "FTA",
+  "url": "https://www.taxadmin.org/state-tax-agencies",
+  "retrievedDate": "2026-08-23",
+  "appliesTo": [
+   "state-tax-authoritative-sources"
+  ],
+  "expectedNextUpdate": "Continuous (directory of links)",
+  "notes": "Per-state DoR lookup. Use to verify Tax Foundation's roundup against the state's own publication. Reviewed 2026-08-23: page live, still the full member directory with a link per state, FTA contact details and copyright current."
+ },
+ {
+  "id": "irs-aca-subsidy-table",
+  "category": "aca",
+  "title": "ACA Premium Tax Credit — applicable percentage table",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/affordable-care-act/individuals-and-families/eligibility-for-the-premium-tax-credit",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "aca-subsidy-slopes",
+   "aca-applicable-percent"
+  ],
+  "expectedNextUpdate": "Annually, with Rev. Proc.",
+  "notes": "Applicable-percent slopes drive the engine/tax/aca.ts subsidy calculation. Enhanced ARPA/IRA subsidies expire after 2025 unless extended."
+ },
+ {
+  "id": "hhs-fpl-guidelines",
+  "category": "aca",
+  "title": "HHS Poverty Guidelines (Federal Poverty Level)",
+  "publisher": "HHS",
+  "url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "fpl-by-household-size"
+  ],
+  "expectedNextUpdate": "Annually, late January",
+  "notes": "ACA subsidy eligibility is FPL-percentage-based. The 2-year-lookback quirk: 2026 marketplace coverage uses 2025 FPL."
+ },
+ {
+  "id": "genworth-cost-of-care-2025",
+  "category": "ltc",
+  "title": "Genworth Cost of Care Survey",
+  "publisher": "Genworth Financial",
+  "url": "https://www.genworth.com/aging-and-you/finances/cost-of-care.html",
+  "version": "2025 survey",
+  "publishedDate": "2025-03-01",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "ltc-cost-medians",
+   "ltc-default-amounts"
+  ],
+  "expectedNextUpdate": "Annually, typically Q1",
+  "notes": "2025 medians: ~$125K/yr nursing home, ~$80K/yr in-home care. Engine schema defaults reference these. Free public release; the underlying actuarial data is proprietary."
+ },
+ {
+  "id": "bea-regional-price-parities-2024",
+  "category": "cost-of-living",
+  "title": "Regional Price Parities by State and Metro Area, 2024 (tables SARPP, MARPP)",
+  "publisher": "U.S. Bureau of Economic Analysis",
+  "url": "https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area",
+  "version": "News Release BEA 26-10",
+  "publishedDate": "2026-02-19",
+  "retrievedDate": "2026-08-06",
+  "appliesTo": [
+   "cost-of-living-rpp-by-state",
+   "cost-of-living-rpp-by-metro"
+  ],
+  "expectedNextUpdate": "Annually, typically mid-December (2025 data expected 2026-12-10)",
+  "notes": "Regional Price Parity (RPP) index, US = 100, covering all consumption goods and services including housing rents. Bundled data pulled directly from BEA's own bulk CSV downloads (apps.bea.gov/regional/zip/SARPP.zip for the 50-state+DC table, apps.bea.gov/regional/zip/MARPP.zip for 387 Metropolitan Statistical Areas), LineCode 1 (\"All items\"), 2024 column — not hand-transcribed. BEA does not publish a per-state non-metropolitan breakdown, only one national non-metro figure (from the same MARPP file, GeoFIPS 00999); the app discloses this rather than estimating a per-state figure. Used only by the What-If \"State Comparison\" tool — not part of the tax engine. dataUrl points at BEA's downloadable state file, which is where the figures actually live; the release page named by url carries only the highest and lowest states in prose. Metro parities come from the companion MARPP.zip.",
+  "dataUrl": "https://apps.bea.gov/regional/zip/SARPP.zip"
+ },
+ {
+  "id": "hud-fair-market-rents-fy2026",
+  "category": "cost-of-living",
+  "title": "FY2026 Fair Market Rents (county-level, revised)",
+  "publisher": "U.S. Dept. of Housing and Urban Development, Office of Policy Development and Research",
+  "url": "https://www.huduser.gov/portal/datasets/fmr.html",
+  "version": "FY2026, revised",
+  "publishedDate": "2025-08-29",
+  "retrievedDate": "2026-07-23",
+  "appliesTo": [
+   "modest-budget-housing"
+  ],
+  "expectedNextUpdate": "Annually, effective start of the federal fiscal year (Oct 1)",
+  "notes": "Fair Market Rents are 40th-percentile GROSS rent estimates (24 CFR 888.113) — rent plus tenant-paid utilities except telephone — for every county/HUD area nationwide (4,764 rows). The app population-weights county figures up to a single state average for the 1BR/2BR columns; used only by the What-If \"Affordability\" tool's housing component, never the tax engine. huduser.gov blocks bare automated requests (AWS WAF challenge) but serves the file to a normal browser session with a referer header — not a login-gated API.",
+  "dataUrl": "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY26_FMRs_revised.xlsx"
+ },
+ {
+  "id": "usda-food-plans-may2026",
+  "category": "cost-of-living",
+  "title": "Official USDA Food Plans: Cost of Food at Home at Three Levels, U.S. Average, May 2026",
+  "publisher": "USDA Food and Nutrition Administration (Center for Nutrition Policy and Promotion)",
+  "url": "https://www.fns.usda.gov/cnpp/usda-food-plans-cost-food-monthly-reports",
+  "version": "May 2026 (issued June 2026)",
+  "publishedDate": "2026-06-01",
+  "retrievedDate": "2026-07-23",
+  "appliesTo": [
+   "modest-budget-food"
+  ],
+  "expectedNextUpdate": "Monthly",
+  "notes": "Uses the Low-Cost Plan (one of four published levels — Thrifty/Low-Cost/Moderate-Cost/Liberal), adult 19-50 age-sex rows, averaged. Household-size adjustment percentages (1-person +20%, 2-person +10%, etc.) are USDA's own published methodology, applied in-app after summing each individual's cost, not invented. National figure only — not localized by state (no USDA state-level food-cost breakdown exists); used only by the What-If \"Affordability\" tool."
+ },
+ {
+  "id": "bls-consumer-expenditure-survey-2024",
+  "category": "cost-of-living",
+  "title": "Consumer Expenditures—2024 (by size of consumer unit)",
+  "publisher": "U.S. Bureau of Labor Statistics",
+  "url": "https://www.bls.gov/news.release/cesan.nr0.htm",
+  "version": "USDL-25-1586",
+  "publishedDate": "2025-12-19",
+  "retrievedDate": "2026-07-23",
+  "appliesTo": [
+   "modest-budget-transportation",
+   "modest-budget-healthcare",
+   "modest-budget-other-necessities"
+  ],
+  "expectedNextUpdate": "Annually, mid-December",
+  "notes": "Transportation, healthcare, and apparel + personal care (combined as \"other necessities\") national averages, split \"one person\" vs. \"two or more people\" consumer units — matching this app's own one-or-two-individual plan model exactly, so no invented household-equivalence scale was needed. Figures pulled via FRED's mirrored BLS CE series (e.g. CXUTRANSLB0502M) since BLS's own site only publishes these breakdowns as PDF/Excel tables without a stable bulk-download URL. National only — not localized by state; used only by the What-If \"Affordability\" tool."
+ },
+ {
+  "id": "trinity-study",
+  "category": "methodology",
+  "title": "Retirement Savings: Choosing a Withdrawal Rate That Is Sustainable",
+  "publisher": "Cooley, Hubbard & Walz (Trinity University)",
+  "url": "https://afcpe.org/wp-content/uploads/2018/10/vol1014.pdf",
+  "version": "AAII Journal 1998 (original); updated 2011",
+  "publishedDate": "1998-02-01",
+  "retrievedDate": "2026-05-25",
+  "appliesTo": [
+   "4-percent-rule-default",
+   "safe-withdrawal-rate-methodology"
+  ],
+  "expectedNextUpdate": "Static academic paper (republished/critiqued periodically)",
+  "notes": "Foundational study behind the '4% rule' default. Plan Health rule R03 flags SWRs > 4% based on this."
+ },
+ {
+  "id": "bundled-federal-2026",
+  "category": "data-file",
+  "title": "Bundled federal tax data",
+  "publisher": "Bundled with the app",
+  "url": "https://github.com/softwarebydaw/retirement-planner/blob/master/tax-data/federal/2026.json",
+  "version": "2026 tax year",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "Federal tax tables"
+  ],
+  "expectedNextUpdate": "When new IRS Rev. Proc. is published",
+  "notes": "Bundled JSON, sourced from irs-rev-proc-2025-32. User can override globally via Tax Data Updates → Remote URL or per-plan via Reference Data Updates."
+ },
+ {
+  "id": "bundled-irmaa-2026",
+  "category": "data-file",
+  "title": "Bundled IRMAA + Medicare Part B data",
+  "publisher": "Bundled with the app",
+  "url": "https://github.com/softwarebydaw/retirement-planner/blob/master/tax-data/irmaa/2026.json",
+  "version": "2026 coverage year",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "Medicare IRMAA tables"
+  ],
+  "expectedNextUpdate": "When new CMS fact sheet is published",
+  "notes": "Bundled JSON, sourced from cms-irmaa-2026."
+ },
+ {
+  "id": "cdc-life-expectancy",
+  "category": "data-file",
+  "title": "United States Life Tables",
+  "publisher": "CDC / National Vital Statistics Reports",
+  "url": "https://www.cdc.gov/nchs/products/nvsr.htm",
+  "retrievedDate": "2026-05-07",
+  "appliesTo": [
+   "Life-expectancy tables",
+   "horizon-vs-life-expectancy-check"
+  ],
+  "expectedNextUpdate": "Annually, with multi-year lag (2022 data published 2024)",
+  "notes": "Bundled in reference-data/lifeExpectancy.json. Used by Plan Health to flag horizons that exceed actuarial life expectancy."
+ },
+ {
+  "id": "damodaran-histretsp",
+  "category": "data-file",
+  "title": "Historical Returns on Stocks, Bonds and Bills (1928–present)",
+  "publisher": "Aswath Damodaran, Stern School of Business, NYU",
+  "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html",
+  "retrievedDate": "2026-07-14",
+  "appliesTo": [
+   "reference-data/historicalReturns.json",
+   "historical-backtest",
+   "reference-data/historicalEpisodes.json"
+  ],
+  "expectedNextUpdate": "Annually in January (prior full year appended)",
+  "notes": "Annual total returns for S&P 500 (incl. dividends), 10-year US Treasury, and 3-month T-Bill. Bundled in reference-data/historicalReturns.json for the What If → Historical backtest. Verified end-to-end against Damodaran's published cumulative $100 values (S&P/T-Bill <0.05%, T-Bond <0.5% over 98-year compounding)."
+ },
+ {
+  "id": "bls-cpi-u",
+  "category": "data-file",
+  "title": "Consumer Price Index (CPI-U), annual average inflation",
+  "publisher": "U.S. Bureau of Labor Statistics",
+  "url": "https://www.bls.gov/cpi/",
+  "retrievedDate": "2026-08-06",
+  "appliesTo": [
+   "reference-data/historicalReturns.json",
+   "historical-backtest",
+   "reference-data/historicalEpisodes.json"
+  ],
+  "expectedNextUpdate": "Monthly; annual average finalized early the following year",
+  "notes": "CPI-U year annual-average change, paired with the Damodaran returns to drive inflation in the historical backtest. 2025 is a partial-year figure."
+ },
+ {
+  "id": "shiller-ie-data",
+  "category": "data-file",
+  "title": "U.S. Stock Markets 1871–present (Irrational Exuberance data)",
+  "publisher": "Robert J. Shiller, Yale University",
+  "url": "https://shillerdata.com/",
+  "retrievedDate": "2026-07-19",
+  "appliesTo": [
+   "reference-data/historicalReturns.json",
+   "historical-backtest"
+  ],
+  "expectedNextUpdate": "Monthly",
+  "notes": "Second historical-backtest source (What If → Historical, \"Shiller (Yale) + FRED\"). S&P Composite real total-return index (dividend-reinvested), CPI-U, and long-term interest rate, 1928–2025 slice bundled in reference-data/historicalReturns.json. Cross-validated against the Damodaran series: correlation 0.95–1.00 on every leg. Shiller's monthly price is a monthly average of daily closes, not a month-end close — annual returns derived from it are smoothed relative to Damodaran's point-to-point figures; see the series' own methodology field for specifics."
+ },
+ {
+  "id": "fred-tb3ms",
+  "category": "data-file",
+  "title": "3-Month Treasury Bill Secondary Market Rate (TB3MS)",
+  "publisher": "Federal Reserve Bank of St. Louis (FRED)",
+  "url": "https://fred.stlouisfed.org/series/TB3MS",
+  "retrievedDate": "2026-07-19",
+  "appliesTo": [
+   "reference-data/historicalReturns.json",
+   "historical-backtest"
+  ],
+  "expectedNextUpdate": "Monthly",
+  "notes": "Cash leg of the Shiller/FRED historical-backtest series, 1934–2025 (annual average of the monthly rate, used directly as total return given negligible duration risk). 1928–1933 predates TB3MS and the formal T-bill market, so those years reuse the Damodaran series' cash figures instead."
+ },
+ {
+  "id": "irc-section-1014",
+  "category": "estate",
+  "title": "Basis of Property Acquired From a Decedent (step-up)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/1014",
+  "version": "IRC §1014",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "step-up-basis",
+   "community-property-double-step-up"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "Backs the at-death basis reset. Full derivation, including the nine community-property states' double step-up, in app/src/engine/validation/sources/irc-section-1014-step-up-basis.md."
+ },
+ {
+  "id": "irc-section-72t",
+  "category": "retirement-accounts",
+  "title": "10% Additional Tax on Early Distributions",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/72",
+  "version": "IRC §72(t)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "early-withdrawal-penalty",
+   "rule-of-55",
+   "public-safety-age-50"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The 10% penalty and its exceptions, including §72(t)(2)(A)(v) separation-from-service at 55 and §72(t)(10)'s age-50 rule for qualified public-safety employees."
+ },
+ {
+  "id": "irc-section-1401",
+  "category": "retirement-accounts",
+  "title": "Self-Employment Tax (SECA)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/1401",
+  "version": "IRC §1401–§1402, §164(f)",
+  "retrievedDate": "2026-08-07",
+  "appliesTo": [
+   "self-employment-tax"
+  ],
+  "expectedNextUpdate": "Statutory; rates amended only by Congress. The Social Security contribution base the tax is capped at IS indexed annually and is carried separately, in reference-data/parameters.json.",
+  "notes": "§1401(a) sets the 12.4% Social Security rate and §1401(b) the 2.9% Medicare rate — both halves of what an employee splits with an employer — plus the 0.9% Additional Medicare Tax at fixed, never-indexed thresholds. §1402(a)(12) reduces net profit to 92.35% before the rates apply, and §1402(b) both coordinates with wages against one Social Security base and exempts net earnings under $400. §164(f) allows a deduction for one half of the §1401 tax, above the line — it is NOT extended to the Additional Medicare Tax, which is imposed on the individual rather than in respect of the trade or business."
+ },
+ {
+  "id": "irc-section-402e4",
+  "category": "retirement-accounts",
+  "title": "Net Unrealized Appreciation on Employer Securities",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/402",
+  "version": "IRC §402(e)(4)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "nua-distribution"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "NUA: employer stock distributed in kind is taxed as ordinary income on cost basis only, with the appreciation taxed at long-term capital-gains rates when sold."
+ },
+ {
+  "id": "irc-section-408",
+  "category": "retirement-accounts",
+  "title": "Individual Retirement Accounts — QCD and distribution ordering",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/408",
+  "version": "IRC §408",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "qualified-charitable-distribution",
+   "ira-basis-recovery"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "§408(d)(8) is the qualified charitable distribution; §408(d)(4) is the ordering used for basis recovery. The QCD dollar limit is indexed — see irs-notice-2025-67 for the current figure."
+ },
+ {
+  "id": "irc-section-408a",
+  "category": "retirement-accounts",
+  "title": "Roth IRAs",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/408A",
+  "version": "IRC §408A",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "roth-conversion",
+   "roth-no-lifetime-rmd"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "§408A(c)(5) is why a Roth IRA has no lifetime RMD for the original owner — the rule the engine relies on when ranking conversions."
+ },
+ {
+  "id": "irc-section-415c",
+  "category": "retirement-accounts",
+  "title": "Limitations on Benefits and Contributions — annual additions",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/415",
+  "version": "IRC §415(c)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "annual-additions-limit",
+   "mega-backdoor-roth-headroom"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The overall annual-additions cap across employee deferrals, employer contributions and after-tax dollars. Sets the headroom the Contributions screen reports for mega-backdoor Roth."
+ },
+ {
+  "id": "irc-section-219",
+  "category": "retirement-accounts",
+  "title": "Retirement Savings — IRA deduction limits",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/219",
+  "version": "IRC §219(b)(5)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "ira-contribution-limit"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The IRA contribution limit and its inflation adjustment. Current-year dollar figures come from the annual IRS notice, not from the statute."
+ },
+ {
+  "id": "irc-section-223",
+  "category": "retirement-accounts",
+  "title": "Health Savings Accounts",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/223",
+  "version": "IRC §223",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "hsa-contribution-limits",
+   "hsa-catch-up"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "§223(b)(3)'s $1,000 age-55 catch-up is a fixed statutory amount and is NOT indexed — which is why it never appears in the annual HSA Rev. Proc. See irs-rev-proc-2025-19 for the indexed limits."
+ },
+ {
+  "id": "irc-section-4973",
+  "category": "retirement-accounts",
+  "title": "Excise Tax on Excess Contributions",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/4973",
+  "version": "IRC §4973",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "excess-contribution-detection"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The 6% excise tax on excess contributions. The app detects and warns only; it does not model the tax."
+ },
+ {
+  "id": "irc-section-121",
+  "category": "ltcg",
+  "title": "Exclusion of Gain from Sale of a Principal Residence",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/121",
+  "version": "IRC §121",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "home-sale-exclusion"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The $250K single / $500K MFJ exclusion, and the two-of-five-years ownership and use test."
+ },
+ {
+  "id": "irs-pub-523",
+  "category": "ltcg",
+  "title": "Selling Your Home",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-pdf/p523.pdf",
+  "version": "Pub 523",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "home-sale-exclusion",
+   "home-cost-basis"
+  ],
+  "expectedNextUpdate": "Annually, usually early in the filing season",
+  "notes": "The worked-example companion to IRC §121 — what counts toward basis, and how the exclusion is applied."
+ },
+ {
+  "id": "irc-section-1211b",
+  "category": "ltcg",
+  "title": "Limitation on Capital Losses",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/1211",
+  "version": "IRC §1211(b)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "capital-loss-ordinary-offset"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The $3,000/yr capital-loss offset against ordinary income. Flat by statute and NOT inflation-adjusted, which matters over a multi-decade horizon."
+ },
+ {
+  "id": "irc-section-1250",
+  "category": "ltcg",
+  "title": "Gain from Dispositions of Depreciable Real Property",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/1250",
+  "version": "IRC §1250",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "unrecaptured-1250-gain",
+   "rental-sale"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "Unrecaptured §1250 gain — depreciation taken on a rental is recaptured at up to 25% on sale, ahead of the ordinary long-term rate."
+ },
+ {
+  "id": "irs-schedule-e",
+  "category": "federal-tax",
+  "title": "Schedule E (Form 1040) — Supplemental Income and Loss",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-pdf/f1040se.pdf",
+  "version": "Schedule E (Form 1040)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "rental-income",
+   "rental-depreciation",
+   "passive-loss"
+  ],
+  "expectedNextUpdate": "Annually",
+  "notes": "How rental income and depreciation reach the return. The engine models rental cash flow through this treatment rather than as an ordinary income stream."
+ },
+ {
+  "id": "irs-schedule-a",
+  "category": "federal-tax",
+  "title": "Schedule A (Form 1040) — Itemized Deductions",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-pdf/f1040sa.pdf",
+  "version": "Schedule A (Form 1040)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "itemized-deductions"
+  ],
+  "expectedNextUpdate": "Annually",
+  "notes": "The itemized-deduction form the app's five OBBBA rules feed. See obbba-itemized-deductions-public-law.md for the enacted text those rules follow."
+ },
+ {
+  "id": "irc-section-164",
+  "category": "federal-tax",
+  "title": "Taxes (SALT deduction)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/164",
+  "version": "IRC §164(b)(7)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "salt-cap",
+   "salt-phase-down"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The state-and-local-tax deduction cap and, under §164(b)(7)(A)(iii), its income phase-down."
+ },
+ {
+  "id": "irc-section-163",
+  "category": "federal-tax",
+  "title": "Interest — qualified residence interest",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/163",
+  "version": "IRC §163(h)(3)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "mortgage-interest-deduction",
+   "mortgage-insurance-premiums"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "Mortgage interest, and §163(h)(3)(F) for treating mortgage-insurance premiums as qualified residence interest."
+ },
+ {
+  "id": "irc-section-170",
+  "category": "federal-tax",
+  "title": "Charitable Contributions",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/170",
+  "version": "IRC §170(b)(1)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "charitable-deduction-limits"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The AGI percentage ceilings on charitable deductions, including §170(b)(1)(G)(i) and (I)."
+ },
+ {
+  "id": "irc-section-213",
+  "category": "federal-tax",
+  "title": "Medical, Dental, etc., Expenses",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/213",
+  "version": "IRC §213(a)",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "medical-deduction-floor"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The 7.5%-of-AGI floor below which medical expenses are not deductible."
+ },
+ {
+  "id": "irc-section-68",
+  "category": "federal-tax",
+  "title": "Overall Limitation on Itemized Deductions",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/68",
+  "version": "IRC §68",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "itemized-deduction-limitation"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "Rewritten by OBBBA. Read alongside obbba-itemized-deductions-public-law.md — the enacted text differs from the widely-circulated House draft, a discrepancy that produced a real bug once."
+ },
+ {
+  "id": "irs-pub-501",
+  "category": "federal-tax",
+  "title": "Dependents, Standard Deduction, and Filing Information",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-pdf/p501.pdf",
+  "version": "Pub 501",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "filing-status",
+   "standard-deduction",
+   "age-65-additional"
+  ],
+  "expectedNextUpdate": "Annually, usually early in the filing season",
+  "notes": "Filing-status rules and the standard deduction, including the year-of-death filing treatment recorded in irs-pub501-age65-death-year.md."
+ },
+ {
+  "id": "irs-pub-525",
+  "category": "federal-tax",
+  "title": "Taxable and Nontaxable Income",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-pdf/p525.pdf",
+  "version": "Pub 525",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "equity-compensation",
+   "rsu-nso-iso-taxation",
+   "espp"
+  ],
+  "expectedNextUpdate": "Annually, usually early in the filing season",
+  "notes": "The treatment of RSUs, NSOs, ISOs and ESPP shares. Backs the equity-compensation validation reports."
+ },
+ {
+  "id": "irs-pub-555",
+  "category": "federal-tax",
+  "title": "Community Property",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-pdf/p555.pdf",
+  "version": "Pub 555",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "community-property",
+   "mfs-income-splitting",
+   "double-step-up"
+  ],
+  "expectedNextUpdate": "Annually, usually early in the filing season",
+  "notes": "Community-property income splitting for Married Filing Separately, and the nine states where a surviving spouse gets a double step-up."
+ },
+ {
+  "id": "irc-section-36b",
+  "category": "aca",
+  "title": "Refundable Credit for Coverage Under a Qualified Health Plan",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/36B",
+  "version": "IRC §36B",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "aca-premium-tax-credit"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The ACA premium tax credit. The applicable-percentage table that turns income into a credit is republished annually — see irs-rev-proc-2025-25."
+ },
+ {
+  "id": "irs-rev-proc-2025-25",
+  "category": "aca",
+  "title": "Applicable Percentage Table for the Premium Tax Credit",
+  "publisher": "IRS",
+  "url": "https://www.irs.gov/pub/irs-drop/rp-25-25.pdf",
+  "version": "Rev. Proc. 2025-25",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "aca-applicable-percentage"
+  ],
+  "expectedNextUpdate": "Annually, usually mid-year",
+  "notes": "The annual §36B applicable-percentage table. Full quote in app/src/engine/validation/sources/aca-premium-tax-credit-rev-proc-2025-25.md."
+ },
+ {
+  "id": "irc-section-4980b",
+  "category": "aca",
+  "title": "Continuation Coverage Requirements (COBRA)",
+  "publisher": "U.S. Congress",
+  "url": "https://www.law.cornell.edu/uscode/text/26/4980B",
+  "version": "IRC §4980B",
+  "retrievedDate": "2026-07-30",
+  "appliesTo": [
+   "cobra-continuation-coverage"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "COBRA continuation coverage — the bridge a household pays for between employer coverage and Medicare."
+ },
+ {
+  "id": "ssa-period-life-table",
+  "category": "social-security",
+  "title": "Actuarial Life Table — Period Life Table, as used in the Trustees Report",
+  "publisher": "SSA Office of the Chief Actuary",
+  "url": "https://www.ssa.gov/oact/STATS/table4c6.html",
+  "dataUrl": "https://www.ssa.gov/oact/STATS/table4c6.html",
+  "version": "2023 table, 2026 Trustees Report",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "survivor-claim-weighting",
+   "period-life-table"
+  ],
+  "expectedNextUpdate": "Annually, with each Trustees Report",
+  "notes": "Source for reference-data/ssaPeriodLifeTable.json. CHANGE DETECTION CANNOT REACH THIS SOURCE: www.ssa.gov returns HTTP 403 to curl, including with a browser user-agent, so refdata:detect will report it unreachable rather than unchanged. That is the tool working, not a fault to route around — it is a live block on non-browser clients, confirmed 2026-08-08. The table was read in a real browser and extracted from the page's own table element rather than retyped, and the result is checked by recomputing the published life-expectancy column from the published death probabilities (ssaPeriodLifeTable.test.ts). At the annual review, open the URL by hand and compare. Note also that secure.ssa.gov POMS DOES answer automated requests — the same-day sourcing of the survivor age reduction and RIB-LIM went through it — so the block is specific to www.ssa.gov."
+ },
+ {
+  "id": "ssa-family-maximum-bend-points",
+  "category": "social-security",
+  "title": "Family Maximum Chart — bend points by year of eligibility",
+  "publisher": "SSA (POMS RS 00605.910)",
+  "url": "https://secure.ssa.gov/poms.nsf/lnx/0300605910",
+  "dataUrl": "https://secure.ssa.gov/poms.nsf/lnx/0300605910",
+  "version": "2026 eligibility year",
+  "retrievedDate": "2026-08-08",
+  "appliesTo": [
+   "family-maximum",
+   "dependent-benefits"
+  ],
+  "expectedNextUpdate": "Annually, with the SSA automatic determinations",
+  "notes": "Source for parameters.socialSecurity.familyMaximumBend. Reachable by an automated client, unlike www.ssa.gov — see the ssa-period-life-table entry for that block. The percentages the bend points are applied to (150/272/134/175) are statutory rather than annual and live as tagged constants in engine/ssa/familyMaximum.ts; only these dollar thresholds change each year, which is why only they are here."
+ },
+ {
+  "id": "state-rate-schedule-nd",
+  "category": "state-tax",
+  "title": "Individual Income Tax — rates and brackets",
+  "publisher": "North Dakota Office of State Tax Commissioner",
+  "url": "https://www.tax.nd.gov/individual-income-tax",
+  "version": "Tax year 2026 schedules",
+  "retrievedDate": "2026-08-06",
+  "appliesTo": [
+   "state-tax-brackets"
+  ],
+  "expectedNextUpdate": "Annual — thresholds are inflation-indexed and published with filing-season materials.",
+  "notes": "Read directly when North Dakota's three-bracket structure was corrected: the 0% bottom band had been modelled as an unmodelled 'personal exemption credit' with stale thresholds. Also the source for the married-filing-separately thresholds, which are genuinely distinct and NOT half of the joint ones — confirmed here rather than derived by halving. Cited as the `authority` for ND in tax-data/states/2026.json."
+ },
+ {
+  "id": "state-standard-deduction-va",
+  "category": "state-tax",
+  "title": "Virginia Deductions — standard deduction amounts",
+  "publisher": "Virginia Department of Taxation",
+  "url": "https://www.tax.virginia.gov/",
+  "version": "Tax year 2026",
+  "retrievedDate": "2026-08-06",
+  "appliesTo": [
+   "state-standard-deduction"
+  ],
+  "expectedNextUpdate": "Annual — Virginia sets its own amounts by legislation rather than conforming to the federal figure.",
+  "notes": "Virginia does not conform to the federal standard deduction, so its amount cannot be inferred from the IRS release the way a conformity state's can. Confirmed against the department's own published figures during the 2026-08-06 standard-deduction review. Cited as the `authority` for VA in tax-data/states/2026.json. Distinct from state-retirement-exclusion-va, which is the statute behind the age deduction."
+ },
+ {
+  "id": "nber-business-cycles",
+  "category": "data-file",
+  "title": "US Business Cycle Expansions and Contractions",
+  "publisher": "National Bureau of Economic Research",
+  "url": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions",
+  "retrievedDate": "2026-09-09",
+  "appliesTo": [
+   "reference-data/historicalEpisodes.json",
+   "historical-backtest"
+  ],
+  "expectedNextUpdate": "When the committee dates a new peak or trough — years apart, not scheduled",
+  "notes": "Peak and trough months for every US contraction. The authority for every episode in historicalEpisodes.json whose dateBasis is \"published\": 1929, 1937, 1973, 2000/2001, 2007-2009 and 2020. Episodes whose range is a characterisation rather than a dated event (stagflation, the post-war inflation, 2022) say so in the file and cite the price record instead."
+ },
+ {
+  "id": "fdic-sl-crisis",
+  "category": "data-file",
+  "title": "S&L Crisis: A Chrono-Bibliography",
+  "publisher": "Federal Deposit Insurance Corporation",
+  "url": "https://www.fdic.gov/publications/sl-crisis-chrono-bibliography",
+  "retrievedDate": "2026-09-09",
+  "appliesTo": [
+   "reference-data/historicalEpisodes.json"
+  ],
+  "expectedNextUpdate": "Never — a closed historical chronology",
+  "notes": "The savings-and-loan episode's date range. The FDIC chronology runs through the eighties in sections; the app anchors the retiree's walk at the recession that followed, and names the longer range beside it, because what reaches a retirement plan is returns and prices rather than thrift failures. The registry URL is the one the FDIC redirects to; the /resources/publications/ path still works and lands here."
+ },
+ {
+  "id": "cms-ssi-spousal-impoverishment-2026",
+  "category": "medicaid",
+  "title": "Updated 2026 SSI and Spousal Impoverishment Standards",
+  "publisher": "CMS, Center for Medicaid and CHIP Services",
+  "url": "https://www.medicaid.gov/medicaid/eligibility-policy/spousal-impoverishment",
+  "dataUrl": "https://www.medicaid.gov/federal-policy-guidance/downloads/cib04272026.pdf",
+  "version": "CMCS Informational Bulletin, April 27, 2026",
+  "publishedDate": "2026-04-27",
+  "retrievedDate": "2026-09-09",
+  "appliesTo": [
+   "medicaid-ssi-federal-benefit-rate",
+   "medicaid-ssi-resource-standard",
+   "medicaid-income-cap",
+   "medicaid-mmmna",
+   "medicaid-housing-allowance",
+   "medicaid-csra-range",
+   "medicaid-home-equity-range"
+  ],
+  "expectedNextUpdate": "Annually, each year in January (the January bulletin) with a revised chart in April carrying the July MMMNA",
+  "notes": "Source for reference-data/medicaidStandards.json. The medicaid.gov landing page links to the bulletin and states no current figures itself, so dataUrl is the PDF; the extractor reads it through pdfjs. Two bulletins a year: the December/January one carries the January figures, the April one adds the July MMMNA and housing allowance — archive the April one."
+ },
+ {
+  "id": "ssa-act-1924-spousal-impoverishment",
+  "category": "medicaid",
+  "title": "Social Security Act §1924 — Treatment of income and resources for certain institutionalized spouses (42 U.S.C. §1396r-5)",
+  "publisher": "Congress (via Cornell LII)",
+  "url": "https://www.law.cornell.edu/uscode/text/42/1396r-5",
+  "version": "42 U.S.C. §1396r-5",
+  "retrievedDate": "2026-09-09",
+  "appliesTo": [
+   "medicaid-csra-arithmetic",
+   "medicaid-community-spouse-income-allowance",
+   "medicaid-excess-shelter-allowance"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "The arithmetic behind lib/medicaidSpendDown.ts: the spousal share is half the couple's resources (c)(1); the allowance is the greatest of the state minimum and the lesser of the share and the federal maximum (f)(2); the income allowance is the MMMNA less the spouse's own income (d)(2); the MMMNA is 150% of the two-person poverty line plus an excess shelter allowance, capped (d)(3); excess shelter is shelter cost above 30% of the MMMNA (d)(4). Dollar figures in the statute are 1988 amounts indexed by (g); the current values come from the CMS bulletin, never from here."
+ },
+ {
+  "id": "dra-2005-ltc-partnership",
+  "category": "medicaid",
+  "title": "Qualified State Long-Term Care Insurance Partnership — inflation protection by issue age (42 U.S.C. §1396p(b)(1)(C)(iii))",
+  "publisher": "Congress (via Cornell LII)",
+  "url": "https://www.law.cornell.edu/uscode/text/42/1396p",
+  "version": "42 U.S.C. §1396p(b)(1)(C)(iii), as added by the Deficit Reduction Act of 2005 §6021",
+  "retrievedDate": "2026-09-09",
+  "appliesTo": [
+   "ltc-partnership-inflation-by-age",
+   "ltc-partnership-asset-disregard"
+  ],
+  "expectedNextUpdate": "Statutory; amended only by Congress",
+  "notes": "Clause (IV): compound annual inflation protection for a purchaser who 'has not attained age 61'; 'some level of inflation protection' from 61 to 75; optional at 76 and over. States set the percentage and the original four partnership states impose stricter rules, which live in the per-state table (design §6.2), not here. The disregard itself is clause (iii): assets equal to the benefits the policy paid."
+ },
+ {
+  "id": "naic-ltc-regulation-provisions",
+  "category": "medicaid",
+  "title": "Long-Term Care Insurance Regulation Provisions (model law chart HS-15)",
+  "publisher": "National Association of Insurance Commissioners",
+  "url": "https://content.naic.org/sites/default/files/model-law-chart-hs-15-long-term-care-insurance-regulation-provisions.pdf",
+  "version": "NAIC Model Laws, Regulations, Guidelines and Other Resources — Spring 2024",
+  "publishedDate": "2024-04-01",
+  "retrievedDate": "2026-09-11",
+  "appliesTo": [
+   "ltc-state-inflation-offer-standard"
+  ],
+  "expectedNextUpdate": "Each year, as NAIC reissues the model-law volume; individual state blocks carry their own review date in the chart",
+  "notes": "One block per state, each with an 'Offer of Inflation Protection' row stating what that state's regulation requires an insurer to OFFER. Prose, not a table, and the state's own citation is given at the end of each row — so a curated ltcByState.inflation block quotes it rather than paraphrasing. © NAIC: cited and quoted in short, never reproduced. The chart says when each state's block was last reviewed (most read '(1/24)'), which is not the same as when the state last changed its rule. Re-pulled 2026-09-11: content.naic.org refuses this repository's fetch tool, so a maintainer saved it from a browser and it was archived through refdata:place, which gives the next review a hash to diff instead of fifty state blocks to re-read."
+ },
+ {
+  "id": "bls-oes-home-care-aides",
+  "category": "ltc",
+  "title": "Occupational Employment and Wage Statistics — Home Health and Personal Care Aides (SOC 31-1120)",
+  "publisher": "U.S. Bureau of Labor Statistics",
+  "url": "https://www.bls.gov/oes/current/oes311120.htm",
+  "dataUrl": "https://api.bls.gov/publicAPI/v1/timeseries/data/OEUN000000000000031112008",
+  "version": "May 2025 estimates",
+  "publishedDate": "2026-04-01",
+  "retrievedDate": "2026-09-09",
+  "appliesTo": [
+   "ltc-home-care-wage-by-state",
+   "ltc-regional-cost-fallback"
+  ],
+  "expectedNextUpdate": "Annually, each year in the spring, when BLS publishes the previous May's OES estimates",
+  "notes": "Public-domain wage data behind the DERIVED regional in-home care figure (design §6.3 tier 3). dataUrl is the v1 single-series GET for the NATIONAL median, which is the anchor the survey-to-wage ratio is calibrated against — if that moves, the ratio's base moved. The per-state figures come from the same API in one v2 POST and live in reference-data/homeCareWageByState.json. The wage is BLS's; the ratio from wage to agency billing rate is ours and is calibrated against the CareScout survey, so a figure derived through it is never independent of that survey and is labelled as derived wherever it is shown."
+ },
+ {
+  "id": "naic-ltc-shoppers-guide",
+  "category": "ltc",
+  "title": "A Shopper's Guide to Long-Term Care Insurance",
+  "publisher": "National Association of Insurance Commissioners",
+  "url": "https://content.naic.org/sites/default/files/publication-ltc-lp-shoppers-guide-long-term.pdf",
+  "version": "2022 edition",
+  "publishedDate": "2022-01-01",
+  "retrievedDate": "2026-09-09",
+  "appliesTo": [
+   "ltc-prescreen-rubric",
+   "ltc-suitability-band"
+  ],
+  "expectedNextUpdate": "Every few years, when NAIC reissues the guide — the current edition is 2022",
+  "notes": "The consumer guide every state insurance department points at. Two things in it back the intake rail's bands: the underwriting reality ('If you already have health problems that could lead to long-term care … you probably won't be able to buy a policy') and the affordability rule of thumb ('you may not be able to afford the policy if the premiums will be more than 7% of your income'). NAIC calls the second a RULE OF THUMB rather than a standard, and lib/ltcPrescreen.ts is careful to repeat it that way. content.naic.org refuses this repository's fetch tool, so the guide is in blockedSources.ts with the manual step."
+ }
+]

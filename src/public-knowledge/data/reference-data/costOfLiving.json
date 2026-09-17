@@ -1,0 +1,3214 @@
+{
+  "sourceIds": [
+    "bea-regional-price-parities-2024"
+  ],
+  "source": "U.S. Bureau of Economic Analysis, Regional Price Parities by State and Metro Area, 2024",
+  "sourceUrl": "https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area",
+  "year": 2024,
+  "retrievedDate": "2026-08-06",
+  "methodology": "Regional Price Parity (RPP) is BEA's official cost-of-living-difference index across all consumption goods and services, including housing rents. 100 = national average; a state/metro at 110 is about 10% more expensive than average, at 90 is about 10% cheaper. State figures are table SARPP (all 50 states + DC, whole-state blend of metro and non-metro areas). Metro-area figures are table MARPP (384 Metropolitan Statistical Areas; a handful straddle state lines and are listed once per MSA, tagged with every state it touches). BEA does not publish a per-state non-metropolitan breakdown -- only a single national non-metropolitan figure (nationalNonMetroRpp) exists, shown for context, never substituted for a specific state's non-metro area.",
+  "rppByState": {
+    "AK": 102.4,
+    "AL": 88.8,
+    "AR": 86.9,
+    "AZ": 100.7,
+    "CA": 110.7,
+    "CO": 103.1,
+    "CT": 103.6,
+    "DC": 109.9,
+    "DE": 99.8,
+    "FL": 103.4,
+    "GA": 96.3,
+    "HI": 110.0,
+    "IA": 87.8,
+    "ID": 95.5,
+    "IL": 100.0,
+    "IN": 93.3,
+    "KS": 90.1,
+    "KY": 90.2,
+    "LA": 88.2,
+    "MA": 105.8,
+    "MD": 105.0,
+    "ME": 97.0,
+    "MI": 96.2,
+    "MN": 98.6,
+    "MO": 90.8,
+    "MS": 87.0,
+    "MT": 94.6,
+    "NC": 94.3,
+    "ND": 89.0,
+    "NE": 90.1,
+    "NH": 104.2,
+    "NJ": 108.8,
+    "NM": 92.2,
+    "NV": 100.0,
+    "NY": 107.9,
+    "OH": 92.8,
+    "OK": 87.8,
+    "OR": 103.4,
+    "PA": 97.6,
+    "RI": 102.3,
+    "SC": 93.7,
+    "SD": 88.6,
+    "TN": 91.9,
+    "TX": 97.1,
+    "UT": 98.9,
+    "VA": 101.1,
+    "VT": 98.0,
+    "WA": 107.0,
+    "WI": 94.1,
+    "WV": 89.5,
+    "WY": 92.7
+  },
+  "nationalNonMetroRpp": 88.7,
+  "metroAreas": [
+    {
+      "id": "10180",
+      "name": "Abilene, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 90.4
+    },
+    {
+      "id": "10420",
+      "name": "Akron, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 93.4
+    },
+    {
+      "id": "10500",
+      "name": "Albany, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 87.7
+    },
+    {
+      "id": "10540",
+      "name": "Albany, OR",
+      "states": [
+        "OR"
+      ],
+      "rpp": 102.1
+    },
+    {
+      "id": "10580",
+      "name": "Albany-Schenectady-Troy, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 99.6
+    },
+    {
+      "id": "10740",
+      "name": "Albuquerque, NM",
+      "states": [
+        "NM"
+      ],
+      "rpp": 95.5
+    },
+    {
+      "id": "10780",
+      "name": "Alexandria, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 85.7
+    },
+    {
+      "id": "10900",
+      "name": "Allentown-Bethlehem-Easton, PA-NJ",
+      "states": [
+        "PA",
+        "NJ"
+      ],
+      "rpp": 100.0
+    },
+    {
+      "id": "11020",
+      "name": "Altoona, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 89.5
+    },
+    {
+      "id": "11100",
+      "name": "Amarillo, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 91.8
+    },
+    {
+      "id": "11180",
+      "name": "Ames, IA",
+      "states": [
+        "IA"
+      ],
+      "rpp": 88.8
+    },
+    {
+      "id": "11200",
+      "name": "Amherst Town-Northampton, MA",
+      "states": [
+        "MA"
+      ],
+      "rpp": 100.2
+    },
+    {
+      "id": "11260",
+      "name": "Anchorage, AK",
+      "states": [
+        "AK"
+      ],
+      "rpp": 105.4
+    },
+    {
+      "id": "11460",
+      "name": "Ann Arbor, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 100.9
+    },
+    {
+      "id": "11500",
+      "name": "Anniston-Oxford, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 85.9
+    },
+    {
+      "id": "11540",
+      "name": "Appleton, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 92.4
+    },
+    {
+      "id": "11700",
+      "name": "Asheville, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 96.5
+    },
+    {
+      "id": "12020",
+      "name": "Athens-Clarke County, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 93.3
+    },
+    {
+      "id": "12060",
+      "name": "Atlanta-Sandy Springs-Roswell, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 100.1
+    },
+    {
+      "id": "12100",
+      "name": "Atlantic City-Hammonton, NJ",
+      "states": [
+        "NJ"
+      ],
+      "rpp": 98.9
+    },
+    {
+      "id": "12220",
+      "name": "Auburn-Opelika, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 87.9
+    },
+    {
+      "id": "12260",
+      "name": "Augusta-Richmond County, GA-SC",
+      "states": [
+        "GA",
+        "SC"
+      ],
+      "rpp": 91.9
+    },
+    {
+      "id": "12420",
+      "name": "Austin-Round Rock-San Marcos, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 98.1
+    },
+    {
+      "id": "12540",
+      "name": "Bakersfield-Delano, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 100.9
+    },
+    {
+      "id": "12580",
+      "name": "Baltimore-Columbia-Towson, MD",
+      "states": [
+        "MD"
+      ],
+      "rpp": 104.5
+    },
+    {
+      "id": "12620",
+      "name": "Bangor, ME",
+      "states": [
+        "ME"
+      ],
+      "rpp": 96.5
+    },
+    {
+      "id": "12700",
+      "name": "Barnstable Town, MA",
+      "states": [
+        "MA"
+      ],
+      "rpp": 98.4
+    },
+    {
+      "id": "12940",
+      "name": "Baton Rouge, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 90.8
+    },
+    {
+      "id": "12980",
+      "name": "Battle Creek, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 90.5
+    },
+    {
+      "id": "13020",
+      "name": "Bay City, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 91.9
+    },
+    {
+      "id": "13140",
+      "name": "Beaumont-Port Arthur, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 90.0
+    },
+    {
+      "id": "13220",
+      "name": "Beckley, WV",
+      "states": [
+        "WV"
+      ],
+      "rpp": 88.4
+    },
+    {
+      "id": "13380",
+      "name": "Bellingham, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 103.3
+    },
+    {
+      "id": "13460",
+      "name": "Bend, OR",
+      "states": [
+        "OR"
+      ],
+      "rpp": 103.6
+    },
+    {
+      "id": "13740",
+      "name": "Billings, MT",
+      "states": [
+        "MT"
+      ],
+      "rpp": 93.5
+    },
+    {
+      "id": "13780",
+      "name": "Binghamton, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 92.9
+    },
+    {
+      "id": "13820",
+      "name": "Birmingham, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 91.6
+    },
+    {
+      "id": "13900",
+      "name": "Bismarck, ND",
+      "states": [
+        "ND"
+      ],
+      "rpp": 91.0
+    },
+    {
+      "id": "13980",
+      "name": "Blacksburg-Christiansburg-Radford, VA",
+      "states": [
+        "VA"
+      ],
+      "rpp": 92.7
+    },
+    {
+      "id": "14010",
+      "name": "Bloomington, IL",
+      "states": [
+        "IL"
+      ],
+      "rpp": 93.5
+    },
+    {
+      "id": "14020",
+      "name": "Bloomington, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 95.1
+    },
+    {
+      "id": "14260",
+      "name": "Boise City, ID",
+      "states": [
+        "ID"
+      ],
+      "rpp": 98.4
+    },
+    {
+      "id": "14460",
+      "name": "Boston-Cambridge-Newton, MA-NH",
+      "states": [
+        "MA",
+        "NH"
+      ],
+      "rpp": 108.3
+    },
+    {
+      "id": "14500",
+      "name": "Boulder, CO",
+      "states": [
+        "CO"
+      ],
+      "rpp": 105.2
+    },
+    {
+      "id": "14540",
+      "name": "Bowling Green, KY",
+      "states": [
+        "KY"
+      ],
+      "rpp": 90.2
+    },
+    {
+      "id": "14580",
+      "name": "Bozeman, MT",
+      "states": [
+        "MT"
+      ],
+      "rpp": 102.5
+    },
+    {
+      "id": "14740",
+      "name": "Bremerton-Silverdale-Port Orchard, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 105.6
+    },
+    {
+      "id": "14860",
+      "name": "Bridgeport-Stamford-Danbury, CT",
+      "states": [
+        "CT"
+      ],
+      "rpp": 106.9
+    },
+    {
+      "id": "15180",
+      "name": "Brownsville-Harlingen, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 86.0
+    },
+    {
+      "id": "15260",
+      "name": "Brunswick-St. Simons, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 87.7
+    },
+    {
+      "id": "15380",
+      "name": "Buffalo-Cheektowaga, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 95.8
+    },
+    {
+      "id": "15500",
+      "name": "Burlington, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 93.2
+    },
+    {
+      "id": "15540",
+      "name": "Burlington-South Burlington, VT",
+      "states": [
+        "VT"
+      ],
+      "rpp": 100.9
+    },
+    {
+      "id": "15940",
+      "name": "Canton-Massillon, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 89.4
+    },
+    {
+      "id": "15980",
+      "name": "Cape Coral-Fort Myers, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 102.3
+    },
+    {
+      "id": "16020",
+      "name": "Cape Girardeau, MO-IL",
+      "states": [
+        "MO",
+        "IL"
+      ],
+      "rpp": 86.1
+    },
+    {
+      "id": "16180",
+      "name": "Carson City, NV",
+      "states": [
+        "NV"
+      ],
+      "rpp": 98.1
+    },
+    {
+      "id": "16220",
+      "name": "Casper, WY",
+      "states": [
+        "WY"
+      ],
+      "rpp": 93.8
+    },
+    {
+      "id": "16300",
+      "name": "Cedar Rapids, IA",
+      "states": [
+        "IA"
+      ],
+      "rpp": 89.0
+    },
+    {
+      "id": "16540",
+      "name": "Chambersburg, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 94.6
+    },
+    {
+      "id": "16580",
+      "name": "Champaign-Urbana, IL",
+      "states": [
+        "IL"
+      ],
+      "rpp": 92.7
+    },
+    {
+      "id": "16620",
+      "name": "Charleston, WV",
+      "states": [
+        "WV"
+      ],
+      "rpp": 88.7
+    },
+    {
+      "id": "16700",
+      "name": "Charleston-North Charleston, SC",
+      "states": [
+        "SC"
+      ],
+      "rpp": 101.0
+    },
+    {
+      "id": "16740",
+      "name": "Charlotte-Concord-Gastonia, NC-SC",
+      "states": [
+        "NC",
+        "SC"
+      ],
+      "rpp": 97.3
+    },
+    {
+      "id": "16820",
+      "name": "Charlottesville, VA",
+      "states": [
+        "VA"
+      ],
+      "rpp": 99.1
+    },
+    {
+      "id": "16860",
+      "name": "Chattanooga, TN-GA",
+      "states": [
+        "TN",
+        "GA"
+      ],
+      "rpp": 91.5
+    },
+    {
+      "id": "16940",
+      "name": "Cheyenne, WY",
+      "states": [
+        "WY"
+      ],
+      "rpp": 96.5
+    },
+    {
+      "id": "16980",
+      "name": "Chicago-Naperville-Elgin, IL-IN",
+      "states": [
+        "IL",
+        "IN"
+      ],
+      "rpp": 103.6
+    },
+    {
+      "id": "17020",
+      "name": "Chico, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 101.2
+    },
+    {
+      "id": "17140",
+      "name": "Cincinnati, OH-KY-IN",
+      "states": [
+        "OH",
+        "KY",
+        "IN"
+      ],
+      "rpp": 95.4
+    },
+    {
+      "id": "17300",
+      "name": "Clarksville, TN-KY",
+      "states": [
+        "TN",
+        "KY"
+      ],
+      "rpp": 90.9
+    },
+    {
+      "id": "17410",
+      "name": "Cleveland, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 93.9
+    },
+    {
+      "id": "17420",
+      "name": "Cleveland, TN",
+      "states": [
+        "TN"
+      ],
+      "rpp": 88.1
+    },
+    {
+      "id": "17660",
+      "name": "Coeur d'Alene, ID",
+      "states": [
+        "ID"
+      ],
+      "rpp": 98.3
+    },
+    {
+      "id": "17780",
+      "name": "College Station-Bryan, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 91.0
+    },
+    {
+      "id": "17820",
+      "name": "Colorado Springs, CO",
+      "states": [
+        "CO"
+      ],
+      "rpp": 100.7
+    },
+    {
+      "id": "17860",
+      "name": "Columbia, MO",
+      "states": [
+        "MO"
+      ],
+      "rpp": 89.4
+    },
+    {
+      "id": "17900",
+      "name": "Columbia, SC",
+      "states": [
+        "SC"
+      ],
+      "rpp": 93.7
+    },
+    {
+      "id": "17980",
+      "name": "Columbus, GA-AL",
+      "states": [
+        "GA",
+        "AL"
+      ],
+      "rpp": 89.3
+    },
+    {
+      "id": "18020",
+      "name": "Columbus, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 93.0
+    },
+    {
+      "id": "18140",
+      "name": "Columbus, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 95.5
+    },
+    {
+      "id": "18580",
+      "name": "Corpus Christi, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 92.7
+    },
+    {
+      "id": "18700",
+      "name": "Corvallis, OR",
+      "states": [
+        "OR"
+      ],
+      "rpp": 104.0
+    },
+    {
+      "id": "18880",
+      "name": "Crestview-Fort Walton Beach-Destin, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 97.0
+    },
+    {
+      "id": "19100",
+      "name": "Dallas-Fort Worth-Arlington, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 103.1
+    },
+    {
+      "id": "19140",
+      "name": "Dalton, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 89.8
+    },
+    {
+      "id": "19300",
+      "name": "Daphne-Fairhope-Foley, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 94.7
+    },
+    {
+      "id": "19340",
+      "name": "Davenport-Moline-Rock Island, IA-IL",
+      "states": [
+        "IA",
+        "IL"
+      ],
+      "rpp": 89.1
+    },
+    {
+      "id": "19430",
+      "name": "Dayton-Kettering-Beavercreek, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 92.7
+    },
+    {
+      "id": "19460",
+      "name": "Decatur, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 87.2
+    },
+    {
+      "id": "19500",
+      "name": "Decatur, IL",
+      "states": [
+        "IL"
+      ],
+      "rpp": 88.4
+    },
+    {
+      "id": "19660",
+      "name": "Deltona-Daytona Beach-Ormond Beach, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 99.4
+    },
+    {
+      "id": "19740",
+      "name": "Denver-Aurora-Centennial, CO",
+      "states": [
+        "CO"
+      ],
+      "rpp": 105.8
+    },
+    {
+      "id": "19780",
+      "name": "Des Moines-West Des Moines, IA",
+      "states": [
+        "IA"
+      ],
+      "rpp": 91.7
+    },
+    {
+      "id": "19820",
+      "name": "Detroit-Warren-Dearborn, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 100.3
+    },
+    {
+      "id": "20020",
+      "name": "Dothan, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 83.8
+    },
+    {
+      "id": "20100",
+      "name": "Dover, DE",
+      "states": [
+        "DE"
+      ],
+      "rpp": 97.5
+    },
+    {
+      "id": "20220",
+      "name": "Dubuque, IA",
+      "states": [
+        "IA"
+      ],
+      "rpp": 87.3
+    },
+    {
+      "id": "20260",
+      "name": "Duluth, MN-WI",
+      "states": [
+        "MN",
+        "WI"
+      ],
+      "rpp": 88.8
+    },
+    {
+      "id": "20500",
+      "name": "Durham-Chapel Hill, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 97.6
+    },
+    {
+      "id": "20580",
+      "name": "Eagle Pass, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 83.8
+    },
+    {
+      "id": "20740",
+      "name": "Eau Claire, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 92.8
+    },
+    {
+      "id": "20940",
+      "name": "El Centro, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 95.2
+    },
+    {
+      "id": "21340",
+      "name": "El Paso, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 89.9
+    },
+    {
+      "id": "21060",
+      "name": "Elizabethtown, KY",
+      "states": [
+        "KY"
+      ],
+      "rpp": 90.6
+    },
+    {
+      "id": "21140",
+      "name": "Elkhart-Goshen, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 90.3
+    },
+    {
+      "id": "21300",
+      "name": "Elmira, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 94.4
+    },
+    {
+      "id": "21420",
+      "name": "Enid, OK",
+      "states": [
+        "OK"
+      ],
+      "rpp": 84.3
+    },
+    {
+      "id": "21500",
+      "name": "Erie, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 91.0
+    },
+    {
+      "id": "21660",
+      "name": "Eugene-Springfield, OR",
+      "states": [
+        "OR"
+      ],
+      "rpp": 101.6
+    },
+    {
+      "id": "21780",
+      "name": "Evansville, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 91.5
+    },
+    {
+      "id": "21820",
+      "name": "Fairbanks-College, AK",
+      "states": [
+        "AK"
+      ],
+      "rpp": 103.2
+    },
+    {
+      "id": "22020",
+      "name": "Fargo, ND-MN",
+      "states": [
+        "ND",
+        "MN"
+      ],
+      "rpp": 90.9
+    },
+    {
+      "id": "22140",
+      "name": "Farmington, NM",
+      "states": [
+        "NM"
+      ],
+      "rpp": 87.7
+    },
+    {
+      "id": "22180",
+      "name": "Fayetteville, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 92.0
+    },
+    {
+      "id": "22220",
+      "name": "Fayetteville-Springdale-Rogers, AR",
+      "states": [
+        "AR"
+      ],
+      "rpp": 91.4
+    },
+    {
+      "id": "22380",
+      "name": "Flagstaff, AZ",
+      "states": [
+        "AZ"
+      ],
+      "rpp": 100.3
+    },
+    {
+      "id": "22420",
+      "name": "Flint, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 93.0
+    },
+    {
+      "id": "22500",
+      "name": "Florence, SC",
+      "states": [
+        "SC"
+      ],
+      "rpp": 86.8
+    },
+    {
+      "id": "22520",
+      "name": "Florence-Muscle Shoals, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 84.8
+    },
+    {
+      "id": "22540",
+      "name": "Fond du Lac, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 91.6
+    },
+    {
+      "id": "22660",
+      "name": "Fort Collins-Loveland, CO",
+      "states": [
+        "CO"
+      ],
+      "rpp": 101.1
+    },
+    {
+      "id": "22900",
+      "name": "Fort Smith, AR-OK",
+      "states": [
+        "AR",
+        "OK"
+      ],
+      "rpp": 85.9
+    },
+    {
+      "id": "23060",
+      "name": "Fort Wayne, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 92.6
+    },
+    {
+      "id": "23420",
+      "name": "Fresno, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 102.2
+    },
+    {
+      "id": "23460",
+      "name": "Gadsden, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 85.7
+    },
+    {
+      "id": "23540",
+      "name": "Gainesville, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 96.7
+    },
+    {
+      "id": "23580",
+      "name": "Gainesville, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 96.8
+    },
+    {
+      "id": "23900",
+      "name": "Gettysburg, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 95.4
+    },
+    {
+      "id": "24020",
+      "name": "Glens Falls, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 94.9
+    },
+    {
+      "id": "24140",
+      "name": "Goldsboro, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 88.5
+    },
+    {
+      "id": "24220",
+      "name": "Grand Forks, ND-MN",
+      "states": [
+        "ND",
+        "MN"
+      ],
+      "rpp": 86.7
+    },
+    {
+      "id": "24260",
+      "name": "Grand Island, NE",
+      "states": [
+        "NE"
+      ],
+      "rpp": 86.7
+    },
+    {
+      "id": "24300",
+      "name": "Grand Junction, CO",
+      "states": [
+        "CO"
+      ],
+      "rpp": 95.5
+    },
+    {
+      "id": "24340",
+      "name": "Grand Rapids-Wyoming-Kentwood, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 95.5
+    },
+    {
+      "id": "24420",
+      "name": "Grants Pass, OR",
+      "states": [
+        "OR"
+      ],
+      "rpp": 97.8
+    },
+    {
+      "id": "24500",
+      "name": "Great Falls, MT",
+      "states": [
+        "MT"
+      ],
+      "rpp": 96.8
+    },
+    {
+      "id": "24540",
+      "name": "Greeley, CO",
+      "states": [
+        "CO"
+      ],
+      "rpp": 100.2
+    },
+    {
+      "id": "24580",
+      "name": "Green Bay, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 93.1
+    },
+    {
+      "id": "24660",
+      "name": "Greensboro-High Point, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 92.9
+    },
+    {
+      "id": "24780",
+      "name": "Greenville, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 88.4
+    },
+    {
+      "id": "24860",
+      "name": "Greenville-Anderson-Greer, SC",
+      "states": [
+        "SC"
+      ],
+      "rpp": 93.3
+    },
+    {
+      "id": "25060",
+      "name": "Gulfport-Biloxi, MS",
+      "states": [
+        "MS"
+      ],
+      "rpp": 90.0
+    },
+    {
+      "id": "25180",
+      "name": "Hagerstown-Martinsburg, MD-WV",
+      "states": [
+        "MD",
+        "WV"
+      ],
+      "rpp": 94.2
+    },
+    {
+      "id": "25220",
+      "name": "Hammond, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 84.5
+    },
+    {
+      "id": "25260",
+      "name": "Hanford-Corcoran, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 101.6
+    },
+    {
+      "id": "25420",
+      "name": "Harrisburg-Carlisle, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 98.7
+    },
+    {
+      "id": "25500",
+      "name": "Harrisonburg, VA",
+      "states": [
+        "VA"
+      ],
+      "rpp": 94.9
+    },
+    {
+      "id": "25540",
+      "name": "Hartford-West Hartford-East Hartford, CT",
+      "states": [
+        "CT"
+      ],
+      "rpp": 102.7
+    },
+    {
+      "id": "25620",
+      "name": "Hattiesburg, MS",
+      "states": [
+        "MS"
+      ],
+      "rpp": 87.6
+    },
+    {
+      "id": "25740",
+      "name": "Helena, MT",
+      "states": [
+        "MT"
+      ],
+      "rpp": 95.7
+    },
+    {
+      "id": "25860",
+      "name": "Hickory-Lenoir-Morganton, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 88.5
+    },
+    {
+      "id": "25940",
+      "name": "Hilton Head Island-Bluffton-Port Royal, SC",
+      "states": [
+        "SC"
+      ],
+      "rpp": 98.0
+    },
+    {
+      "id": "25980",
+      "name": "Hinesville, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 93.9
+    },
+    {
+      "id": "26140",
+      "name": "Homosassa Springs, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 93.5
+    },
+    {
+      "id": "26300",
+      "name": "Hot Springs, AR",
+      "states": [
+        "AR"
+      ],
+      "rpp": 85.7
+    },
+    {
+      "id": "26380",
+      "name": "Houma-Bayou Cane-Thibodaux, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 85.1
+    },
+    {
+      "id": "26420",
+      "name": "Houston-Pasadena-The Woodlands, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 98.6
+    },
+    {
+      "id": "26580",
+      "name": "Huntington-Ashland, WV-KY-OH",
+      "states": [
+        "WV",
+        "KY",
+        "OH"
+      ],
+      "rpp": 88.4
+    },
+    {
+      "id": "26620",
+      "name": "Huntsville, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 93.1
+    },
+    {
+      "id": "26820",
+      "name": "Idaho Falls, ID",
+      "states": [
+        "ID"
+      ],
+      "rpp": 94.4
+    },
+    {
+      "id": "26900",
+      "name": "Indianapolis-Carmel-Greenwood, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 95.7
+    },
+    {
+      "id": "26980",
+      "name": "Iowa City, IA",
+      "states": [
+        "IA"
+      ],
+      "rpp": 91.5
+    },
+    {
+      "id": "27060",
+      "name": "Ithaca, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 103.3
+    },
+    {
+      "id": "27100",
+      "name": "Jackson, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 91.8
+    },
+    {
+      "id": "27140",
+      "name": "Jackson, MS",
+      "states": [
+        "MS"
+      ],
+      "rpp": 89.0
+    },
+    {
+      "id": "27180",
+      "name": "Jackson, TN",
+      "states": [
+        "TN"
+      ],
+      "rpp": 85.5
+    },
+    {
+      "id": "27260",
+      "name": "Jacksonville, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 99.5
+    },
+    {
+      "id": "27340",
+      "name": "Jacksonville, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 92.1
+    },
+    {
+      "id": "27500",
+      "name": "Janesville-Beloit, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 93.7
+    },
+    {
+      "id": "27620",
+      "name": "Jefferson City, MO",
+      "states": [
+        "MO"
+      ],
+      "rpp": 88.0
+    },
+    {
+      "id": "27740",
+      "name": "Johnson City, TN",
+      "states": [
+        "TN"
+      ],
+      "rpp": 87.9
+    },
+    {
+      "id": "27780",
+      "name": "Johnstown, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 85.9
+    },
+    {
+      "id": "27860",
+      "name": "Jonesboro, AR",
+      "states": [
+        "AR"
+      ],
+      "rpp": 85.9
+    },
+    {
+      "id": "27900",
+      "name": "Joplin, MO-KS",
+      "states": [
+        "MO",
+        "KS"
+      ],
+      "rpp": 85.7
+    },
+    {
+      "id": "27980",
+      "name": "Kahului-Wailuku, HI",
+      "states": [
+        "HI"
+      ],
+      "rpp": 109.4
+    },
+    {
+      "id": "28020",
+      "name": "Kalamazoo-Portage, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 94.8
+    },
+    {
+      "id": "28100",
+      "name": "Kankakee, IL",
+      "states": [
+        "IL"
+      ],
+      "rpp": 96.4
+    },
+    {
+      "id": "28140",
+      "name": "Kansas City, MO-KS",
+      "states": [
+        "MO",
+        "KS"
+      ],
+      "rpp": 92.5
+    },
+    {
+      "id": "28420",
+      "name": "Kennewick-Richland, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 100.1
+    },
+    {
+      "id": "28450",
+      "name": "Kenosha, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 101.1
+    },
+    {
+      "id": "28660",
+      "name": "Killeen-Temple, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 91.1
+    },
+    {
+      "id": "28700",
+      "name": "Kingsport-Bristol, TN-VA",
+      "states": [
+        "TN",
+        "VA"
+      ],
+      "rpp": 86.4
+    },
+    {
+      "id": "28740",
+      "name": "Kingston, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 100.7
+    },
+    {
+      "id": "28880",
+      "name": "Kiryas Joel-Poughkeepsie-Newburgh, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 109.4
+    },
+    {
+      "id": "28940",
+      "name": "Knoxville, TN",
+      "states": [
+        "TN"
+      ],
+      "rpp": 92.6
+    },
+    {
+      "id": "29020",
+      "name": "Kokomo, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 89.6
+    },
+    {
+      "id": "29100",
+      "name": "La Crosse-Onalaska, WI-MN",
+      "states": [
+        "WI",
+        "MN"
+      ],
+      "rpp": 91.8
+    },
+    {
+      "id": "29180",
+      "name": "Lafayette, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 87.2
+    },
+    {
+      "id": "29200",
+      "name": "Lafayette-West Lafayette, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 93.4
+    },
+    {
+      "id": "29340",
+      "name": "Lake Charles, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 85.9
+    },
+    {
+      "id": "29420",
+      "name": "Lake Havasu City-Kingman, AZ",
+      "states": [
+        "AZ"
+      ],
+      "rpp": 94.1
+    },
+    {
+      "id": "29460",
+      "name": "Lakeland-Winter Haven, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 97.1
+    },
+    {
+      "id": "29540",
+      "name": "Lancaster, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 98.3
+    },
+    {
+      "id": "29620",
+      "name": "Lansing-East Lansing, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 95.0
+    },
+    {
+      "id": "29700",
+      "name": "Laredo, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 87.0
+    },
+    {
+      "id": "29740",
+      "name": "Las Cruces, NM",
+      "states": [
+        "NM"
+      ],
+      "rpp": 90.2
+    },
+    {
+      "id": "29820",
+      "name": "Las Vegas-Henderson-North Las Vegas, NV",
+      "states": [
+        "NV"
+      ],
+      "rpp": 100.2
+    },
+    {
+      "id": "29940",
+      "name": "Lawrence, KS",
+      "states": [
+        "KS"
+      ],
+      "rpp": 90.2
+    },
+    {
+      "id": "30020",
+      "name": "Lawton, OK",
+      "states": [
+        "OK"
+      ],
+      "rpp": 85.9
+    },
+    {
+      "id": "30140",
+      "name": "Lebanon, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 93.2
+    },
+    {
+      "id": "30300",
+      "name": "Lewiston, ID-WA",
+      "states": [
+        "ID",
+        "WA"
+      ],
+      "rpp": 91.2
+    },
+    {
+      "id": "30340",
+      "name": "Lewiston-Auburn, ME",
+      "states": [
+        "ME"
+      ],
+      "rpp": 94.7
+    },
+    {
+      "id": "30500",
+      "name": "Lexington Park, MD",
+      "states": [
+        "MD"
+      ],
+      "rpp": 100.8
+    },
+    {
+      "id": "30460",
+      "name": "Lexington-Fayette, KY",
+      "states": [
+        "KY"
+      ],
+      "rpp": 92.9
+    },
+    {
+      "id": "30620",
+      "name": "Lima, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 89.7
+    },
+    {
+      "id": "30700",
+      "name": "Lincoln, NE",
+      "states": [
+        "NE"
+      ],
+      "rpp": 91.6
+    },
+    {
+      "id": "30780",
+      "name": "Little Rock-North Little Rock-Conway, AR",
+      "states": [
+        "AR"
+      ],
+      "rpp": 89.4
+    },
+    {
+      "id": "30860",
+      "name": "Logan, UT-ID",
+      "states": [
+        "UT",
+        "ID"
+      ],
+      "rpp": 95.9
+    },
+    {
+      "id": "30980",
+      "name": "Longview, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 89.5
+    },
+    {
+      "id": "31020",
+      "name": "Longview-Kelso, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 97.5
+    },
+    {
+      "id": "31080",
+      "name": "Los Angeles-Long Beach-Anaheim, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 113.6
+    },
+    {
+      "id": "31140",
+      "name": "Louisville/Jefferson County, KY-IN",
+      "states": [
+        "KY",
+        "IN"
+      ],
+      "rpp": 93.1
+    },
+    {
+      "id": "31180",
+      "name": "Lubbock, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 91.3
+    },
+    {
+      "id": "31340",
+      "name": "Lynchburg, VA",
+      "states": [
+        "VA"
+      ],
+      "rpp": 89.4
+    },
+    {
+      "id": "31420",
+      "name": "Macon-Bibb County, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 88.5
+    },
+    {
+      "id": "31540",
+      "name": "Madison, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 97.3
+    },
+    {
+      "id": "31700",
+      "name": "Manchester-Nashua, NH",
+      "states": [
+        "NH"
+      ],
+      "rpp": 105.7
+    },
+    {
+      "id": "31740",
+      "name": "Manhattan, KS",
+      "states": [
+        "KS"
+      ],
+      "rpp": 90.2
+    },
+    {
+      "id": "31860",
+      "name": "Mankato, MN",
+      "states": [
+        "MN"
+      ],
+      "rpp": 91.0
+    },
+    {
+      "id": "31900",
+      "name": "Mansfield, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 88.9
+    },
+    {
+      "id": "32580",
+      "name": "McAllen-Edinburg-Mission, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 85.9
+    },
+    {
+      "id": "32780",
+      "name": "Medford, OR",
+      "states": [
+        "OR"
+      ],
+      "rpp": 101.4
+    },
+    {
+      "id": "32820",
+      "name": "Memphis, TN-MS-AR",
+      "states": [
+        "TN",
+        "MS",
+        "AR"
+      ],
+      "rpp": 92.2
+    },
+    {
+      "id": "32900",
+      "name": "Merced, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 98.3
+    },
+    {
+      "id": "33100",
+      "name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 114.2
+    },
+    {
+      "id": "33140",
+      "name": "Michigan City-La Porte, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 91.7
+    },
+    {
+      "id": "33220",
+      "name": "Midland, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 91.9
+    },
+    {
+      "id": "33260",
+      "name": "Midland, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 95.8
+    },
+    {
+      "id": "33340",
+      "name": "Milwaukee-Waukesha, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 96.9
+    },
+    {
+      "id": "33460",
+      "name": "Minneapolis-St. Paul-Bloomington, MN-WI",
+      "states": [
+        "MN",
+        "WI"
+      ],
+      "rpp": 104.8
+    },
+    {
+      "id": "33500",
+      "name": "Minot, ND",
+      "states": [
+        "ND"
+      ],
+      "rpp": 87.0
+    },
+    {
+      "id": "33540",
+      "name": "Missoula, MT",
+      "states": [
+        "MT"
+      ],
+      "rpp": 96.4
+    },
+    {
+      "id": "33660",
+      "name": "Mobile, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 88.1
+    },
+    {
+      "id": "33700",
+      "name": "Modesto, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 104.1
+    },
+    {
+      "id": "33740",
+      "name": "Monroe, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 83.6
+    },
+    {
+      "id": "33780",
+      "name": "Monroe, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 93.5
+    },
+    {
+      "id": "33860",
+      "name": "Montgomery, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 89.7
+    },
+    {
+      "id": "34060",
+      "name": "Morgantown, WV",
+      "states": [
+        "WV"
+      ],
+      "rpp": 93.3
+    },
+    {
+      "id": "34100",
+      "name": "Morristown, TN",
+      "states": [
+        "TN"
+      ],
+      "rpp": 86.4
+    },
+    {
+      "id": "34580",
+      "name": "Mount Vernon-Anacortes, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 102.4
+    },
+    {
+      "id": "34620",
+      "name": "Muncie, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 88.1
+    },
+    {
+      "id": "34740",
+      "name": "Muskegon-Norton Shores, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 92.5
+    },
+    {
+      "id": "34820",
+      "name": "Myrtle Beach-Conway-North Myrtle Beach, SC",
+      "states": [
+        "SC"
+      ],
+      "rpp": 93.6
+    },
+    {
+      "id": "34900",
+      "name": "Napa, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 112.6
+    },
+    {
+      "id": "34940",
+      "name": "Naples-Marco Island, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 103.2
+    },
+    {
+      "id": "34980",
+      "name": "Nashville-Davidson--Murfreesboro--Franklin, TN",
+      "states": [
+        "TN"
+      ],
+      "rpp": 96.3
+    },
+    {
+      "id": "35300",
+      "name": "New Haven, CT",
+      "states": [
+        "CT"
+      ],
+      "rpp": 104.6
+    },
+    {
+      "id": "35380",
+      "name": "New Orleans-Metairie, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 92.6
+    },
+    {
+      "id": "35620",
+      "name": "New York-Newark-Jersey City, NY-NJ",
+      "states": [
+        "NY",
+        "NJ"
+      ],
+      "rpp": 112.6
+    },
+    {
+      "id": "35660",
+      "name": "Niles, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 92.4
+    },
+    {
+      "id": "35840",
+      "name": "North Port-Bradenton-Sarasota, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 102.4
+    },
+    {
+      "id": "35980",
+      "name": "Norwich-New London-Willimantic, CT",
+      "states": [
+        "CT"
+      ],
+      "rpp": 100.4
+    },
+    {
+      "id": "36100",
+      "name": "Ocala, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 95.2
+    },
+    {
+      "id": "36220",
+      "name": "Odessa, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 93.9
+    },
+    {
+      "id": "36260",
+      "name": "Ogden, UT",
+      "states": [
+        "UT"
+      ],
+      "rpp": 100.3
+    },
+    {
+      "id": "36420",
+      "name": "Oklahoma City, OK",
+      "states": [
+        "OK"
+      ],
+      "rpp": 90.4
+    },
+    {
+      "id": "36500",
+      "name": "Olympia-Lacey-Tumwater, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 103.7
+    },
+    {
+      "id": "36540",
+      "name": "Omaha, NE-IA",
+      "states": [
+        "NE",
+        "IA"
+      ],
+      "rpp": 91.9
+    },
+    {
+      "id": "36740",
+      "name": "Orlando-Kissimmee-Sanford, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 101.4
+    },
+    {
+      "id": "36780",
+      "name": "Oshkosh-Neenah, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 92.9
+    },
+    {
+      "id": "36980",
+      "name": "Owensboro, KY",
+      "states": [
+        "KY"
+      ],
+      "rpp": 88.6
+    },
+    {
+      "id": "37100",
+      "name": "Oxnard-Thousand Oaks-Ventura, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 110.5
+    },
+    {
+      "id": "37140",
+      "name": "Paducah, KY-IL",
+      "states": [
+        "KY",
+        "IL"
+      ],
+      "rpp": 86.1
+    },
+    {
+      "id": "37340",
+      "name": "Palm Bay-Melbourne-Titusville, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 100.0
+    },
+    {
+      "id": "37460",
+      "name": "Panama City-Panama City Beach, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 97.3
+    },
+    {
+      "id": "37620",
+      "name": "Parkersburg-Vienna, WV",
+      "states": [
+        "WV"
+      ],
+      "rpp": 87.1
+    },
+    {
+      "id": "37860",
+      "name": "Pensacola-Ferry Pass-Brent, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 97.7
+    },
+    {
+      "id": "37900",
+      "name": "Peoria, IL",
+      "states": [
+        "IL"
+      ],
+      "rpp": 91.2
+    },
+    {
+      "id": "37980",
+      "name": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",
+      "states": [
+        "PA",
+        "NJ",
+        "DE",
+        "MD"
+      ],
+      "rpp": 102.6
+    },
+    {
+      "id": "38060",
+      "name": "Phoenix-Mesa-Chandler, AZ",
+      "states": [
+        "AZ"
+      ],
+      "rpp": 103.3
+    },
+    {
+      "id": "38240",
+      "name": "Pinehurst-Southern Pines, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 88.3
+    },
+    {
+      "id": "38300",
+      "name": "Pittsburgh, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 94.7
+    },
+    {
+      "id": "38340",
+      "name": "Pittsfield, MA",
+      "states": [
+        "MA"
+      ],
+      "rpp": 95.1
+    },
+    {
+      "id": "38540",
+      "name": "Pocatello, ID",
+      "states": [
+        "ID"
+      ],
+      "rpp": 88.9
+    },
+    {
+      "id": "38940",
+      "name": "Port St. Lucie, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 100.2
+    },
+    {
+      "id": "38860",
+      "name": "Portland-South Portland, ME",
+      "states": [
+        "ME"
+      ],
+      "rpp": 101.9
+    },
+    {
+      "id": "38900",
+      "name": "Portland-Vancouver-Hillsboro, OR-WA",
+      "states": [
+        "OR",
+        "WA"
+      ],
+      "rpp": 105.4
+    },
+    {
+      "id": "39150",
+      "name": "Prescott Valley-Prescott, AZ",
+      "states": [
+        "AZ"
+      ],
+      "rpp": 98.3
+    },
+    {
+      "id": "39300",
+      "name": "Providence-Warwick, RI-MA",
+      "states": [
+        "RI",
+        "MA"
+      ],
+      "rpp": 101.8
+    },
+    {
+      "id": "39340",
+      "name": "Provo-Orem-Lehi, UT",
+      "states": [
+        "UT"
+      ],
+      "rpp": 98.2
+    },
+    {
+      "id": "39380",
+      "name": "Pueblo, CO",
+      "states": [
+        "CO"
+      ],
+      "rpp": 91.8
+    },
+    {
+      "id": "39460",
+      "name": "Punta Gorda, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 100.5
+    },
+    {
+      "id": "39540",
+      "name": "Racine-Mount Pleasant, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 96.0
+    },
+    {
+      "id": "39580",
+      "name": "Raleigh-Cary, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 98.2
+    },
+    {
+      "id": "39660",
+      "name": "Rapid City, SD",
+      "states": [
+        "SD"
+      ],
+      "rpp": 89.2
+    },
+    {
+      "id": "39740",
+      "name": "Reading, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 97.1
+    },
+    {
+      "id": "39820",
+      "name": "Redding, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 100.7
+    },
+    {
+      "id": "39900",
+      "name": "Reno, NV",
+      "states": [
+        "NV"
+      ],
+      "rpp": 101.0
+    },
+    {
+      "id": "40060",
+      "name": "Richmond, VA",
+      "states": [
+        "VA"
+      ],
+      "rpp": 97.9
+    },
+    {
+      "id": "40140",
+      "name": "Riverside-San Bernardino-Ontario, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 106.4
+    },
+    {
+      "id": "40220",
+      "name": "Roanoke, VA",
+      "states": [
+        "VA"
+      ],
+      "rpp": 93.6
+    },
+    {
+      "id": "40340",
+      "name": "Rochester, MN",
+      "states": [
+        "MN"
+      ],
+      "rpp": 90.8
+    },
+    {
+      "id": "40380",
+      "name": "Rochester, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 97.0
+    },
+    {
+      "id": "40420",
+      "name": "Rockford, IL",
+      "states": [
+        "IL"
+      ],
+      "rpp": 92.2
+    },
+    {
+      "id": "40580",
+      "name": "Rocky Mount, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 88.0
+    },
+    {
+      "id": "40660",
+      "name": "Rome, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 90.2
+    },
+    {
+      "id": "40900",
+      "name": "Sacramento-Roseville-Folsom, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 106.7
+    },
+    {
+      "id": "40980",
+      "name": "Saginaw, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 90.9
+    },
+    {
+      "id": "41420",
+      "name": "Salem, OR",
+      "states": [
+        "OR"
+      ],
+      "rpp": 103.6
+    },
+    {
+      "id": "41500",
+      "name": "Salinas, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 109.0
+    },
+    {
+      "id": "41540",
+      "name": "Salisbury, MD",
+      "states": [
+        "MD"
+      ],
+      "rpp": 95.6
+    },
+    {
+      "id": "41620",
+      "name": "Salt Lake City-Murray, UT",
+      "states": [
+        "UT"
+      ],
+      "rpp": 100.9
+    },
+    {
+      "id": "41660",
+      "name": "San Angelo, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 92.5
+    },
+    {
+      "id": "41700",
+      "name": "San Antonio-New Braunfels, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 94.7
+    },
+    {
+      "id": "41740",
+      "name": "San Diego-Chula Vista-Carlsbad, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 111.9
+    },
+    {
+      "id": "41860",
+      "name": "San Francisco-Oakland-Fremont, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 115.6
+    },
+    {
+      "id": "41940",
+      "name": "San Jose-Sunnyvale-Santa Clara, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 110.4
+    },
+    {
+      "id": "42020",
+      "name": "San Luis Obispo-Paso Robles, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 108.6
+    },
+    {
+      "id": "41780",
+      "name": "Sandusky, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 89.3
+    },
+    {
+      "id": "42100",
+      "name": "Santa Cruz-Watsonville, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 109.9
+    },
+    {
+      "id": "42140",
+      "name": "Santa Fe, NM",
+      "states": [
+        "NM"
+      ],
+      "rpp": 98.8
+    },
+    {
+      "id": "42200",
+      "name": "Santa Maria-Santa Barbara, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 108.8
+    },
+    {
+      "id": "42220",
+      "name": "Santa Rosa-Petaluma, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 107.8
+    },
+    {
+      "id": "42340",
+      "name": "Savannah, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 95.2
+    },
+    {
+      "id": "42540",
+      "name": "Scranton--Wilkes-Barre, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 93.6
+    },
+    {
+      "id": "42660",
+      "name": "Seattle-Tacoma-Bellevue, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 111.1
+    },
+    {
+      "id": "42680",
+      "name": "Sebastian-Vero Beach-West Vero Corridor, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 98.3
+    },
+    {
+      "id": "42700",
+      "name": "Sebring, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 92.5
+    },
+    {
+      "id": "43100",
+      "name": "Sheboygan, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 94.0
+    },
+    {
+      "id": "43300",
+      "name": "Sherman-Denison, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 93.8
+    },
+    {
+      "id": "43340",
+      "name": "Shreveport-Bossier City, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 84.8
+    },
+    {
+      "id": "43420",
+      "name": "Sierra Vista-Douglas, AZ",
+      "states": [
+        "AZ"
+      ],
+      "rpp": 89.2
+    },
+    {
+      "id": "43580",
+      "name": "Sioux City, IA-NE-SD",
+      "states": [
+        "IA",
+        "NE",
+        "SD"
+      ],
+      "rpp": 86.5
+    },
+    {
+      "id": "43620",
+      "name": "Sioux Falls, SD-MN",
+      "states": [
+        "SD",
+        "MN"
+      ],
+      "rpp": 90.6
+    },
+    {
+      "id": "43640",
+      "name": "Slidell-Mandeville-Covington, LA",
+      "states": [
+        "LA"
+      ],
+      "rpp": 92.7
+    },
+    {
+      "id": "43780",
+      "name": "South Bend-Mishawaka, IN-MI",
+      "states": [
+        "IN",
+        "MI"
+      ],
+      "rpp": 92.9
+    },
+    {
+      "id": "43900",
+      "name": "Spartanburg, SC",
+      "states": [
+        "SC"
+      ],
+      "rpp": 91.1
+    },
+    {
+      "id": "44060",
+      "name": "Spokane-Spokane Valley, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 100.3
+    },
+    {
+      "id": "44100",
+      "name": "Springfield, IL",
+      "states": [
+        "IL"
+      ],
+      "rpp": 92.7
+    },
+    {
+      "id": "44140",
+      "name": "Springfield, MA",
+      "states": [
+        "MA"
+      ],
+      "rpp": 96.1
+    },
+    {
+      "id": "44180",
+      "name": "Springfield, MO",
+      "states": [
+        "MO"
+      ],
+      "rpp": 88.6
+    },
+    {
+      "id": "44220",
+      "name": "Springfield, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 90.5
+    },
+    {
+      "id": "41060",
+      "name": "St. Cloud, MN",
+      "states": [
+        "MN"
+      ],
+      "rpp": 87.6
+    },
+    {
+      "id": "41100",
+      "name": "St. George, UT",
+      "states": [
+        "UT"
+      ],
+      "rpp": 97.3
+    },
+    {
+      "id": "41140",
+      "name": "St. Joseph, MO-KS",
+      "states": [
+        "MO",
+        "KS"
+      ],
+      "rpp": 86.4
+    },
+    {
+      "id": "41180",
+      "name": "St. Louis, MO-IL",
+      "states": [
+        "MO",
+        "IL"
+      ],
+      "rpp": 95.1
+    },
+    {
+      "id": "44300",
+      "name": "State College, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 96.8
+    },
+    {
+      "id": "44420",
+      "name": "Staunton-Stuarts Draft, VA",
+      "states": [
+        "VA"
+      ],
+      "rpp": 91.1
+    },
+    {
+      "id": "44700",
+      "name": "Stockton-Lodi, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 105.1
+    },
+    {
+      "id": "44940",
+      "name": "Sumter, SC",
+      "states": [
+        "SC"
+      ],
+      "rpp": 88.0
+    },
+    {
+      "id": "45060",
+      "name": "Syracuse, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 95.7
+    },
+    {
+      "id": "45220",
+      "name": "Tallahassee, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 93.9
+    },
+    {
+      "id": "45300",
+      "name": "Tampa-St. Petersburg-Clearwater, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 100.9
+    },
+    {
+      "id": "45460",
+      "name": "Terre Haute, IN",
+      "states": [
+        "IN"
+      ],
+      "rpp": 87.8
+    },
+    {
+      "id": "45500",
+      "name": "Texarkana, TX-AR",
+      "states": [
+        "TX",
+        "AR"
+      ],
+      "rpp": 84.0
+    },
+    {
+      "id": "45780",
+      "name": "Toledo, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 91.5
+    },
+    {
+      "id": "45820",
+      "name": "Topeka, KS",
+      "states": [
+        "KS"
+      ],
+      "rpp": 88.8
+    },
+    {
+      "id": "45900",
+      "name": "Traverse City, MI",
+      "states": [
+        "MI"
+      ],
+      "rpp": 93.4
+    },
+    {
+      "id": "45940",
+      "name": "Trenton-Princeton, NJ",
+      "states": [
+        "NJ"
+      ],
+      "rpp": 103.2
+    },
+    {
+      "id": "46060",
+      "name": "Tucson, AZ",
+      "states": [
+        "AZ"
+      ],
+      "rpp": 96.9
+    },
+    {
+      "id": "46140",
+      "name": "Tulsa, OK",
+      "states": [
+        "OK"
+      ],
+      "rpp": 89.2
+    },
+    {
+      "id": "46220",
+      "name": "Tuscaloosa, AL",
+      "states": [
+        "AL"
+      ],
+      "rpp": 87.7
+    },
+    {
+      "id": "46300",
+      "name": "Twin Falls, ID",
+      "states": [
+        "ID"
+      ],
+      "rpp": 92.1
+    },
+    {
+      "id": "46340",
+      "name": "Tyler, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 92.2
+    },
+    {
+      "id": "46520",
+      "name": "Urban Honolulu, HI",
+      "states": [
+        "HI"
+      ],
+      "rpp": 111.0
+    },
+    {
+      "id": "46540",
+      "name": "Utica-Rome, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 92.7
+    },
+    {
+      "id": "46660",
+      "name": "Valdosta, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 88.3
+    },
+    {
+      "id": "46700",
+      "name": "Vallejo, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 108.5
+    },
+    {
+      "id": "47020",
+      "name": "Victoria, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 89.8
+    },
+    {
+      "id": "47220",
+      "name": "Vineland, NJ",
+      "states": [
+        "NJ"
+      ],
+      "rpp": 96.0
+    },
+    {
+      "id": "47260",
+      "name": "Virginia Beach-Chesapeake-Norfolk, VA-NC",
+      "states": [
+        "VA",
+        "NC"
+      ],
+      "rpp": 97.9
+    },
+    {
+      "id": "47300",
+      "name": "Visalia, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 99.8
+    },
+    {
+      "id": "47380",
+      "name": "Waco, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 92.5
+    },
+    {
+      "id": "47460",
+      "name": "Walla Walla, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 98.5
+    },
+    {
+      "id": "47580",
+      "name": "Warner Robins, GA",
+      "states": [
+        "GA"
+      ],
+      "rpp": 93.8
+    },
+    {
+      "id": "47900",
+      "name": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+      "states": [
+        "DC",
+        "VA",
+        "MD",
+        "WV"
+      ],
+      "rpp": 108.9
+    },
+    {
+      "id": "47930",
+      "name": "Waterbury-Shelton, CT",
+      "states": [
+        "CT"
+      ],
+      "rpp": 99.8
+    },
+    {
+      "id": "47940",
+      "name": "Waterloo-Cedar Falls, IA",
+      "states": [
+        "IA"
+      ],
+      "rpp": 87.1
+    },
+    {
+      "id": "48060",
+      "name": "Watertown-Fort Drum, NY",
+      "states": [
+        "NY"
+      ],
+      "rpp": 87.7
+    },
+    {
+      "id": "48140",
+      "name": "Wausau, WI",
+      "states": [
+        "WI"
+      ],
+      "rpp": 92.7
+    },
+    {
+      "id": "48260",
+      "name": "Weirton-Steubenville, WV-OH",
+      "states": [
+        "WV",
+        "OH"
+      ],
+      "rpp": 89.0
+    },
+    {
+      "id": "48300",
+      "name": "Wenatchee-East Wenatchee, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 103.9
+    },
+    {
+      "id": "48540",
+      "name": "Wheeling, WV-OH",
+      "states": [
+        "WV",
+        "OH"
+      ],
+      "rpp": 88.3
+    },
+    {
+      "id": "48660",
+      "name": "Wichita Falls, TX",
+      "states": [
+        "TX"
+      ],
+      "rpp": 89.5
+    },
+    {
+      "id": "48620",
+      "name": "Wichita, KS",
+      "states": [
+        "KS"
+      ],
+      "rpp": 88.9
+    },
+    {
+      "id": "48680",
+      "name": "Wildwood-The Villages, FL",
+      "states": [
+        "FL"
+      ],
+      "rpp": 85.4
+    },
+    {
+      "id": "48700",
+      "name": "Williamsport, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 92.3
+    },
+    {
+      "id": "48900",
+      "name": "Wilmington, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 96.4
+    },
+    {
+      "id": "49020",
+      "name": "Winchester, VA-WV",
+      "states": [
+        "VA",
+        "WV"
+      ],
+      "rpp": 96.5
+    },
+    {
+      "id": "49180",
+      "name": "Winston-Salem, NC",
+      "states": [
+        "NC"
+      ],
+      "rpp": 92.0
+    },
+    {
+      "id": "49340",
+      "name": "Worcester, MA",
+      "states": [
+        "MA"
+      ],
+      "rpp": 102.5
+    },
+    {
+      "id": "49420",
+      "name": "Yakima, WA",
+      "states": [
+        "WA"
+      ],
+      "rpp": 95.5
+    },
+    {
+      "id": "49620",
+      "name": "York-Hanover, PA",
+      "states": [
+        "PA"
+      ],
+      "rpp": 96.0
+    },
+    {
+      "id": "49660",
+      "name": "Youngstown-Warren, OH",
+      "states": [
+        "OH"
+      ],
+      "rpp": 87.4
+    },
+    {
+      "id": "49700",
+      "name": "Yuba City, CA",
+      "states": [
+        "CA"
+      ],
+      "rpp": 104.2
+    },
+    {
+      "id": "49740",
+      "name": "Yuma, AZ",
+      "states": [
+        "AZ"
+      ],
+      "rpp": 92.7
+    }
+  ],
+  "verifiedAgainstPrimarySource": "2026-08-06 \u2014 every figure compared against BEA's own downloadable regional price parity files (SARPP state, MARPP metro, 2008-2024 vintages): all 51 state parities, all metro parities and the non-metropolitan figure matched exactly, with no state or metro missing. The two rows in BEA's metro file the app does not carry are the national total and the non-metropolitan portion, the latter held here as nationalNonMetroRpp."
+}

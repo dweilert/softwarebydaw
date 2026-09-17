@@ -1,0 +1,1132 @@
+{
+  "sourceIds": [
+    "cdc-life-expectancy"
+  ],
+  "sourceUrl": "https://www.cdc.gov/nchs/products/nvsr.htm",
+  "retrievedDate": "2026-05-07",
+  "source": "National Vital Statistics Reports",
+  "rows": [
+    {
+      "age": 35,
+      "yearsToLive": {
+        "black": {
+          "male": 39.4826,
+          "female": 44.8468
+        },
+        "hispanic": {
+          "male": 45.7861,
+          "female": 50.3407
+        },
+        "white": {
+          "male": 43.1766,
+          "female": 47.2556
+        }
+      }
+    },
+    {
+      "age": 36,
+      "yearsToLive": {
+        "black": {
+          "male": 38.6087,
+          "female": 43.9197
+        },
+        "hispanic": {
+          "male": 44.8558,
+          "female": 49.374
+        },
+        "white": {
+          "male": 42.2744,
+          "female": 46.3122
+        }
+      }
+    },
+    {
+      "age": 37,
+      "yearsToLive": {
+        "black": {
+          "male": 37.7377,
+          "female": 42.9959
+        },
+        "hispanic": {
+          "male": 43.9277,
+          "female": 48.4084
+        },
+        "white": {
+          "male": 41.3738,
+          "female": 45.3707
+        }
+      }
+    },
+    {
+      "age": 38,
+      "yearsToLive": {
+        "black": {
+          "male": 36.8695,
+          "female": 42.0753
+        },
+        "hispanic": {
+          "male": 43.0012,
+          "female": 47.4436
+        },
+        "white": {
+          "male": 40.4739,
+          "female": 44.4307
+        }
+      }
+    },
+    {
+      "age": 39,
+      "yearsToLive": {
+        "black": {
+          "male": 36.0037,
+          "female": 41.1578
+        },
+        "hispanic": {
+          "male": 42.0755,
+          "female": 46.4794
+        },
+        "white": {
+          "male": 39.574,
+          "female": 43.4916
+        }
+      }
+    },
+    {
+      "age": 40,
+      "yearsToLive": {
+        "black": {
+          "male": 35.1407,
+          "female": 40.2434
+        },
+        "hispanic": {
+          "male": 41.1501,
+          "female": 45.5159
+        },
+        "white": {
+          "male": 38.6735,
+          "female": 42.5536
+        }
+      }
+    },
+    {
+      "age": 41,
+      "yearsToLive": {
+        "black": {
+          "male": 34.2812,
+          "female": 39.3328
+        },
+        "hispanic": {
+          "male": 40.2252,
+          "female": 44.5529
+        },
+        "white": {
+          "male": 37.7729,
+          "female": 41.6169
+        }
+      }
+    },
+    {
+      "age": 42,
+      "yearsToLive": {
+        "black": {
+          "male": 33.4261,
+          "female": 38.4266
+        },
+        "hispanic": {
+          "male": 39.3013,
+          "female": 43.591
+        },
+        "white": {
+          "male": 36.8734,
+          "female": 40.6824
+        }
+      }
+    },
+    {
+      "age": 43,
+      "yearsToLive": {
+        "black": {
+          "male": 32.5753,
+          "female": 37.525
+        },
+        "hispanic": {
+          "male": 38.3794,
+          "female": 42.631
+        },
+        "white": {
+          "male": 35.9763,
+          "female": 39.7508
+        }
+      }
+    },
+    {
+      "age": 44,
+      "yearsToLive": {
+        "black": {
+          "male": 31.7286,
+          "female": 36.6279
+        },
+        "hispanic": {
+          "male": 37.4604,
+          "female": 41.674
+        },
+        "white": {
+          "male": 35.0829,
+          "female": 38.8229
+        }
+      }
+    },
+    {
+      "age": 45,
+      "yearsToLive": {
+        "black": {
+          "male": 30.8855,
+          "female": 35.7353
+        },
+        "hispanic": {
+          "male": 36.5452,
+          "female": 40.7206
+        },
+        "white": {
+          "male": 34.1939,
+          "female": 37.899
+        }
+      }
+    },
+    {
+      "age": 46,
+      "yearsToLive": {
+        "black": {
+          "male": 30.0463,
+          "female": 34.8472
+        },
+        "hispanic": {
+          "male": 35.6341,
+          "female": 39.7713
+        },
+        "white": {
+          "male": 33.31,
+          "female": 36.9793
+        }
+      }
+    },
+    {
+      "age": 47,
+      "yearsToLive": {
+        "black": {
+          "male": 29.2116,
+          "female": 33.964
+        },
+        "hispanic": {
+          "male": 34.7274,
+          "female": 38.826
+        },
+        "white": {
+          "male": 32.4314,
+          "female": 36.0639
+        }
+      }
+    },
+    {
+      "age": 48,
+      "yearsToLive": {
+        "black": {
+          "male": 28.3828,
+          "female": 33.0863
+        },
+        "hispanic": {
+          "male": 33.8257,
+          "female": 37.885
+        },
+        "white": {
+          "male": 31.5583,
+          "female": 35.1529
+        }
+      }
+    },
+    {
+      "age": 49,
+      "yearsToLive": {
+        "black": {
+          "male": 27.5615,
+          "female": 32.215
+        },
+        "hispanic": {
+          "male": 32.9296,
+          "female": 36.9487
+        },
+        "white": {
+          "male": 30.6911,
+          "female": 34.2466
+        }
+      }
+    },
+    {
+      "age": 50,
+      "yearsToLive": {
+        "black": {
+          "male": 26.7492,
+          "female": 31.3509
+        },
+        "hispanic": {
+          "male": 32.04,
+          "female": 36.0173
+        },
+        "white": {
+          "male": 29.8307,
+          "female": 33.3455
+        }
+      }
+    },
+    {
+      "age": 51,
+      "yearsToLive": {
+        "black": {
+          "male": 25.9462,
+          "female": 30.4944
+        },
+        "hispanic": {
+          "male": 31.1569,
+          "female": 35.0912
+        },
+        "white": {
+          "male": 28.9771,
+          "female": 32.4496
+        }
+      }
+    },
+    {
+      "age": 52,
+      "yearsToLive": {
+        "black": {
+          "male": 25.153,
+          "female": 29.6456
+        },
+        "hispanic": {
+          "male": 30.2807,
+          "female": 34.1705
+        },
+        "white": {
+          "male": 28.1312,
+          "female": 31.5593
+        }
+      }
+    },
+    {
+      "age": 53,
+      "yearsToLive": {
+        "black": {
+          "male": 24.3715,
+          "female": 28.8061
+        },
+        "hispanic": {
+          "male": 29.4124,
+          "female": 33.2553
+        },
+        "white": {
+          "male": 27.295,
+          "female": 30.6757
+        }
+      }
+    },
+    {
+      "age": 54,
+      "yearsToLive": {
+        "black": {
+          "male": 23.6036,
+          "female": 27.9768
+        },
+        "hispanic": {
+          "male": 28.5528,
+          "female": 32.3454
+        },
+        "white": {
+          "male": 26.4704,
+          "female": 29.7997
+        }
+      }
+    },
+    {
+      "age": 55,
+      "yearsToLive": {
+        "black": {
+          "male": 22.8502,
+          "female": 27.1584
+        },
+        "hispanic": {
+          "male": 27.7026,
+          "female": 31.4404
+        },
+        "white": {
+          "male": 25.6579,
+          "female": 28.9314
+        }
+      }
+    },
+    {
+      "age": 56,
+      "yearsToLive": {
+        "black": {
+          "male": 22.1103,
+          "female": 26.3501
+        },
+        "hispanic": {
+          "male": 26.8621,
+          "female": 30.5403
+        },
+        "white": {
+          "male": 24.8565,
+          "female": 28.0701
+        }
+      }
+    },
+    {
+      "age": 57,
+      "yearsToLive": {
+        "black": {
+          "male": 21.3831,
+          "female": 25.5511
+        },
+        "hispanic": {
+          "male": 26.0313,
+          "female": 29.6452
+        },
+        "white": {
+          "male": 24.0649,
+          "female": 27.2152
+        }
+      }
+    },
+    {
+      "age": 58,
+      "yearsToLive": {
+        "black": {
+          "male": 20.6693,
+          "female": 24.7618
+        },
+        "hispanic": {
+          "male": 25.2101,
+          "female": 28.7554
+        },
+        "white": {
+          "male": 23.2825,
+          "female": 26.366
+        }
+      }
+    },
+    {
+      "age": 59,
+      "yearsToLive": {
+        "black": {
+          "male": 19.9704,
+          "female": 23.9827
+        },
+        "hispanic": {
+          "male": 24.3984,
+          "female": 27.8715
+        },
+        "white": {
+          "male": 22.5095,
+          "female": 25.5222
+        }
+      }
+    },
+    {
+      "age": 60,
+      "yearsToLive": {
+        "black": {
+          "male": 19.2878,
+          "female": 23.2144
+        },
+        "hispanic": {
+          "male": 23.5961,
+          "female": 26.994
+        },
+        "white": {
+          "male": 21.7458,
+          "female": 24.6837
+        }
+      }
+    },
+    {
+      "age": 61,
+      "yearsToLive": {
+        "black": {
+          "male": 18.6219,
+          "female": 22.4573
+        },
+        "hispanic": {
+          "male": 22.8039,
+          "female": 26.1234
+        },
+        "white": {
+          "male": 20.992,
+          "female": 23.8511
+        }
+      }
+    },
+    {
+      "age": 62,
+      "yearsToLive": {
+        "black": {
+          "male": 17.972,
+          "female": 21.7107
+        },
+        "hispanic": {
+          "male": 22.022,
+          "female": 25.2597
+        },
+        "white": {
+          "male": 20.2473,
+          "female": 23.0242
+        }
+      }
+    },
+    {
+      "age": 63,
+      "yearsToLive": {
+        "black": {
+          "male": 17.3373,
+          "female": 20.9735
+        },
+        "hispanic": {
+          "male": 21.2495,
+          "female": 24.4023
+        },
+        "white": {
+          "male": 19.5107,
+          "female": 22.2028
+        }
+      }
+    },
+    {
+      "age": 64,
+      "yearsToLive": {
+        "black": {
+          "male": 16.7171,
+          "female": 20.2443
+        },
+        "hispanic": {
+          "male": 20.4845,
+          "female": 23.5504
+        },
+        "white": {
+          "male": 18.7806,
+          "female": 21.3865
+        }
+      }
+    },
+    {
+      "age": 65,
+      "yearsToLive": {
+        "black": {
+          "male": 16.1104,
+          "female": 19.5221
+        },
+        "hispanic": {
+          "male": 19.7257,
+          "female": 22.7034
+        },
+        "white": {
+          "male": 18.0561,
+          "female": 20.5753
+        }
+      }
+    },
+    {
+      "age": 66,
+      "yearsToLive": {
+        "black": {
+          "male": 15.519,
+          "female": 18.8069
+        },
+        "hispanic": {
+          "male": 18.9728,
+          "female": 21.8615
+        },
+        "white": {
+          "male": 17.337,
+          "female": 19.7692
+        }
+      }
+    },
+    {
+      "age": 67,
+      "yearsToLive": {
+        "black": {
+          "male": 14.9427,
+          "female": 18.0993
+        },
+        "hispanic": {
+          "male": 18.2264,
+          "female": 21.0253
+        },
+        "white": {
+          "male": 16.6254,
+          "female": 18.9698
+        }
+      }
+    },
+    {
+      "age": 68,
+      "yearsToLive": {
+        "black": {
+          "male": 14.3781,
+          "female": 17.3986
+        },
+        "hispanic": {
+          "male": 17.4876,
+          "female": 20.196
+        },
+        "white": {
+          "male": 15.9213,
+          "female": 18.1783
+        }
+      }
+    },
+    {
+      "age": 69,
+      "yearsToLive": {
+        "black": {
+          "male": 13.8192,
+          "female": 16.7044
+        },
+        "hispanic": {
+          "male": 16.7581,
+          "female": 19.3747
+        },
+        "white": {
+          "male": 15.2254,
+          "female": 17.3969
+        }
+      }
+    },
+    {
+      "age": 70,
+      "yearsToLive": {
+        "black": {
+          "male": 13.2607,
+          "female": 16.0179
+        },
+        "hispanic": {
+          "male": 16.0389,
+          "female": 18.5624
+        },
+        "white": {
+          "male": 14.5393,
+          "female": 16.627
+        }
+      }
+    },
+    {
+      "age": 71,
+      "yearsToLive": {
+        "black": {
+          "male": 12.702,
+          "female": 15.3413
+        },
+        "hispanic": {
+          "male": 15.3308,
+          "female": 17.7597
+        },
+        "white": {
+          "male": 13.8613,
+          "female": 15.8698
+        }
+      }
+    },
+    {
+      "age": 72,
+      "yearsToLive": {
+        "black": {
+          "male": 12.1445,
+          "female": 14.6739
+        },
+        "hispanic": {
+          "male": 14.6335,
+          "female": 16.9671
+        },
+        "white": {
+          "male": 13.1902,
+          "female": 15.1232
+        }
+      }
+    },
+    {
+      "age": 73,
+      "yearsToLive": {
+        "black": {
+          "male": 11.5945,
+          "female": 14.0229
+        },
+        "hispanic": {
+          "male": 13.9464,
+          "female": 16.185
+        },
+        "white": {
+          "male": 12.535,
+          "female": 14.3935
+        }
+      }
+    },
+    {
+      "age": 74,
+      "yearsToLive": {
+        "black": {
+          "male": 11.059,
+          "female": 13.3764
+        },
+        "hispanic": {
+          "male": 13.2685,
+          "female": 15.4141
+        },
+        "white": {
+          "male": 11.8892,
+          "female": 13.6757
+        }
+      }
+    },
+    {
+      "age": 75,
+      "yearsToLive": {
+        "black": {
+          "male": 10.5313,
+          "female": 12.7446
+        },
+        "hispanic": {
+          "male": 12.5995,
+          "female": 14.6552
+        },
+        "white": {
+          "male": 11.2595,
+          "female": 12.9728
+        }
+      }
+    },
+    {
+      "age": 76,
+      "yearsToLive": {
+        "black": {
+          "male": 10.023,
+          "female": 12.1255
+        },
+        "hispanic": {
+          "male": 11.9394,
+          "female": 13.9091
+        },
+        "white": {
+          "male": 10.643,
+          "female": 12.2834
+        }
+      }
+    },
+    {
+      "age": 77,
+      "yearsToLive": {
+        "black": {
+          "male": 9.5291,
+          "female": 11.5215
+        },
+        "hispanic": {
+          "male": 11.2907,
+          "female": 13.1776
+        },
+        "white": {
+          "male": 10.0456,
+          "female": 11.6119
+        }
+      }
+    },
+    {
+      "age": 78,
+      "yearsToLive": {
+        "black": {
+          "male": 9.0486,
+          "female": 10.9249
+        },
+        "hispanic": {
+          "male": 10.6577,
+          "female": 12.4628
+        },
+        "white": {
+          "male": 9.4675,
+          "female": 10.9576
+        }
+      }
+    },
+    {
+      "age": 79,
+      "yearsToLive": {
+        "black": {
+          "male": 8.5831,
+          "female": 10.346
+        },
+        "hispanic": {
+          "male": 10.0411,
+          "female": 11.7653
+        },
+        "white": {
+          "male": 8.9023,
+          "female": 10.3204
+        }
+      }
+    },
+    {
+      "age": 80,
+      "yearsToLive": {
+        "black": {
+          "male": 8.1271,
+          "female": 9.7814
+        },
+        "hispanic": {
+          "male": 9.4432,
+          "female": 11.0849
+        },
+        "white": {
+          "male": 8.3548,
+          "female": 9.6998
+        }
+      }
+    },
+    {
+      "age": 81,
+      "yearsToLive": {
+        "black": {
+          "male": 7.6839,
+          "female": 9.23
+        },
+        "hispanic": {
+          "male": 8.8628,
+          "female": 10.4218
+        },
+        "white": {
+          "male": 7.8233,
+          "female": 9.0968
+        }
+      }
+    },
+    {
+      "age": 82,
+      "yearsToLive": {
+        "black": {
+          "male": 7.2577,
+          "female": 8.702
+        },
+        "hispanic": {
+          "male": 8.3031,
+          "female": 9.7803
+        },
+        "white": {
+          "male": 7.3114,
+          "female": 8.5158
+        }
+      }
+    },
+    {
+      "age": 83,
+      "yearsToLive": {
+        "black": {
+          "male": 6.8485,
+          "female": 8.2068
+        },
+        "hispanic": {
+          "male": 7.7627,
+          "female": 9.1596
+        },
+        "white": {
+          "male": 6.8186,
+          "female": 7.9559
+        }
+      }
+    },
+    {
+      "age": 84,
+      "yearsToLive": {
+        "black": {
+          "male": 6.4629,
+          "female": 7.7219
+        },
+        "hispanic": {
+          "male": 7.2405,
+          "female": 8.5611
+        },
+        "white": {
+          "male": 6.3437,
+          "female": 7.4186
+        }
+      }
+    },
+    {
+      "age": 85,
+      "yearsToLive": {
+        "black": {
+          "male": 6.0845,
+          "female": 7.2547
+        },
+        "hispanic": {
+          "male": 6.7478,
+          "female": 7.9905
+        },
+        "white": {
+          "male": 5.8985,
+          "female": 6.9096
+        }
+      }
+    },
+    {
+      "age": 86,
+      "yearsToLive": {
+        "black": {
+          "male": 5.7257,
+          "female": 6.8005
+        },
+        "hispanic": {
+          "male": 6.2753,
+          "female": 7.4442
+        },
+        "white": {
+          "male": 5.4729,
+          "female": 6.4248
+        }
+      }
+    },
+    {
+      "age": 87,
+      "yearsToLive": {
+        "black": {
+          "male": 5.386,
+          "female": 6.3756
+        },
+        "hispanic": {
+          "male": 5.8185,
+          "female": 6.9096
+        },
+        "white": {
+          "male": 5.0619,
+          "female": 5.9499
+        }
+      }
+    },
+    {
+      "age": 88,
+      "yearsToLive": {
+        "black": {
+          "male": 5.0652,
+          "female": 5.9729
+        },
+        "hispanic": {
+          "male": 5.3901,
+          "female": 6.4041
+        },
+        "white": {
+          "male": 4.6784,
+          "female": 5.5037
+        }
+      }
+    },
+    {
+      "age": 89,
+      "yearsToLive": {
+        "black": {
+          "male": 4.7626,
+          "female": 5.5923
+        },
+        "hispanic": {
+          "male": 4.9898,
+          "female": 5.9282
+        },
+        "white": {
+          "male": 4.3222,
+          "female": 5.0859
+        }
+      }
+    },
+    {
+      "age": 90,
+      "yearsToLive": {
+        "black": {
+          "male": 4.478,
+          "female": 5.2333
+        },
+        "hispanic": {
+          "male": 4.6173,
+          "female": 5.4818
+        },
+        "white": {
+          "male": 3.9924,
+          "female": 4.6963
+        }
+      }
+    },
+    {
+      "age": 91,
+      "yearsToLive": {
+        "black": {
+          "male": 4.2107,
+          "female": 4.8957
+        },
+        "hispanic": {
+          "male": 4.272,
+          "female": 5.0648
+        },
+        "white": {
+          "male": 3.6883,
+          "female": 4.3344
+        }
+      }
+    },
+    {
+      "age": 92,
+      "yearsToLive": {
+        "black": {
+          "male": 3.9602,
+          "female": 4.579
+        },
+        "hispanic": {
+          "male": 3.953,
+          "female": 4.6769
+        },
+        "white": {
+          "male": 3.4089,
+          "female": 3.9996
+        }
+      }
+    },
+    {
+      "age": 93,
+      "yearsToLive": {
+        "black": {
+          "male": 3.7259,
+          "female": 4.2825
+        },
+        "hispanic": {
+          "male": 3.6597,
+          "female": 4.3176
+        },
+        "white": {
+          "male": 3.1533,
+          "female": 3.6911
+        }
+      }
+    },
+    {
+      "age": 94,
+      "yearsToLive": {
+        "black": {
+          "male": 3.5071,
+          "female": 4.0057
+        },
+        "hispanic": {
+          "male": 3.3909,
+          "female": 3.9861
+        },
+        "white": {
+          "male": 2.9203,
+          "female": 3.408
+        }
+      }
+    },
+    {
+      "age": 95,
+      "yearsToLive": {
+        "black": {
+          "male": 3.3032,
+          "female": 3.7478
+        },
+        "hispanic": {
+          "male": 3.1455,
+          "female": 3.6815
+        },
+        "white": {
+          "male": 2.7086,
+          "female": 3.1491
+        }
+      }
+    },
+    {
+      "age": 96,
+      "yearsToLive": {
+        "black": {
+          "male": 3.1136,
+          "female": 3.5082
+        },
+        "hispanic": {
+          "male": 2.9224,
+          "female": 3.4029
+        },
+        "white": {
+          "male": 2.5169,
+          "female": 2.9134
+        }
+      }
+    },
+    {
+      "age": 97,
+      "yearsToLive": {
+        "black": {
+          "male": 2.9375,
+          "female": 3.2861
+        },
+        "hispanic": {
+          "male": 2.7202,
+          "female": 3.149
+        },
+        "white": {
+          "male": 2.3441,
+          "female": 2.6995
+        }
+      }
+    },
+    {
+      "age": 98,
+      "yearsToLive": {
+        "black": {
+          "male": 2.7742,
+          "female": 3.0807
+        },
+        "hispanic": {
+          "male": 2.5377,
+          "female": 2.9187
+        },
+        "white": {
+          "male": 2.1886,
+          "female": 2.5061
+        }
+      }
+    },
+    {
+      "age": 99,
+      "yearsToLive": {
+        "black": {
+          "male": 2.6231,
+          "female": 2.8911
+        },
+        "hispanic": {
+          "male": 2.3734,
+          "female": 2.7104
+        },
+        "white": {
+          "male": 2.0493,
+          "female": 2.332
+        }
+      }
+    },
+    {
+      "age": 100,
+      "yearsToLive": {
+        "black": {
+          "male": 2.4835,
+          "female": 2.7165
+        },
+        "hispanic": {
+          "male": 2.226,
+          "female": 2.5228
+        },
+        "white": {
+          "male": 1.9248,
+          "female": 2.1756
+        }
+      }
+    }
+  ]
+}

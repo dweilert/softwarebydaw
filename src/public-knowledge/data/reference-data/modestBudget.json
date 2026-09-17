@@ -1,0 +1,261 @@
+{
+  "sourceIds": [
+    "hud-fair-market-rents-fy2026",
+    "usda-food-plans-may2026",
+    "bls-consumer-expenditure-survey-2024"
+  ],
+  "source": "U.S. Dept. of Housing and Urban Development, Office of Policy Development and Research — FY2026 Fair Market Rents (county-level, revised) • USDA Food and Nutrition Administration (Center for Nutrition Policy and Promotion) — Official USDA Food Plans: Cost of Food at Home at Three Levels, U.S. Average, May 2026 • U.S. Bureau of Labor Statistics — Consumer Expenditures—2024 (by size of consumer unit)",
+  "sourceUrls": [
+    "https://www.huduser.gov/portal/datasets/fmr/fmr2026/FY26_FMRs_revised.xlsx",
+    "https://www.fns.usda.gov/cnpp/usda-food-plans-cost-food-monthly-reports",
+    "https://www.bls.gov/news.release/cesan.nr0.htm"
+  ],
+  "retrievedDate": "2026-07-23",
+  "methodology": "A \"modest but adequate\" household budget built from real component sources, not a single blended index: housing from HUD's own Fair Market Rents (a gross-rent figure \u2014 HUD's FMR definition already includes tenant-paid utilities except phone, so utilities are not added again separately), food from USDA's Low-Cost Food Plan, and transportation/healthcare/other necessities (clothing + personal care) from the BLS Consumer Expenditure Survey, split by household size (one person vs. two-or-more) matching this app's own one-or-two-individual plan model. All figures are national/state 2024-2026 vintage; see sources.ts for exact citations per component.",
+  "housing": {
+    "source": "U.S. Dept. of Housing and Urban Development, FY2026 Fair Market Rents (county-level), population-weighted to a state average",
+    "sourceUrl": "https://www.huduser.gov/portal/datasets/fmr.html",
+    "note": "FMR is a GROSS rent estimate (24 CFR 888.113) \u2014 rent plus tenant-paid utilities except telephone. Do not add a separate utilities line on top of this.",
+    "byState": {
+      "AL": {
+        "oneBedroomFmrMonthly": 923,
+        "twoBedroomFmrMonthly": 1079
+      },
+      "AK": {
+        "oneBedroomFmrMonthly": 1216,
+        "twoBedroomFmrMonthly": 1569
+      },
+      "AZ": {
+        "oneBedroomFmrMonthly": 1436,
+        "twoBedroomFmrMonthly": 1706
+      },
+      "AR": {
+        "oneBedroomFmrMonthly": 869,
+        "twoBedroomFmrMonthly": 1064
+      },
+      "CA": {
+        "oneBedroomFmrMonthly": 2178,
+        "twoBedroomFmrMonthly": 2674
+      },
+      "CO": {
+        "oneBedroomFmrMonthly": 1556,
+        "twoBedroomFmrMonthly": 1866
+      },
+      "CT": {
+        "oneBedroomFmrMonthly": 1647,
+        "twoBedroomFmrMonthly": 2027
+      },
+      "DE": {
+        "oneBedroomFmrMonthly": 1345,
+        "twoBedroomFmrMonthly": 1648
+      },
+      "DC": {
+        "oneBedroomFmrMonthly": 2015,
+        "twoBedroomFmrMonthly": 2246
+      },
+      "FL": {
+        "oneBedroomFmrMonthly": 1630,
+        "twoBedroomFmrMonthly": 1933
+      },
+      "GA": {
+        "oneBedroomFmrMonthly": 1385,
+        "twoBedroomFmrMonthly": 1550
+      },
+      "HI": {
+        "oneBedroomFmrMonthly": 1945,
+        "twoBedroomFmrMonthly": 2545
+      },
+      "ID": {
+        "oneBedroomFmrMonthly": 1153,
+        "twoBedroomFmrMonthly": 1404
+      },
+      "IL": {
+        "oneBedroomFmrMonthly": 1344,
+        "twoBedroomFmrMonthly": 1556
+      },
+      "IN": {
+        "oneBedroomFmrMonthly": 1021,
+        "twoBedroomFmrMonthly": 1234
+      },
+      "IA": {
+        "oneBedroomFmrMonthly": 886,
+        "twoBedroomFmrMonthly": 1097
+      },
+      "KS": {
+        "oneBedroomFmrMonthly": 919,
+        "twoBedroomFmrMonthly": 1122
+      },
+      "KY": {
+        "oneBedroomFmrMonthly": 899,
+        "twoBedroomFmrMonthly": 1105
+      },
+      "LA": {
+        "oneBedroomFmrMonthly": 944,
+        "twoBedroomFmrMonthly": 1127
+      },
+      "ME": {
+        "oneBedroomFmrMonthly": 1302,
+        "twoBedroomFmrMonthly": 1650
+      },
+      "MD": {
+        "oneBedroomFmrMonthly": 1673,
+        "twoBedroomFmrMonthly": 1957
+      },
+      "MA": {
+        "oneBedroomFmrMonthly": 2036,
+        "twoBedroomFmrMonthly": 2495
+      },
+      "MI": {
+        "oneBedroomFmrMonthly": 1055,
+        "twoBedroomFmrMonthly": 1310
+      },
+      "MN": {
+        "oneBedroomFmrMonthly": 1203,
+        "twoBedroomFmrMonthly": 1478
+      },
+      "MS": {
+        "oneBedroomFmrMonthly": 879,
+        "twoBedroomFmrMonthly": 1033
+      },
+      "MO": {
+        "oneBedroomFmrMonthly": 938,
+        "twoBedroomFmrMonthly": 1138
+      },
+      "MT": {
+        "oneBedroomFmrMonthly": 1210,
+        "twoBedroomFmrMonthly": 1522
+      },
+      "NE": {
+        "oneBedroomFmrMonthly": 971,
+        "twoBedroomFmrMonthly": 1186
+      },
+      "NV": {
+        "oneBedroomFmrMonthly": 1439,
+        "twoBedroomFmrMonthly": 1719
+      },
+      "NH": {
+        "oneBedroomFmrMonthly": 1568,
+        "twoBedroomFmrMonthly": 2038
+      },
+      "NJ": {
+        "oneBedroomFmrMonthly": 1855,
+        "twoBedroomFmrMonthly": 2229
+      },
+      "NM": {
+        "oneBedroomFmrMonthly": 1066,
+        "twoBedroomFmrMonthly": 1294
+      },
+      "NY": {
+        "oneBedroomFmrMonthly": 2094,
+        "twoBedroomFmrMonthly": 2374
+      },
+      "NC": {
+        "oneBedroomFmrMonthly": 1223,
+        "twoBedroomFmrMonthly": 1389
+      },
+      "ND": {
+        "oneBedroomFmrMonthly": 894,
+        "twoBedroomFmrMonthly": 1075
+      },
+      "OH": {
+        "oneBedroomFmrMonthly": 979,
+        "twoBedroomFmrMonthly": 1219
+      },
+      "OK": {
+        "oneBedroomFmrMonthly": 904,
+        "twoBedroomFmrMonthly": 1122
+      },
+      "OR": {
+        "oneBedroomFmrMonthly": 1420,
+        "twoBedroomFmrMonthly": 1716
+      },
+      "PA": {
+        "oneBedroomFmrMonthly": 1214,
+        "twoBedroomFmrMonthly": 1474
+      },
+      "RI": {
+        "oneBedroomFmrMonthly": 1421,
+        "twoBedroomFmrMonthly": 1761
+      },
+      "SC": {
+        "oneBedroomFmrMonthly": 1188,
+        "twoBedroomFmrMonthly": 1344
+      },
+      "SD": {
+        "oneBedroomFmrMonthly": 876,
+        "twoBedroomFmrMonthly": 1088
+      },
+      "TN": {
+        "oneBedroomFmrMonthly": 1150,
+        "twoBedroomFmrMonthly": 1335
+      },
+      "TX": {
+        "oneBedroomFmrMonthly": 1274,
+        "twoBedroomFmrMonthly": 1520
+      },
+      "UT": {
+        "oneBedroomFmrMonthly": 1293,
+        "twoBedroomFmrMonthly": 1566
+      },
+      "VT": {
+        "oneBedroomFmrMonthly": 1294,
+        "twoBedroomFmrMonthly": 1629
+      },
+      "VA": {
+        "oneBedroomFmrMonthly": 1527,
+        "twoBedroomFmrMonthly": 1729
+      },
+      "WA": {
+        "oneBedroomFmrMonthly": 1675,
+        "twoBedroomFmrMonthly": 2011
+      },
+      "WV": {
+        "oneBedroomFmrMonthly": 804,
+        "twoBedroomFmrMonthly": 995
+      },
+      "WI": {
+        "oneBedroomFmrMonthly": 1017,
+        "twoBedroomFmrMonthly": 1250
+      },
+      "WY": {
+        "oneBedroomFmrMonthly": 848,
+        "twoBedroomFmrMonthly": 1067
+      }
+    }
+  },
+  "food": {
+    "source": "USDA Food and Nutrition Administration, Official USDA Food Plans: Cost of Food at Home at Three Levels, U.S. Average, May 2026 (Low-Cost Plan)",
+    "sourceUrl": "https://www.fns.usda.gov/cnpp/usda-food-plans-cost-food-monthly-reports",
+    "monthlyPerAdult": {
+      "female19to50": 274.8,
+      "male19to50": 316.0
+    },
+    "householdSizeAdjustmentPercent": {
+      "1": 20,
+      "2": 10,
+      "3": 5,
+      "4": 0,
+      "5": -5,
+      "6": -5,
+      "7": -10
+    }
+  },
+  "transportation": {
+    "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Survey 2024, by size of consumer unit (via FRED)",
+    "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+    "annualOnePerson": 6953,
+    "annualTwoOrMore": 16056
+  },
+  "healthcare": {
+    "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Survey 2024, by size of consumer unit (via FRED)",
+    "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+    "annualOnePerson": 4026,
+    "annualTwoOrMore": 7131
+  },
+  "otherNecessities": {
+    "source": "U.S. Bureau of Labor Statistics, Consumer Expenditure Survey 2024 \u2014 apparel and services + personal care products and services, by size of consumer unit (via FRED)",
+    "sourceUrl": "https://www.bls.gov/news.release/cesan.nr0.htm",
+    "annualOnePerson": 1732,
+    "annualTwoOrMore": 3514
+  }
+}

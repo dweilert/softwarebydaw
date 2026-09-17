@@ -1,0 +1,256 @@
+{
+  "sourceIds": [
+    "irs-pub-590b"
+  ],
+  "sourceUrl": "https://www.irs.gov/pub/irs-pdf/p590b.pdf",
+  "retrievedDate": "2026-08-06",
+  "source": "IRS Publication 590-B (2025), Appendix B, Table III (Uniform Lifetime)",
+  "rows": [
+    {
+      "age": 72,
+      "distributionPeriodYears": 27.4,
+      "fractionOfBalance": 0.0365
+    },
+    {
+      "age": 73,
+      "distributionPeriodYears": 26.5,
+      "fractionOfBalance": 0.0378
+    },
+    {
+      "age": 74,
+      "distributionPeriodYears": 25.5,
+      "fractionOfBalance": 0.0393
+    },
+    {
+      "age": 75,
+      "distributionPeriodYears": 24.6,
+      "fractionOfBalance": 0.0407
+    },
+    {
+      "age": 76,
+      "distributionPeriodYears": 23.7,
+      "fractionOfBalance": 0.0422
+    },
+    {
+      "age": 77,
+      "distributionPeriodYears": 22.9,
+      "fractionOfBalance": 0.0437
+    },
+    {
+      "age": 78,
+      "distributionPeriodYears": 22.0,
+      "fractionOfBalance": 0.0455
+    },
+    {
+      "age": 79,
+      "distributionPeriodYears": 21.1,
+      "fractionOfBalance": 0.0474
+    },
+    {
+      "age": 80,
+      "distributionPeriodYears": 20.2,
+      "fractionOfBalance": 0.0496
+    },
+    {
+      "age": 81,
+      "distributionPeriodYears": 19.4,
+      "fractionOfBalance": 0.0516
+    },
+    {
+      "age": 82,
+      "distributionPeriodYears": 18.5,
+      "fractionOfBalance": 0.0541
+    },
+    {
+      "age": 83,
+      "distributionPeriodYears": 17.7,
+      "fractionOfBalance": 0.0565
+    },
+    {
+      "age": 84,
+      "distributionPeriodYears": 16.8,
+      "fractionOfBalance": 0.0596
+    },
+    {
+      "age": 85,
+      "distributionPeriodYears": 16.0,
+      "fractionOfBalance": 0.0625
+    },
+    {
+      "age": 86,
+      "distributionPeriodYears": 15.2,
+      "fractionOfBalance": 0.0658
+    },
+    {
+      "age": 87,
+      "distributionPeriodYears": 14.4,
+      "fractionOfBalance": 0.0695
+    },
+    {
+      "age": 88,
+      "distributionPeriodYears": 13.7,
+      "fractionOfBalance": 0.073
+    },
+    {
+      "age": 89,
+      "distributionPeriodYears": 12.9,
+      "fractionOfBalance": 0.0776
+    },
+    {
+      "age": 90,
+      "distributionPeriodYears": 12.2,
+      "fractionOfBalance": 0.082
+    },
+    {
+      "age": 91,
+      "distributionPeriodYears": 11.5,
+      "fractionOfBalance": 0.087
+    },
+    {
+      "age": 92,
+      "distributionPeriodYears": 10.8,
+      "fractionOfBalance": 0.0926
+    },
+    {
+      "age": 93,
+      "distributionPeriodYears": 10.1,
+      "fractionOfBalance": 0.0991
+    },
+    {
+      "age": 94,
+      "distributionPeriodYears": 9.5,
+      "fractionOfBalance": 0.1053
+    },
+    {
+      "age": 95,
+      "distributionPeriodYears": 8.9,
+      "fractionOfBalance": 0.1124
+    },
+    {
+      "age": 96,
+      "distributionPeriodYears": 8.4,
+      "fractionOfBalance": 0.1191
+    },
+    {
+      "age": 97,
+      "distributionPeriodYears": 7.8,
+      "fractionOfBalance": 0.1283
+    },
+    {
+      "age": 98,
+      "distributionPeriodYears": 7.3,
+      "fractionOfBalance": 0.137
+    },
+    {
+      "age": 99,
+      "distributionPeriodYears": 6.8,
+      "fractionOfBalance": 0.1471
+    },
+    {
+      "age": 100,
+      "distributionPeriodYears": 6.4,
+      "fractionOfBalance": 0.1563
+    },
+    {
+      "age": 101,
+      "distributionPeriodYears": 6.0,
+      "fractionOfBalance": 0.1667
+    },
+    {
+      "age": 102,
+      "distributionPeriodYears": 5.6,
+      "fractionOfBalance": 0.1786
+    },
+    {
+      "age": 103,
+      "distributionPeriodYears": 5.2,
+      "fractionOfBalance": 0.1924
+    },
+    {
+      "age": 104,
+      "distributionPeriodYears": 4.9,
+      "fractionOfBalance": 0.2041
+    },
+    {
+      "age": 105,
+      "distributionPeriodYears": 4.6,
+      "fractionOfBalance": 0.2174
+    },
+    {
+      "age": 106,
+      "distributionPeriodYears": 4.3,
+      "fractionOfBalance": 0.2326
+    },
+    {
+      "age": 107,
+      "distributionPeriodYears": 4.1,
+      "fractionOfBalance": 0.244
+    },
+    {
+      "age": 108,
+      "distributionPeriodYears": 3.9,
+      "fractionOfBalance": 0.2565
+    },
+    {
+      "age": 109,
+      "distributionPeriodYears": 3.7,
+      "fractionOfBalance": 0.2703
+    },
+    {
+      "age": 110,
+      "distributionPeriodYears": 3.5,
+      "fractionOfBalance": 0.2858
+    },
+    {
+      "age": 111,
+      "distributionPeriodYears": 3.4,
+      "fractionOfBalance": 0.2942
+    },
+    {
+      "age": 112,
+      "distributionPeriodYears": 3.3,
+      "fractionOfBalance": 0.3031
+    },
+    {
+      "age": 113,
+      "distributionPeriodYears": 3.1,
+      "fractionOfBalance": 0.3226
+    },
+    {
+      "age": 114,
+      "distributionPeriodYears": 3.0,
+      "fractionOfBalance": 0.3334
+    },
+    {
+      "age": 115,
+      "distributionPeriodYears": 2.9,
+      "fractionOfBalance": 0.3449
+    },
+    {
+      "age": 116,
+      "distributionPeriodYears": 2.8,
+      "fractionOfBalance": 0.3572
+    },
+    {
+      "age": 117,
+      "distributionPeriodYears": 2.7,
+      "fractionOfBalance": 0.3704
+    },
+    {
+      "age": 118,
+      "distributionPeriodYears": 2.5,
+      "fractionOfBalance": 0.4
+    },
+    {
+      "age": 119,
+      "distributionPeriodYears": 2.3,
+      "fractionOfBalance": 0.4348
+    },
+    {
+      "age": 120,
+      "distributionPeriodYears": 2.0,
+      "fractionOfBalance": 0.5
+    }
+  ],
+  "verifiedAgainstPrimarySource": "2026-08-06 \u2014 every age compared against Table III read from the publication PDF; all agreed"
+}

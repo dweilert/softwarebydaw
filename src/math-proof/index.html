@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Math Proof | SoftwareByDaW</title>
+  <meta name="description" content="How RP checks its retirement-planning calculations against published authority and independent calculations.">
+  <link href="../css/bootstrap.min.css" rel="stylesheet"><link href="../css/style.css" rel="stylesheet">
+  <style>body{background:#fffaf3;color:#263044}.knowledge{max-width:980px;margin:0 auto;padding:56px 24px 80px}.knowledge nav{margin-bottom:48px}.knowledge h1{font-weight:700}.knowledge .lead{max-width:780px}.panel{background:#fff;border:1px solid #eadfd4;border-radius:8px;padding:24px;margin-top:24px}.links a{display:block;margin:8px 0}.callout{background:#eaf8ef;border-left:4px solid #39a96b;padding:18px 20px;border-radius:4px}</style>
+</head>
+<body><main class="knowledge">
+  <nav><a href="../index.html">SoftwareByDaW</a> &middot; <a href="../reference-data/">Reference data</a> &middot; <a href="../methodology/">Methodology</a></nav>
+  <h1>Math Proof</h1>
+  <p class="lead">A retirement plan is easier to trust when the arithmetic is checked against something outside itself. RP publishes the calculation-validation work behind the shared engine, including what passed, what was independently checked, and what the model does not claim to know.</p>
+  <section class="panel"><div class="callout"><strong>Current validation:</strong> report version and results are generated from the same validation data used by the RP app. <span id="validation-vintage">The current report is linked below.</span></div><div class="links"><a href="../public-knowledge/data/validation-report.md">Read the full validation report</a><a href="../public-knowledge/data/validation-report.json">Download the structured report</a></div></section>
+  <section class="panel"><h2>What the checks mean</h2><ul><li><strong>Authority-validated:</strong> the expected result comes from an IRS, CMS, or Social Security publication, worksheet, or worked example.</li><li><strong>Cross-validated:</strong> the same published methodology was independently reimplemented and compared.</li><li><strong>Vetted-secondary:</strong> used only when a primary source is unavailable, with the limitation disclosed.</li><li><strong>Regression-only:</strong> an internal consistency check, not a claim of outside authority.</li></ul></section>
+  <section class="panel"><h2>What this does not mean</h2><p>Passing calculation cases do not make RP a licensed financial advisor, guarantee an outcome, or prove that a plan is optimal. The report identifies known limitations and the areas where assumptions, projections, or simplified modeling matter.</p><p>Read the <a href="../methodology/">methodology</a> for the model's treatment of taxes, after-tax cash flow, withdrawals, risk, and uncertainty.</p></section>
+</main><script>fetch('../public-knowledge/data/publication.json').then(r=>r.json()).then(p=>{document.getElementById('validation-vintage').textContent='RP '+p.validation.appVersion+'; generated '+p.validation.generatedDate+'.'}).catch(()=>{});</script></body></html>
