@@ -58,8 +58,9 @@ jobs:
             --query 'app.customRules' \
             --output json)
           UPDATED_RULES=$(jq -c '
-            map(select(.source != "/public-knowledge/data/validation-report.md"))
-            + [{"source":"/public-knowledge/data/validation-report.md","status":"301","target":"/math-proof/report.html","condition":null}]
+            map(select(.source != "/public-knowledge/data/validation-report.md")
+              | if .condition == null then del(.condition) else . end)
+            + [{"source":"/public-knowledge/data/validation-report.md","status":"301","target":"/math-proof/report.html"}]
           ' <<< "$CURRENT_RULES")
           aws amplify update-app \
             --app-id "$AMPLIFY_APP_ID" \
